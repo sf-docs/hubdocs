@@ -1,0 +1,113 @@
+site_name: Документация
+nav:
+  - Общая информация:
+    - gi/index.md
+    - Описание инструмента: gi/tool description.md
+    - gi/user workstation requirements.md
+  - Руководство пользователя: 
+      - ug/index.md
+      - Приложения:
+        - Работа с приложениями: ug/work with applications.md
+        - Добавление нового приложения: ug/adding a new application.md
+        - Настройки приложения: ug/application settings.md
+      - Проблемы и дефекты безопасности:
+        - ug/work with applications.md
+        - Добавление нового приложения: ug/adding a new application.md
+        - ug/application settings.md
+  - Руководство администратора:
+    - aag/index.md
+    - aag/installing, running and updating AppSec.Hub.md
+    - Интеграция с инструментами:
+        - aag/integration with tools.md
+        - Интеграция с инструментами разработки ПО: aag/integration with software development tools.md
+  - Руководство администратора ИБ:
+    - sag/index.md
+    - Installation: getting-started.md
+    - Creating your site: creating-your-site.md
+    - Publishing your site: publishing-your-site.md
+    - Customization: customization.md
+    - Browser support: browser-support.md
+    - Alternatives: alternatives.md
+    - License: license.md
+    - Changelog:
+      - changelog/index.md
+      - How dto upgrade: upgrade.md
+  
+theme:
+  language: ru
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  name: material
+  custom_dir: overrides
+  palette:
+#    - media: "(prefers-color-scheme: light)" 
+      scheme: appsechub
+#      toggle:
+#        icon: material/weather-night
+#        name: Switch to dark mode
+#    - media: "(prefers-color-scheme: dark)" 
+#      scheme: slate
+#      toggle:
+#        icon: material/weather-sunny
+#        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.shares
+    - content.code.annotate
+    - toc.integrate
+#    - navigation.sections
+extra_css:
+  - stylesheets/extra.css
+#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
+
+plugins:
+#  - git-revision-date-localized:
+#      type: iso_datetime
+  - search:
+      lang: 
+        - en
+        - ru
+
+# repo_url: https://github.com/andreygladilin/mktest
+# repo_name: andreygladilin/mktest
+
+# extra:
+#  social:
+#    - icon: fontawesome/brands/twitter 
+#      link: https://twitter.com/squidfunk
+#    - icon: fontawesome/brands/github 
+#      link: https://twitter.com/squidfunk
+
+markdown_extensions:
+  - meta
+  - abbr
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      use_pygments: false
+      auto_title: true
+      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: ⚓︎
+
+extra_javascript:
+#  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
+#  - javascripts/highlight.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tablesort.js
