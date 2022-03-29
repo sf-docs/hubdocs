@@ -3,17 +3,24 @@ nav:
   - Общая информация:
     - gi/index.md
     - Описание инструмента: gi/tool description.md
-    - gi/user workstation requirements.md
+    - Требования к рабочему месту пользователя: gi/user workstation requirements.md
+    - Термины и сокращения: gi/glossary.md
   - Руководство пользователя: 
       - ug/index.md
-      - Приложения:
-        - Работа с приложениями: ug/work with applications.md
-        - Добавление нового приложения: ug/adding a new application.md
-        - Настройки приложения: ug/application settings.md
-      - Проблемы и дефекты безопасности:
-        - ug/work with applications.md
-        - Добавление нового приложения: ug/adding a new application.md
-        - ug/application settings.md
+      - Работа с приложениями:
+          - Работа с приложениями: ug/work with applications.md
+          - Добавление нового приложения: ug/adding a new application.md
+          - Настройки приложения: ug/application settings.md
+          - Конфигурация приложения: ug/work with applications.md
+          - Security Pipelines: ug/work with applications.md
+          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/work with applications.md
+      - Работа с проблемами и дефектами безопасности:
+          - Работа с проблемами и дефектами безопасности: ug/work with applications.md
+          - Проблемы безопасности: ug/work with applications.md
+          - Дефекты безопасности: ug/work with applications.md
+          - Синхронизация с Jira — настройки: ug/work with applications.md
+      - Аналитика: ug/work with applications.md
+      - Приложения: ug/work with applications.md
   - Руководство администратора:
     - aag/index.md
     - aag/installing, running and updating AppSec.Hub.md
@@ -60,7 +67,7 @@ theme:
     - search.highlight
     - search.shares
     - content.code.annotate
-    - toc.integrate
+#    - toc.integrate
 #    - navigation.sections
 extra_css:
   - stylesheets/extra.css
