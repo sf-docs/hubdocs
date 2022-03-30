@@ -11,8 +11,8 @@ nav:
           - Работа с приложениями: ug/work with applications.md
           - Добавление нового приложения: ug/adding a new application.md
           - Настройки приложения: ug/application settings.md
-          - Конфигурация приложения: ug/work with applications.md
-          - Security Pipelines: ug/work with applications.md
+          - Конфигурация приложения: ug/application configuration.md
+          - Security Pipelines: ug/security pipelines.md
           - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/work with applications.md
       - Работа с проблемами и дефектами безопасности:
           - Работа с проблемами и дефектами безопасности: ug/work with applications.md
