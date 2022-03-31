@@ -13,10 +13,10 @@ nav:
           - Настройки приложения: ug/application settings.md
           - Конфигурация приложения: ug/application configuration.md
           - Security Pipelines: ug/security pipelines.md
-          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/work with applications.md
+          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
       - Работа с проблемами и дефектами безопасности:
-          - Работа с проблемами и дефектами безопасности: ug/work with applications.md
-          - Проблемы безопасности: ug/work with applications.md
+          - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
+          - Проблемы безопасности: ug/security issues.md
           - Дефекты безопасности: ug/work with applications.md
           - Синхронизация с Jira — настройки: ug/work with applications.md
       - Аналитика: ug/work with applications.md
