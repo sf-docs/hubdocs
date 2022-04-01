@@ -17,10 +17,15 @@ nav:
       - Работа с проблемами и дефектами безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
           - Проблемы безопасности: ug/security issues.md
-          - Дефекты безопасности: ug/work with applications.md
-          - Синхронизация с Jira — настройки: ug/work with applications.md
-      - Аналитика: ug/work with applications.md
-      - Приложения: ug/work with applications.md
+          - Дефекты безопасности: ug/security defects.md
+          - Синхронизация с Jira — настройки: ug/setting of synchronisation with Jira.md
+      - Аналитика: ug/analytics.md
+      - Приложения:
+        - ug/appendices.md
+        - Приложение 1: ug/appendix 1.md
+        - Приложение 2: ug/appendix 2.md
+        - Приложение 3: ug/appendix 3.md
+        - Приложение 4: ug/appendix 4.md
   - Руководство администратора:
     - aag/index.md
     - aag/installing, running and updating AppSec.Hub.md
