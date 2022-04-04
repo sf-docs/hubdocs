@@ -22,16 +22,17 @@ nav:
       - Аналитика: ug/analytics.md
       - Приложения:
         - ug/appendices.md
-        - Приложение 1: ug/appendix 1.md
-        - Приложение 2: ug/appendix 2.md
-        - Приложение 3: ug/appendix 3.md
-        - Приложение 4: ug/appendix 4.md
+        - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
+        - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
+        - Приложение 3. Результаты сканирования: ug/appendix 3.md
+        - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
+        - Приложение 5. Конфигурационный файл app.properties: ug/appendix 5.md
   - Руководство администратора:
     - aag/index.md
     - aag/installing, running and updating AppSec.Hub.md
-    - Интеграция с инструментами:
-        - aag/integration with tools.md
-        - Интеграция с инструментами разработки ПО: aag/integration with software development tools.md
+    - Интеграции:
+      - aag/integration with tools.md
+      - aag/integration with software development tools.md
   - Руководство администратора ИБ:
     - sag/index.md
     - Installation: getting-started.md
