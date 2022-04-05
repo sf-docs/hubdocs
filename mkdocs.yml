@@ -40,19 +40,28 @@ nav:
     - Конфигурация AppSec.Hub:
       - aag/appsechub configuration.md
       - aag/users and teams.md
+      - aag/organisation of workspaces.md
+      - aag/setting up notifications.md
+      - aag/quality gates.md
+      - aag/tagging settings.md
+      - aag/categories of vulnerabilities.md
+      - aag/custom webhooks configuration.md
+      - aag/application vulnerability correlation settings.md
+      - aag/managing the number of tasks import streams.md
+    - Управление лицензией AppSec.Hub:
+      - aag/appsechub licence management.md
+    - Приложения:
+      - aag/appendices.md
+      - aag/appendix 1.md
+      - aag/appendix 2.md
+      - aag/appendix 3.md
   - Руководство администратора ИБ:
     - sag/index.md
-    - Installation: getting-started.md
-    - Creating your site: creating-your-site.md
-    - Publishing your site: publishing-your-site.md
-    - Customization: customization.md
-    - Browser support: browser-support.md
-    - Alternatives: alternatives.md
-    - License: license.md
-    - Changelog:
-      - changelog/index.md
-      - How dto upgrade: upgrade.md
-  
+    - sag/protected objects.md
+    - sag/users and groups.md
+    - sag/secure configuration.md
+    - sag/session lifetime.md
+    - sag/audit logs.md
 theme:
   language: ru
   logo: assets/logo.png
