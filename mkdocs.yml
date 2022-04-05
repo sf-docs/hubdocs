@@ -33,6 +33,13 @@ nav:
     - Интеграции:
       - aag/integration with tools.md
       - aag/integration with software development tools.md
+      - aag/integration with ast tools.md
+      - aag/itegration with wiki tools.md
+      - aag/selection of priority tools.md
+      - aag/disabling tools.md
+    - Конфигурация AppSec.Hub:
+      - aag/appsechub configuration.md
+      - aag/users and teams.md
   - Руководство администратора ИБ:
     - sag/index.md
     - Installation: getting-started.md
