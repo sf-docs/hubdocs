@@ -2,19 +2,19 @@ site_name: Документация
 nav:
   - Общая информация:
     - gi/index.md
-    - Описание инструмента: gi/tool description.md
-    - Требования к рабочему месту пользователя: gi/user workstation requirements.md
-    - Термины и сокращения: gi/glossary.md
+    - gi/tool description.md
+    - gi/user workstation requirements.md
+    - gi/glossary.md
   - Руководство пользователя: 
       - ug/index.md
-      - Работа с приложениями:
+      - Приложения:
           - Работа с приложениями: ug/work with applications.md
           - Добавление нового приложения: ug/adding a new application.md
           - Настройки приложения: ug/application settings.md
           - Конфигурация приложения: ug/application configuration.md
-          - Security Pipelines: ug/security pipelines.md
+          - Security Pipelines: ug/Security Pipelines.md
           - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
-      - Работа с проблемами и дефектами безопасности:
+      - Проблемы и дефекты безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
           - Проблемы безопасности: ug/security issues.md
           - Дефекты безопасности: ug/security defects.md
@@ -62,6 +62,7 @@ nav:
     - sag/secure configuration.md
     - sag/session lifetime.md
     - sag/audit logs.md
+    - sag/appendix 1.md
 theme:
   language: ru
   logo: assets/logo.png
