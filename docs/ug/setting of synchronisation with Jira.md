@@ -23,7 +23,7 @@
 <figure markdown>![](img/196.png)</figure>
 <figure markdown>![](img/197.png)</figure>
 
-Если настройки не копируются из другого приложения, для начала настройки на появившейся странице **Defect Tracking** выберите значения в выпадающих меню **Tracker instance** (значение — Jira), **Project** (значение — имя проекта) и **Issue type** (значение — элемент из списка Task, Bug, и т. д.). Нажмите кнопку **Create config** ![](img/chmark.png) в правом верхнем углу.
+Если настройки не копируются из другого приложения, для начала настройки на появившейся странице **Defect Tracking** выберите значения в выпадающих меню **Tracker instance** (значение — Jira), **Project** (значение — имя проекта) и **Issue type** (значение — элемент из списка Task, Bug и т. д.). Нажмите кнопку **Create config** ![](img/chmark.png) в правом верхнем углу.
 
 <figure markdown>![](img/198.png)</figure>
 

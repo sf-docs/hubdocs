@@ -12,7 +12,7 @@ nav:
           - Добавление нового приложения: ug/adding a new application.md
           - Настройки приложения: ug/application settings.md
           - Конфигурация приложения: ug/application configuration.md
-          - Security Pipelines: ug/Security Pipelines.md
+          - Security Pipelines: ug/security pipelines.md
           - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
       - Проблемы и дефекты безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
