@@ -19,11 +19,11 @@
 
 ### Файловое хранилище (Anonymous)
 
-py scan_artifact.py \
-    --url http://hub.dev.swordfishsecurity.com/ \
-    --token ****** \
-    --appcode 19042021_test_create_org \
-    --artifact-url https://docker.swordfishsecurity.com/nginx/apk/app-prod-debug-1.0.apk
+    py scan_artifact.py \
+        --url http://hub.dev.swordfishsecurity.com/ \
+        --token ****** \
+        --appcode 19042021_test_create_org \
+        --artifact-url https://docker.swordfishsecurity.com/nginx/apk/app-prod-debug-1.0.apk
 
 ### type: maven (с classifier)
 

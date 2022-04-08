@@ -5,7 +5,7 @@
 !!! note "Примечание"
     Корректное завершение работы скриптов возможно, только если указаны все необходимые параметры.
 
-Параметр|Обязат.<br>параметр|Описание|Пример
+Параметр|Обязат.<br>параметр<br>|Описание|Пример
 -|:-:|-|-
 `--url`|+|URL приложения AppSec.Hub|`--url https://hub.demo.swordfishsecurity.com`
 `--token` |+ |Токен авторизации AppSec.Hub| `--token <token>`
@@ -31,13 +31,13 @@
 `--codebase-url`|+|URL репозитория основной кодовой базы|`--codebase-url https://github.com/appsecco/dvja.git`
 `--branch`|–|Ветвь репозитория или тэг основной кодовой базы. Значение по умолчанию — master|`--branch master`
 `--branch-filter`|–|Позволяет осуществить фильтрацию ветвей для сканирования. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — master|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
-`--codebase-name`|–|Имя кодовой базы в AppSec.Hub. Back-end AppSec.Hub должен использовать параметры appcode, codebase-url и branch	--codebase-name dvja-master
+`--codebase-name`|–|Имя кодовой базы в AppSec.Hub. Back-end AppSec.Hub должен использовать параметры appcode, `codebase-url` и `branch`|`--codebase-name dvja-master`
 `--codebase-type`|–|Тип системы контроля версий. Значение по умолчанию — git|`--codebase-type git`
 `--additional-codebase-urls`|–|URL репозитория дополнительной кодовой базы — может содержать несколько ссылок, разделенных пробелом|`--additional-codebase-urls http://github.com/appsecco/dvja1.git http://github.com/appsecco/dvja2.git`
 `--additional-branches`|–|Тег или ветвь дополнительной кодовой базы. Значение по умолчанию — master. Вспомогательный параметр. Если он не определен или указано единственное значение, оно применяется ко всем дополнительным кодовым базам, заданным параметром additional_codebase_urls|`--additional-branches maser develop`
 `--codebase-build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — maven|`--codebase-build-tool maven`
 
-### Специфические параметры скрипта scan_ artifact.py
+## Специфические параметры скрипта scan_ artifact.py
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-

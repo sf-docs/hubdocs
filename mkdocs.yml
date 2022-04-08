@@ -7,8 +7,8 @@ nav:
     - gi/glossary.md
   - Руководство пользователя: 
       - ug/index.md
-      - Приложения:
-          - Работа с приложениями: ug/work with applications.md
+      - Работа с приложениями:
+          - Приложения в AppSec.Hub: ug/work with applications.md
           - Добавление нового приложения: ug/adding a new application.md
           - Настройки приложения: ug/application settings.md
           - Конфигурация приложения: ug/application configuration.md
