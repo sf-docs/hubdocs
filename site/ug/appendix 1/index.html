@@ -1,0 +1,2491 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Приложение 1. Описание параметров запуска скриптов On-boarding - Документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="appsechub" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-on-boarding" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+  <!-- Add announcement here, including arbitrary HTML -->
+  <h6 align="center" style="color: rgb(255, 255, 255)">Тестовая версия. Основная версия документации <a href="https://appsec-hub.ru/help/mergedProjects/ug/obshchaya_informaciya.htm">здесь</a></h6> 
+
+          </div>
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация" class="md-header__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Приложение 1. Описание параметров запуска скриптов On-boarding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gi/" class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Руководство пользователя
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aag/" class="md-tabs__link">
+        Руководство администратора
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sag/" class="md-tabs__link">
+        Руководство администратора ИБ
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация" class="md-nav__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../gi/">Общая информация</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Общая информация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/tool%20description/" class="md-nav__link">
+        Описание инструмента
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/user%20workstation%20requirements/" class="md-nav__link">
+        Требования к рабочему месту пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/glossary/" class="md-nav__link">
+        Термины и сокращения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Руководство пользователя</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство пользователя" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство пользователя
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Работа с приложениями
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Работа с приложениями" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Работа с приложениями
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work%20with%20applications/" class="md-nav__link">
+        Приложения в AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding%20a%20new%20application/" class="md-nav__link">
+        Добавление нового приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20settings/" class="md-nav__link">
+        Настройки приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20configuration/" class="md-nav__link">
+        Конфигурация приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20pipelines/" class="md-nav__link">
+        Security Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../on-boarding/" class="md-nav__link">
+        On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Проблемы и дефекты безопасности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Проблемы и дефекты безопасности" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Проблемы и дефекты безопасности
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling%20security%20problems%20and%20defects/" class="md-nav__link">
+        Работа с проблемами и дефектами безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20issues/" class="md-nav__link">
+        Проблемы безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20defects/" class="md-nav__link">
+        Дефекты безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting%20of%20synchronisation%20with%20Jira/" class="md-nav__link">
+        Синхронизация с Jira — настройки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        Аналитика
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices/" class="md-nav__link">
+        Приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Приложение 1. Описание параметров запуска скриптов On-boarding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Приложение 1. Описание параметров запуска скриптов On-boarding
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scan_codebasepy-scan_-artifactpy" class="md-nav__link">
+    Общие параметры для скриптов scan_codebase.py и scan_ artifact.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan_codebasepy" class="md-nav__link">
+    Специфические параметры скрипта scan_codebase.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan_-artifactpy" class="md-nav__link">
+    Специфические параметры скрипта scan_ artifact.py
+  </a>
+  
+    <nav class="md-nav" aria-label="Специфические параметры скрипта scan_ artifact.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-type-maven" class="md-nav__link">
+    Параметры для артефакта Maven (type: maven)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-type-docker" class="md-nav__link">
+    Параметры для артефакта Docker (type: docker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-type-npm" class="md-nav__link">
+    Параметры для артефакта NPM (type: npm)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yum-type-yum" class="md-nav__link">
+    Параметры для артефакта Yum (type: yum)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-type-raw" class="md-nav__link">
+    Параметры для артефакта RAW (type: raw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-file_storage" class="md-nav__link">
+    Параметры для файлового хранилища (type: file_storage)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_resultspy" class="md-nav__link">
+    Специфические параметры скрипта import_results.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkmarx" class="md-nav__link">
+    Параметры для взаимодействия с Checkmarx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nexus-iq" class="md-nav__link">
+    Параметры для взаимодействия с Nexus IQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Параметры для взаимодействия с кодовой базой
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Параметры для взаимодействия с артефактом
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%202/" class="md-nav__link">
+        Приложение 2. Примеры запуска скриптов для интеграции
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%203/" class="md-nav__link">
+        Приложение 3. Результаты сканирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%204/" class="md-nav__link">
+        Приложение 4. Коды выхода Meta-runner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%205/" class="md-nav__link">
+        Приложение 5. Конфигурационный файл app.properties
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../aag/">Руководство администратора</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/" class="md-nav__link">
+        Установка, запуск и обновление AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Интеграции
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Интеграции" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Интеграции
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20tools/" class="md-nav__link">
+        Интеграция с инструментами
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20software%20development%20tools/" class="md-nav__link">
+        Интеграция с инструментами разработки ПО
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20ast%20tools/" class="md-nav__link">
+        Интеграция с инструментами AST
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/itegration%20with%20wiki%20tools/" class="md-nav__link">
+        Интеграция с инструментами Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/selection%20of%20priority%20tools/" class="md-nav__link">
+        Выбор приоритетных инструментов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/disabling%20tools/" class="md-nav__link">
+        Отключение инструментов
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Конфигурация AppSec.Hub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурация AppSec.Hub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурация AppSec.Hub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20configuration/" class="md-nav__link">
+        Конфигурация AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/users%20and%20teams/" class="md-nav__link">
+        Пользователи и команды
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/organisation%20of%20workspaces/" class="md-nav__link">
+        Организация рабочих пространств
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/setting%20up%20notifications/" class="md-nav__link">
+        Настройка уведомлений
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/quality%20gates/" class="md-nav__link">
+        Quality Gates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/tagging%20settings/" class="md-nav__link">
+        Настройки тегирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/categories%20of%20vulnerabilities/" class="md-nav__link">
+        Категории уязвимостей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/custom%20webhooks%20configuration/" class="md-nav__link">
+        Конфигурация Custom webhooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/application%20vulnerability%20correlation%20settings/" class="md-nav__link">
+        Настройки корреляции уязвимостей приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/managing%20the%20number%20of%20tasks%20import%20streams/" class="md-nav__link">
+        Управление количеством задач/потоков импорта
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" data-md-state="indeterminate" type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Управление лицензией AppSec.Hub
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Управление лицензией AppSec.Hub" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Управление лицензией AppSec.Hub
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20licence%20management/" class="md-nav__link">
+        Управление лицензией AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendices/" class="md-nav__link">
+        Приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%201/" class="md-nav__link">
+        Приложение 1. Список параметров системы, заполняемыx в процессе установки
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%202/" class="md-nav__link">
+        Приложение 2. Список контейнеров
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%203/" class="md-nav__link">
+        Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../sag/">Руководство администратора ИБ</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора ИБ" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора ИБ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/protected%20objects/" class="md-nav__link">
+        Объекты защиты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/users%20and%20groups/" class="md-nav__link">
+        Пользователи и группы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/secure%20configuration/" class="md-nav__link">
+        Безопасная конфигурация
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/session%20lifetime/" class="md-nav__link">
+        Время жизни сессии
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/audit%20logs/" class="md-nav__link">
+        Журналы аудита
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/appendix%201/" class="md-nav__link">
+        Приложение. Список событий аудита
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scan_codebasepy-scan_-artifactpy" class="md-nav__link">
+    Общие параметры для скриптов scan_codebase.py и scan_ artifact.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan_codebasepy" class="md-nav__link">
+    Специфические параметры скрипта scan_codebase.py
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scan_-artifactpy" class="md-nav__link">
+    Специфические параметры скрипта scan_ artifact.py
+  </a>
+  
+    <nav class="md-nav" aria-label="Специфические параметры скрипта scan_ artifact.py">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven-type-maven" class="md-nav__link">
+    Параметры для артефакта Maven (type: maven)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-type-docker" class="md-nav__link">
+    Параметры для артефакта Docker (type: docker)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-type-npm" class="md-nav__link">
+    Параметры для артефакта NPM (type: npm)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yum-type-yum" class="md-nav__link">
+    Параметры для артефакта Yum (type: yum)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raw-type-raw" class="md-nav__link">
+    Параметры для артефакта RAW (type: raw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-file_storage" class="md-nav__link">
+    Параметры для файлового хранилища (type: file_storage)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_resultspy" class="md-nav__link">
+    Специфические параметры скрипта import_results.py
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkmarx" class="md-nav__link">
+    Параметры для взаимодействия с Checkmarx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nexus-iq" class="md-nav__link">
+    Параметры для взаимодействия с Nexus IQ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Параметры для взаимодействия с кодовой базой
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Параметры для взаимодействия с артефактом
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="1-on-boarding">Приложение 1. Описание параметров запуска скриптов On-boarding<a class="headerlink" href="#1-on-boarding" title="Permanent link">⚓︎</a></h1>
+<h2 id="scan_codebasepy-scan_-artifactpy">Общие параметры для скриптов scan_codebase.py и scan_ artifact.py<a class="headerlink" href="#scan_codebasepy-scan_-artifactpy" title="Permanent link">⚓︎</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Корректное завершение работы скриптов возможно, только если указаны все необходимые параметры.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр<br></th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--url</code></td>
+<td align="center">+</td>
+<td>URL приложения AppSec.Hub</td>
+<td><code>--url https://hub.demo.swordfishsecurity.com</code></td>
+</tr>
+<tr>
+<td><code>--token</code></td>
+<td align="center">+</td>
+<td>Токен авторизации AppSec.Hub</td>
+<td><code>--token &lt;token&gt;</code></td>
+</tr>
+<tr>
+<td><code>--appcode</code></td>
+<td align="center">+</td>
+<td>Код приложения в БД AppSec.Hub</td>
+<td><code>--appcode dvja</code></td>
+</tr>
+<tr>
+<td><code>--tagged-artifact</code></td>
+<td align="center">–</td>
+<td>Артефакт, тегируемый в результате сканирования. Обязательный параметр, если соответствующее действие добавлено в Security Pipeline, в противном случае — игнорируется</td>
+<td><code>--tagged-artifact https://nexus.dev.swordfishsecurity.com/ repository/maven-releases/com/appsecco/dvja/1.0/dvja-1.0.war</code></td>
+</tr>
+<tr>
+<td><code>--insecure</code></td>
+<td align="center">–</td>
+<td>Отключает проверки безопасности (например, проверку SSL-сертификатов). По умолчанию —активирован</td>
+<td><code>--insecure</code></td>
+</tr>
+<tr>
+<td><code>--no-wait</code></td>
+<td align="center">–</td>
+<td>Если параметр задан, CLI не ожидает окончания сканирования</td>
+<td><code>--no-wait</code></td>
+</tr>
+<tr>
+<td><code>--debug</code></td>
+<td align="center">–</td>
+<td>Если параметр задан, «log level» — DEBUG. По умолчанию «log level» — INFO</td>
+<td><code>--debug</code></td>
+</tr>
+<tr>
+<td><code>--error</code></td>
+<td align="center">–</td>
+<td>Если параметр задан, «log level» — ERROR. По умолчанию «log level» — INFO</td>
+<td><code>--error</code></td>
+</tr>
+<tr>
+<td><code>--result-file</code></td>
+<td align="center">–</td>
+<td>Определяет имя и расположение JSON-файла с результатами сканирования*</td>
+<td><code>--result-file ./result.json</code></td>
+</tr>
+<tr>
+<td><code>--scan-initiator</code></td>
+<td align="center">–</td>
+<td>Информация об инициаторе сканирования (например, ссылка на соответствующую задачу TeamCity)</td>
+<td><code>--scan-initiator https://demo.teamcity...</code></td>
+</tr>
+<tr>
+<td><code>--scan-initiator-environment</code></td>
+<td align="center">–</td>
+<td>Среда окружения инициатора сканирования</td>
+<td><code>--scan-initiator-environment some information</code></td>
+</tr>
+<tr>
+<td><code>--unit</code></td>
+<td align="center">–</td>
+<td>Устанавливает соответствие между артефактом/кодовой базой и экземпляром приложения. Если объект не существует, он создается</td>
+<td><code>--unit Front</code></td>
+</tr>
+<tr>
+<td><code>--external-id</code></td>
+<td align="center">–</td>
+<td>Внешний идентификатор (external id) нового приложения. Если приложение существует, параметр будет пропущен</td>
+<td><code>--external-id new-app-external-id</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td align="center">–</td>
+<td>Отображение версии скрипта</td>
+<td><code>-v</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>см. раздел «<a href="">Приложение 3. Результаты сканирования</a>».</li>
+</ul>
+<h2 id="scan_codebasepy">Специфические параметры скрипта scan_codebase.py<a class="headerlink" href="#scan_codebasepy" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--codebase-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория основной кодовой базы</td>
+<td><code>--codebase-url https://github.com/appsecco/dvja.git</code></td>
+</tr>
+<tr>
+<td><code>--branch</code></td>
+<td align="center">–</td>
+<td>Ветвь репозитория или тэг основной кодовой базы. Значение по умолчанию — master</td>
+<td><code>--branch master</code></td>
+</tr>
+<tr>
+<td><code>--branch-filter</code></td>
+<td align="center">–</td>
+<td>Позволяет осуществить фильтрацию ветвей для сканирования. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — master</td>
+<td><code>--branch-filter feature/*</code><br>  <code>--branch-filter *</code><br>  <code>--branch-filter develop</code></td>
+</tr>
+<tr>
+<td><code>--codebase-name</code></td>
+<td align="center">–</td>
+<td>Имя кодовой базы в AppSec.Hub. Back-end AppSec.Hub должен использовать параметры appcode, <code>codebase-url</code> и <code>branch</code></td>
+<td><code>--codebase-name dvja-master</code></td>
+</tr>
+<tr>
+<td><code>--codebase-type</code></td>
+<td align="center">–</td>
+<td>Тип системы контроля версий. Значение по умолчанию — git</td>
+<td><code>--codebase-type git</code></td>
+</tr>
+<tr>
+<td><code>--additional-codebase-urls</code></td>
+<td align="center">–</td>
+<td>URL репозитория дополнительной кодовой базы — может содержать несколько ссылок, разделенных пробелом</td>
+<td><code>--additional-codebase-urls http://github.com/appsecco/dvja1.git http://github.com/appsecco/dvja2.git</code></td>
+</tr>
+<tr>
+<td><code>--additional-branches</code></td>
+<td align="center">–</td>
+<td>Тег или ветвь дополнительной кодовой базы. Значение по умолчанию — master. Вспомогательный параметр. Если он не определен или указано единственное значение, оно применяется ко всем дополнительным кодовым базам, заданным параметром additional_codebase_urls</td>
+<td><code>--additional-branches maser develop</code></td>
+</tr>
+<tr>
+<td><code>--codebase-build-tool</code></td>
+<td align="center">–</td>
+<td>Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — maven</td>
+<td><code>--codebase-build-tool maven</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scan_-artifactpy">Специфические параметры скрипта scan_ artifact.py<a class="headerlink" href="#scan_-artifactpy" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--artifact-url</code></td>
+<td align="center">–</td>
+<td>URL артефакта, хранящегося в Nexus RM или файловом хранилище. Если URL указан, другие параметры типов артефактов, игнорируются</td>
+<td><code>--artifact-url https://nexus.dev.swordfishsecurity.com/&lt;br&gt;repository/web-maven-test/com/mkyong/web/java-web-project/1.15/&lt;br&gt;java-web-project-1.15.war</code></td>
+</tr>
+<tr>
+<td><code>--artifact-type</code></td>
+<td align="center">–</td>
+<td>Обязательный параметр, если не указан artifact-url, в противном случае — вспомогательный. Допустимые значения: maven, docker, file_storage, npm, yum, raw</td>
+<td><code>--artifact-type maven</code></td>
+</tr>
+<tr>
+<td><code>--artifact-name</code></td>
+<td align="center">–</td>
+<td>Имя артефакта в AppSec.Hub</td>
+<td><code>--name java-web-project-war</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="maven-type-maven">Параметры для артефакта Maven (type: maven)<a class="headerlink" href="#maven-type-maven" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--repository-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория артефакта</td>
+<td><code>--repository_url https://nexus.dev.swordfishsecurity.com/repository/web-maven-test</code></td>
+</tr>
+<tr>
+<td><code>--repository-name</code></td>
+<td align="center">+</td>
+<td>Имя репозитория</td>
+<td><code>--repository_name web-maven-test</code></td>
+</tr>
+<tr>
+<td><code>--maven-group</code></td>
+<td align="center">+</td>
+<td>Идентификатор группы Maven</td>
+<td><code>--maven-group com.mkyong.web</code></td>
+</tr>
+<tr>
+<td><code>--maven-artifact</code></td>
+<td align="center">+</td>
+<td>Идентификатор артефакта Maven</td>
+<td><code>--maven-artifact java-web-project</code></td>
+</tr>
+<tr>
+<td><code>--maven-classifier</code></td>
+<td align="center">–</td>
+<td>Классификатор Maven</td>
+<td><code>--maven-classifier SNAPSHOT</code></td>
+</tr>
+<tr>
+<td><code>--maven-extension</code></td>
+<td align="center">+</td>
+<td>Тип файла или расширение</td>
+<td><code>--maven-extension war</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 1.15</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="docker-type-docker">Параметры для артефакта Docker (type: docker)<a class="headerlink" href="#docker-type-docker" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--docker-registry</code></td>
+<td align="center">+</td>
+<td>Имя хоста регистра Docker</td>
+<td><code>--docker-registry nexus.dev.swordfishsecurity.com</code></td>
+</tr>
+<tr>
+<td><code>--docker-registry-port</code></td>
+<td align="center">–</td>
+<td>Порт регистра Docker registry. Значение по умолчанию — 443</td>
+<td><code>--docker-registry-port 8096</code></td>
+</tr>
+<tr>
+<td><code>--docker-image</code></td>
+<td align="center">+</td>
+<td>Имя образа/контейнера Docker</td>
+<td><code>--docker-image java-web-project</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 1.15</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="npm-type-npm">Параметры для артефакта NPM (type: npm)<a class="headerlink" href="#npm-type-npm" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--repository-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория артефакта</td>
+<td><code>--repository-url https://nexus.dev.swordfishsecurity.com/repository/npm-private/</code></td>
+</tr>
+<tr>
+<td><code>--repository-name</code></td>
+<td align="center">+</td>
+<td>Имя репозитория</td>
+<td><code>--repository-name npm-private</code></td>
+</tr>
+<tr>
+<td><code>--package-name</code></td>
+<td align="center">+</td>
+<td>Имя пакета NodeJS</td>
+<td><code>--package-name ngclipboard</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 2.0.0</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="yum-type-yum">Параметры для артефакта Yum (type: yum)<a class="headerlink" href="#yum-type-yum" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--repository-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория артефакта</td>
+<td><code>--repository_url https://nexus.dev.swordfishsecurity.com/repository/web-yum-test</code></td>
+</tr>
+<tr>
+<td><code>--repository-name</code></td>
+<td align="center">+</td>
+<td>Имя репозитория</td>
+<td><code>--repository_name web-yum-test</code></td>
+</tr>
+<tr>
+<td><code>--relative-url</code></td>
+<td align="center">+</td>
+<td>Относительный URL, включая имя файла</td>
+<td><code>--relative-url web/web-${artifactVersion}.rpm</code></td>
+</tr>
+<tr>
+<td><code>--component-name</code></td>
+<td align="center">+</td>
+<td>Имя компонента</td>
+<td><code>--component-name web</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 1.15</code></td>
+</tr>
+<tr>
+<td><code>--build</code></td>
+<td align="center">–</td>
+<td>Версия сборки артефакта</td>
+<td><code>--build 12345</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="raw-type-raw">Параметры для артефакта RAW (type: raw)<a class="headerlink" href="#raw-type-raw" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--repository-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория артефакта</td>
+<td><code>--repository-url https://nexus.dev.swordfishsecurity.com/&lt;br&gt;repository/web-raw-test</code></td>
+</tr>
+<tr>
+<td><code>--repository-name</code></td>
+<td align="center">+</td>
+<td>Имя репозитория</td>
+<td><code>--repository-name web-raw-test</code></td>
+</tr>
+<tr>
+<td><code>--relative-url</code></td>
+<td align="center">+</td>
+<td>Относительный URL, включая имя файла</td>
+<td><code>--relative-url dvja/dvja-${artifactVersion}.zip</code></td>
+</tr>
+<tr>
+<td><code>--component-name</code></td>
+<td align="center">+</td>
+<td>Имя компонента</td>
+<td><code>--component-name dvja</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 1.15</code></td>
+</tr>
+<tr>
+<td><code>--build</code></td>
+<td align="center">–</td>
+<td>Версия сборки артефакта</td>
+<td><code>--build 12345</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="type-file_storage">Параметры для файлового хранилища (type: file_storage)<a class="headerlink" href="#type-file_storage" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--repository-url</code></td>
+<td align="center">+</td>
+<td>URL репозитория артефакта</td>
+<td><code>--repository-url https://nexus.dev.swordfishsecurity.com/&lt;br&gt;repository/web-raw-test</code></td>
+</tr>
+<tr>
+<td><code>--relative-url</code></td>
+<td align="center">+</td>
+<td>Относительный URL, включая имя файла</td>
+<td><code>--relative-url dvja/dvja-${artifactVersion}.zip</code></td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td align="center">+</td>
+<td>Версия артефакта</td>
+<td><code>--version 1.15</code></td>
+</tr>
+<tr>
+<td><code>--build</code></td>
+<td align="center">–</td>
+<td>Версия сборки артефакта</td>
+<td><code>--build 12345</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="import_resultspy">Специфические параметры скрипта import_results.py<a class="headerlink" href="#import_resultspy" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--quality-gate-code</code></td>
+<td align="center">–</td>
+<td>Буквенно-цифровой идентификатор QG. Если данный параметр указан, импортируемые результаты будут интерпретированы с учетом Quality Gate, код которого передан в данном параметре. Если параметр отсутствует, проверка QG не осуществляется</td>
+<td><code>--quality-gate-code no-critical-issues</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="checkmarx">Параметры для взаимодействия с Checkmarx<a class="headerlink" href="#checkmarx" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--cx-tool-url</code></td>
+<td align="center">+</td>
+<td>URL экземпляра Checkmarx</td>
+<td><code>--cx-tool-url https://cx.dev.swordfishsecurity.com</code></td>
+</tr>
+<tr>
+<td><code>--cx-project-name</code></td>
+<td align="center">+</td>
+<td>Имя проекта в экземпляре Checkmarx, указанном выше</td>
+<td><code>--cx-project-name DVJA_dvja-master</code></td>
+</tr>
+<tr>
+<td><code>--cx-team</code></td>
+<td align="center">–</td>
+<td>Имя команды Checkmarx. Значение по умолчанию: CxServer</td>
+<td><code>--cx-team CxServer\DEV\DVJA</code></td>
+</tr>
+<tr>
+<td><code>--cx-scan-id</code></td>
+<td align="center">–</td>
+<td>Идентификатор сканирования в проекте Checkmarx. При отсутствии параметра импортируются результаты последнего сканирования</td>
+<td><code>--cx-scan-id 1000650</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="nexus-iq">Параметры для взаимодействия с Nexus IQ<a class="headerlink" href="#nexus-iq" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--nxiq-tool-url</code></td>
+<td align="center">+</td>
+<td>URL экземпляра Nexus IQ</td>
+<td><code>--nxiq-tool-url https://nxiq.dev.swordfishsecurity.com</code></td>
+</tr>
+<tr>
+<td><code>--nxiq-app</code></td>
+<td align="center">+</td>
+<td>Общий идентификатор приложения</td>
+<td><code>--nxiq-app DVJA_dvjawar</code></td>
+</tr>
+<tr>
+<td><code>--nxiq-org</code></td>
+<td align="center">+</td>
+<td>Название организации</td>
+<td><code>--nxiq-org DVJA</code></td>
+</tr>
+<tr>
+<td><code>--nxiq-stage</code></td>
+<td align="center">+</td>
+<td>Этап сканирования приложения. Возможные значения: build, stage-release, release, operate</td>
+<td><code>--nxiq-stage build</code></td>
+</tr>
+<tr>
+<td><code>--nxiq-report</code></td>
+<td align="center">–</td>
+<td>Идентификатор отчета приложения Nexus IQ. При отсутствии параметра импортируются результаты последнего сканирования</td>
+<td><code>--nxiq-report 014519a0a02e4e5fa4d47c56bd3ca509</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_1">Параметры для взаимодействия с кодовой базой<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--url</code></td>
+<td align="center">+</td>
+<td>URL удаленных клонируемых/проверяемых репозиториев кодовых баз</td>
+<td><code>--codebase-url https://github.com/appsecco/dvja.git</code></td>
+</tr>
+<tr>
+<td><code>--branch</code></td>
+<td align="center">–</td>
+<td>Ветвь репозитория или тег основной кодовой базы. Значение по умолчанию: master</td>
+<td><code>--branch master</code></td>
+</tr>
+<tr>
+<td><code>--checkout-path</code></td>
+<td align="center">+</td>
+<td>Относительный путь до кодовой базы</td>
+<td><code>--/&lt;br&gt;or&lt;br&gt;--/ /plugin/</code></td>
+</tr>
+<tr>
+<td><code>--commit</code></td>
+<td align="center">–</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>--branch-filter</code></td>
+<td align="center">–</td>
+<td>Фильтр сканируемых ветвей. Может применяться к основной и дополнительной кодовым базам. Значение по умолчанию: master</td>
+<td><code>--branch-filter feature/*&lt;br&gt;--branch-filter *&lt;br&gt;--branch-filter develop</code></td>
+</tr>
+<tr>
+<td><code>--codebase-name</code></td>
+<td align="center">–</td>
+<td>Имя кодовой базы в AppSec.Hub. Back-end AppSec.Hub должен использовать appcode, codebase-url и branch</td>
+<td><code>--codebase-name dvja-master</code></td>
+</tr>
+<tr>
+<td><code>--codebase-type</code></td>
+<td align="center">–</td>
+<td>Тип VCS type. Возможное значение: git<br>Значение по умолчанию: git</td>
+<td><code>--codebase-type git</code></td>
+</tr>
+<tr>
+<td><code>--codebase-build-tool</code></td>
+<td align="center">–</td>
+<td>Инструмент сборки исходного кода. Возможные значение: N/A, maven, gradle, nuget, npm, pip<br>. Значение по умолчанию: maven</td>
+<td><code>--codebase-build-tool nuget</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_2">Параметры для взаимодействия с артефактом<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h4>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th align="center">Обязат.<br>параметр</th>
+<th>Описание</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--artifact-url</code></td>
+<td align="center">+</td>
+<td>URL артефакта в Nexus RM или в любом файловом хранилище</td>
+<td><code>--artifact-url https://nexus.dev.swordfishsecurity.com/repository/web-maven-test/com/mkyong/web/java-web-project/1.15/java-web-project-1.15.war</code></td>
+</tr>
+<tr>
+<td><code>--artifact-name</code></td>
+<td align="center">–</td>
+<td>Имя артефакта в AppSec.Hub</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
+      
+        
+        <a href="../appendices/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Приложения" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Приложения
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../appendix%202/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Приложение 2. Примеры запуска скриптов для интеграции" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Приложение 2. Примеры запуска скриптов для интеграции
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    © 2020—2022&nbsp;&nbsp;<a href="https://swordfishsecurity.ru/" target="_blank" rel="noopener">
+      Swordfish Security</a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.shares", "content.code.annotate"], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "search": "../../assets/javascripts/workers/search.d5a3c699.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

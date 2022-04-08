@@ -1,3 +1,7 @@
+<head>
+<meta http-equiv="refresh" content="0;URL=gi/">
+</head>
+
 # Документация AppSec.Hub
 
 * [Общая информация](gi/)
