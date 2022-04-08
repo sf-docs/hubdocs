@@ -17,4 +17,4 @@
 <figure markdown>![](img/147.png)</figure>
 
 !!! note "Примечание"
-    После изменения параметров в файле app.properties необходимо выполнить рестарт системы см. разделы «[Остановка AppSec.Hub]()» и «[Запуск AppSec.Hub]()».
+    После изменения параметров в файле app.properties необходимо выполнить рестарт системы см. разделы «[Остановка AppSec.Hub](../installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_3)» и «[Запуск AppSec.Hub](../installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_2)».

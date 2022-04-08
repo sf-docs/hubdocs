@@ -1,5 +1,6 @@
 # Приложение. Список событий аудита
 
+<figure markdown>
 Событие|Описание
 -|-
 `application.created`|Новое приложение было добавлено в AppSec.Hub
@@ -10,7 +11,7 @@
 `application.integrity.activated`|Функция «Integrity check» была включена для приложения
 `application.integrity.deactivated`|Функция «Integrity check» была выключена для приложения
 `application.workspace.updated`|Приложение было переведено в другое рабочее пространство (workspace)
-`authentication.login`|Пользователь попытался войти в AppSec.Hub:<br>– `eventResult: success` — пользователь был успешно авторизован;<br>– `eventResult: fail` — пользователю отказано в доступе (например, ввёл некорректные логин/пароль)
+`authentication.login`|Пользователь попытался войти в AppSec.Hub:<br>– eventResult: success — пользователь был успешно авторизован;<br>– eventResult: fail — пользователю отказано в доступе (например, ввёл некорректные логин/пароль)
 `authentication.logout`|Пользователь вышел из AppSec.Hub
 `defect.created`|Создан дефект ИБ
 `defect.deleted`|Удалён дефект ИБ
@@ -56,3 +57,4 @@
 `workspace.group.revoked`|Доступ к рабочему пространству был закрыт для команды
 `workspace.tool.assigned`|Инструмент был добавлен в рабочее пространство
 `workspace.tool.revoked`|Инструмент был удалён из рабочего пространства
+</firure>

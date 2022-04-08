@@ -2,6 +2,7 @@
 
 В таблице ниже приведены необходимые для успешной интеграции роли в инструментах.
 
+<figure markdown>
 Инструмент|Роль в инструменте
 -|-
 Bitbucket|N/A
@@ -14,3 +15,4 @@ Netsparker|Account Owner
 Nexus IQ|Owner
 Nexus Repository Manager|nx-admin
 TeamCity|Project Administrator + System Administrator for Export Pipeline
+</figure>
