@@ -101,8 +101,8 @@ plugins:
         - en
         - ru
 
-# repo_url: https://github.com/andreygladilin/mktest
-# repo_name: andreygladilin/mktest
+repo_url: https://github.com/andreygladilin/mktest
+repo_name: andreygladilin/mktest
 
 # extra:
 #  social:
