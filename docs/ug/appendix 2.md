@@ -1,11 +1,12 @@
 # Приложение 2. Примеры запуска скриптов для интеграции
 
 ## Сканирование кодовой базы scan_codebase.py
-    py scan_codebase.py \
-        --url http://hub.dev.swordfishsecurity.com/ \
+    py scan_codebase.py --url http://hub.dev.swordfishsecurity.com/ \
         --token ***** \
-        --appcode 09022021_cli --branch master \
-        --codebase-url http://gitlab.service.swordfishsecurity.com/test/java-web-project.git
+        --appcode 0902202-1_cli \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --branch-filet develop
 
 ## Сканирование артефакта по URL scan_artifact.py
 
@@ -31,30 +32,26 @@
         --url http://hub.dev.swordfishsecurity.com \
         --token ****** \
         --appcode 09022021_cli \
-        --artifact-url https://nexus.dev.swordfishsecurity.com/...6776543-1.09-classifer.war
+        --artifact-url https://nexus.dev.swordfishsecurity.com/repository/maven-releases/com/appsecco/456776543/1.09/456776543-1.09-classifer.war 
 
 ### type: yum
 
-    py scan_artifact.py --url http://hub.dev.swordfishsecurity.com/ \
+    py scan_artifact.py --url http://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --artifact-type yum \
-        --artifact-name rpm \
-        --repository-url https://nexus.dev.swordfishsecurity.com/ \
-        --component-name pochtaid-user-history.assembly-4.5.0-SNAPSHOT20200619055220.noarch.rpm \
-        --relative-url postid-yum/...SNAPSHOT20200619055220.noarch.rpm \
-        --repository-name postid-yum \
-        --version 4.5.0
+        --artifact-url https://nexus.dev.swordfishsecurity.com/repository/postid-yum/pochtaid-user-history.assembly-4.5.0-SNAPSHOT20200619055220.noarch.rpm
 
-### type: docker — способ 1
+### type: docker
+
+#### Cпособ 1
 
     py scan_artifact.py \
         --url http://hub.dev.swordfishsecurity.com/ \
         --token ***** \
         --appcode 09022021_cli \
-        --artifact-url https://nexus.dev.swordfishsecurity.com/.../java-web-project/manifests/1.17
+        --artifact-url https://nexus.dev.swordfishsecurity.com/repository/docker-private/v2/java-web-project/manifests/1.17
 
-### type: docker — способ 2
+#### Cпособ 2
 
     py scan_artifact.py \
         --url http://hub.dev.swordfishsecurity.com/ \
@@ -64,16 +61,13 @@
 
 ### type: npm
 
-    py scan_artifact.py --url http://hub.dev.swordfishsecurity.com \
+    py scan_artifact.py \
+        --url http://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --artifact-type npm \
-        --repository-url https://nexus.dev.swordfishsecurity.com/ \
-        --repository-name npm-group \
-        --package-name ngclipboard \
-        --version 2.0.0
+        --artifact-url https://nexus.dev.swordfishsecurity.com/repository/npm-group/ngclipboard/-/ngclipboard-2.0.0.tgz
 
-## Сканирование артефакта, идентифицируемого в AppSec.Hub по параметрам (например, группа, artifact ID и версия для артефактов Maven)
+<!-- ## Сканирование артефакта, идентифицируемого в AppSec.Hub по параметрам (например, группа, artifact ID и версия для артефактов Maven)
 
 ### type: file-storage
 
@@ -151,7 +145,7 @@
         --url http://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --artifact-url https://nexus.dev.swordfishsecurity.com/.../ngclipboard-2.0.0.tgz
+        --artifact-url https://nexus.dev.swordfishsecurity.com/.../ngclipboard-2.0.0.tgz -->
 
 ## Импорт результатов import_results.py
 
@@ -161,10 +155,9 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase-urls http://gitlab.service.swordfishsecurity.com/test/java-web-project.git \
-        http://gitlab.service.swordfishsecurity.com/test/web-project.git \
-        --branch master \
-        --checkout-paths / /web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --build-tool maven \
         --cx-tool-url https://cx93.dev.swordfishsecurity.com \
         --cx-project-name kgaranov_19082021_2_-master_1 \
         --cx-team /CxServer/asdfsadfASDFASDF/kgaranov_19082021_2 \
@@ -176,7 +169,7 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --artifact-url https://nexus.test.swordfishsecurity.com/java-web-project:1.17 \
+        --artifact https://nexus.test.swordfishsecurity.com/java-web-project:1.1;web-project;
         --nxiq-tool-url https://nxiq.dev.swordfishsecurity.com \
         --nxiq-app 12072021_nxiq_java-web-projectdocker \
         --nxiq-org 12072021_nxiq \
@@ -185,17 +178,31 @@
         --quality-gate no-critical-issues
 
 ### Импорт результатов из Nexus IQ (кодовая база)
+    
     py import_results.py \
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase-urls http://gitlab.service.swordfishsecurity.com/test/java-web-project.git \
-          http://gitlab.service.swordfishsecurity.com/test/web-project.git \
-        --checout-paths 
-        --checkout-paths / /web-project \
-        --nxiq-tool-url https://nxiq.dev.swordfishsecurity.com \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --build-tool maven \
+        --dp-tool-url https://nxiq.dev.swordfishsecurity.com \
         --nxiq-app 12072021_nxiq_2_java-web-project-master \
         --nxiq-org 12072021_nxiq_2 \
         --nxiq-stage operate \
         --nxiq-report 5bbfc21a24864254a58c905d475a0ea4 \
+        --quality-gate no-critical-issues
+
+### Импорт результатов из Dependency track (кодовая база)
+
+    py import_results.py \
+        --url https://hub.dev.swordfishsecurity.com \
+        --token ***** \
+        --appcode 09022021_cli \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --build-tool maven \
+        --dt-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080 \
+        --dt-project-name Dependency_Track_java-web-project-master \
+        --dt-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9 \
         --quality-gate no-critical-issues
