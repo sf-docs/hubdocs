@@ -188,7 +188,7 @@ LDAP пользователи могут быть добавлены в AppSec.H
 
 Сопоставление групп выполняется на вкладке **Group mapping** на странице **LDAP Settings**.
 
-<figure markdown>![](img/81.png)</figure>
+<figure markdown>![](img/83.png)</figure>
 
 Поле **Base DN for groups** определяет Base DN в терминах LDAP. Введите фильтр в поле **Filter for groups and roles** и нажмите кнопку **Create** в нижней части вкладки.
 
