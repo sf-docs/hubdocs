@@ -170,13 +170,13 @@ LDAP пользователи могут быть добавлены в AppSec.H
 
 Сопоставление ролевой модели выполняется на вкладке **Role model mapping** на странице **LDAP Settings**.
 
-<figure markdown>![](img/80.png)</figure>
+<figure markdown>![](img/81.png)</figure>
 
 Поле Base **DN for groups and roles** определяет Base DN в терминах LDAP. Введите фильтр в поле **Filter for groups and roles** и нажмите кнопку **Create** в нижней части вкладки. Сообщение, подтверждающее обновление сопоставления ролевой модели, появится в правом нижнем углу экрана.
 
 На вкладке **Role model mapping** теперь доступны новые поля **Hub role** и **LDAP group**. Чтобы сопоставить роли пользователей в AppSec.Hub и LDAP группы, кликните поле **Hub role** и выберите роль пользователя в системе из выпадающего списка, кликните поле **LDAP group** и выберите группу LDAP из выпадающего списка, а затем нажмите справа кнопку ![](img/74.png).
 
-<figure markdown>![](img/81.png)</figure>
+<figure markdown>![](img/80.png)</figure>
 
 На рисунке выше все пользователи домена LDAP получают роль пользователя Developer в AppSec.Hub.
 
