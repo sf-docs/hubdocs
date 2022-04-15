@@ -206,3 +206,17 @@
         --dt-project-name Dependency_Track_java-web-project-master \
         --dt-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9 \
         --quality-gate no-critical-issues
+
+### Импорт результатов из PT Application inspector (кодовая база)
+
+    py import_results.py \
+        --url https://hub.dev.swordfishsecurity.com \
+        --token ***** \
+        --appcode 09022021_cli \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --build-tool maven \
+        --ptai-tool-url https://ptai.dev.swordfishsecurity.com \
+        --ptai-project-id 2e96ce1d-1a32-4376-bfca-f7f1a17128c9 \
+        --ptai-scan-results-id c40b439e-0312-4a38-9bb8-8cea931b3bd9 \
+        --quality-gate no-critical-issues

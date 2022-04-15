@@ -35,7 +35,7 @@
 `codebase-url`|+|URL кодовой базы|`https://github.com/appsecco/dvja.git`
 `branch`|–|Ветка репозитория. Значение по умолчанию — master|`master`
 `commit`|–|Коммит|`9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888`
-`checkout-path`|–|Директория расположения кодовой базы|`/`
+`checkout-path`|+|Директория расположения кодовой базы|`/`<br>`or`<br>`/conf`
 `name`|–|Имя кодовой базы в AppSec.Hub. Бекэнд  AppSec.Hub должен использовать `appcode`, `codebase-url` и `branch`.|`dvja-master`
 
 ## Специфические параметры скрипта scan_artifact.py
@@ -141,7 +141,7 @@
 `--dt-project-name`|+|Имя проекта в Dependecy track|`--dp-project-name Dependency_Track_java-web-project-master`
 `--dt-project-uuid`|+|Идентификатор в Dependecy track|`--dp-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
 
-### Параметры для взаимодействия с Dependency track
+### Параметры для взаимодействия с PT Application
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
