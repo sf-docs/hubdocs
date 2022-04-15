@@ -141,6 +141,14 @@
 `--dt-project-name`|+|Имя проекта в Dependecy track|`--dp-project-name Dependency_Track_java-web-project-master`
 `--dt-project-uuid`|+|Идентификатор в Dependecy track|`--dp-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
 
+### Параметры для взаимодействия с Dependency track
+
+Параметр|Обязат.<br>параметр|Описание|Пример
+-|:-:|-|-
+`--ptai-tool-url`|+|URL экземпляра PT AI|`--ptai-tool-url https://ptai.dev.swordfishsecurity.com`
+`--ptai-project-id`|+|Идентификатор проекта в PT AI|`--ptai-project-id 2e96ce1d-1a32-4376-bfca-f7f1a17128c9`
+`--ptai-scan-results-id`|+|Имя проекта в PT AI|`--ptai-scan-results-id c40b439e-0312-4a38-9bb8-8cea931b3bd9`
+
 ### Параметры для взаимодействия с кодовой базой
 
 Параметр|Обязат.<br>параметр|Описание|Пример
