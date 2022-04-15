@@ -8,7 +8,7 @@
 
 Для настройки HTTPS соединения необходимо получить подписанные удостоверяющим центром сертификаты (открытый и закрытый) в формате PEM. Шаги настройки:
 
-* Полученные сертификаты положить в папку /opt/apphub/ssl:
+* Полученные сертификаты положить в папку `/opt/apphub/ssl`:
 
         $ ls -l ./ssl/
         total 16
@@ -22,7 +22,7 @@
         - ./logs/hub-ui:/var/log/nginx
         - ./ssl:/etc/ssl/certs/ssl-cert:ro
 
-* Изменить конфигурацию /opt/apphub/nginx/hub.conf (hub-ui), для использования SSL:
+* Изменить конфигурацию `/opt/apphub/nginx/hub.conf` (hub-ui), для использования SSL:
 
         listen 443 ssl;
         ssl_certificate /etc/ssl/certs/ssl-cert/hub.crt; # certificate

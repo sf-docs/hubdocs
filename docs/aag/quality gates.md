@@ -35,13 +35,13 @@ AppSec.Hub позволяет создать и настроить для раб
 
 ## Настройка профиля Quality Gate
 
-Чтобы перейти к настройке профиля Quality Gate, нажмите иконку **Show/edit details** в правом нижнем углу его карточки. Более подробная информация о создании профиля Quality Gates приведена выше в разделе «[Создание профиля Quality Gate](../quality%20gates/#quality-gate)» см. выше.
+Чтобы перейти к настройке профиля Quality Gate, нажмите иконку **Show/edit details** в правом нижнем углу его карточки. Более подробная информация о создании профиля Quality Gates приведена выше в разделе «[Создание профиля Quality Gate](../quality%20gates/#quality-gate)».
 
 <figure markdown>![](img/114.png)</figure>
 
 На странице профиля Quality Gate имеется две вкладки:
 
-* Вкладка **Conditions** используется для определения условий Quality Gate.
+* Вкладка **Conditions** используется для определения условий критерия качества, задаваемого данным Quality Gate.
 
     <figure markdown>![](img/115.png)</figure>
 
