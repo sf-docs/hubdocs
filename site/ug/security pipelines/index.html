@@ -1,0 +1,2326 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Security Pipelines - Документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="appsechub" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#security-pipelines" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация" class="md-header__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Security Pipelines
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gi/" class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Руководство пользователя
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aag/" class="md-tabs__link">
+        Руководство администратора
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sag/" class="md-tabs__link">
+        Руководство администратора ИБ
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация" class="md-nav__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Документация
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../gi/">Общая информация</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Общая информация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/tool%20description/" class="md-nav__link">
+        Описание инструмента
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/user%20workstation%20requirements/" class="md-nav__link">
+        Требования к рабочему месту пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/glossary/" class="md-nav__link">
+        Термины и сокращения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Руководство пользователя</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство пользователя" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство пользователя
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Работа с приложениями
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Работа с приложениями" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Работа с приложениями
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work%20with%20applications/" class="md-nav__link">
+        Приложения в AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding%20a%20new%20application/" class="md-nav__link">
+        Добавление нового приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20settings/" class="md-nav__link">
+        Настройки приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20configuration/" class="md-nav__link">
+        Конфигурация приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Security Pipelines
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Security Pipelines
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline" class="md-nav__link">
+    Структура Security Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_1" class="md-nav__link">
+    Настройки Security Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-gate-security-pipelines" class="md-nav__link">
+    Добавление Quality Gate в Security Pipelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    История сканирований
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    Экспорт в CI/CD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_2" class="md-nav__link">
+    Доступ к Security Pipeline в инструменте оркестрации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_3" class="md-nav__link">
+    Security Pipeline исходного кода
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Pipeline исходного кода">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-pipeline_4" class="md-nav__link">
+    Security Pipeline нескольких кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkmarx" class="md-nav__link">
+    Динамические пресеты в Checkmarx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_5" class="md-nav__link">
+    Security Pipeline артефакта
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Pipeline артефакта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Тегирование артефактов
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    Webhooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-webhook" class="md-nav__link">
+    Custom webhook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Сканирование
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-pipeline_6" class="md-nav__link">
+    Security Pipeline нескольких артефактов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_7" class="md-nav__link">
+    Security Pipeline экземпляра приложения
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../on-boarding/" class="md-nav__link">
+        On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Проблемы и дефекты безопасности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Проблемы и дефекты безопасности" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Проблемы и дефекты безопасности
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling%20security%20problems%20and%20defects/" class="md-nav__link">
+        Работа с проблемами и дефектами безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20issues/" class="md-nav__link">
+        Проблемы безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20defects/" class="md-nav__link">
+        Дефекты безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting%20of%20synchronisation%20with%20Jira/" class="md-nav__link">
+        Синхронизация с Jira — настройки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        Аналитика
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" data-md-state="indeterminate" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%201/" class="md-nav__link">
+        Приложение 1. Описание параметров запуска скриптов On-boarding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%202/" class="md-nav__link">
+        Приложение 2. Примеры запуска скриптов для интеграции
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%203/" class="md-nav__link">
+        Приложение 3. Результаты сканирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%204/" class="md-nav__link">
+        Приложение 4. Коды выхода Meta-runner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%205/" class="md-nav__link">
+        Приложение 5. Конфигурационный файл app.properties
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../aag/">Руководство администратора</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/" class="md-nav__link">
+        Установка, запуск и обновление AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Интеграции
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Интеграции" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Интеграции
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20tools/" class="md-nav__link">
+        Интеграция с инструментами
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20software%20development%20tools/" class="md-nav__link">
+        Интеграция с инструментами разработки ПО
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20ast%20tools/" class="md-nav__link">
+        Интеграция с инструментами AST
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/itegration%20with%20wiki%20tools/" class="md-nav__link">
+        Интеграция с инструментами Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/selection%20of%20priority%20tools/" class="md-nav__link">
+        Выбор приоритетных инструментов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/disabling%20tools/" class="md-nav__link">
+        Отключение инструментов
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" data-md-state="indeterminate" type="checkbox" id="__nav_3_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Конфигурация
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурация" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20configuration/" class="md-nav__link">
+        Конфигурация AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/users%20and%20teams/" class="md-nav__link">
+        Пользователи и команды
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/organisation%20of%20workspaces/" class="md-nav__link">
+        Организация рабочих пространств
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/setting%20up%20notifications/" class="md-nav__link">
+        Настройка уведомлений
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/quality%20gates/" class="md-nav__link">
+        Quality Gates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/tagging%20settings/" class="md-nav__link">
+        Настройки тегирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/categories%20of%20vulnerabilities/" class="md-nav__link">
+        Категории уязвимостей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/custom%20webhooks%20configuration/" class="md-nav__link">
+        Конфигурация Custom webhooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/application%20vulnerability%20correlation%20settings/" class="md-nav__link">
+        Настройки корреляции уязвимостей приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/managing%20the%20number%20of%20tasks%20import%20streams/" class="md-nav__link">
+        Управление количеством задач/потоков импорта
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20licence%20management/" class="md-nav__link">
+        Управление лицензией AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" data-md-state="indeterminate" type="checkbox" id="__nav_3_6" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%201/" class="md-nav__link">
+        Приложение 1. Список параметров системы, заполняемыx в процессе установки
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%202/" class="md-nav__link">
+        Приложение 2. Список контейнеров
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%203/" class="md-nav__link">
+        Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../sag/">Руководство администратора ИБ</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора ИБ" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора ИБ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/protected%20objects/" class="md-nav__link">
+        Объекты защиты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/users%20and%20groups/" class="md-nav__link">
+        Пользователи и группы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/secure%20configuration/" class="md-nav__link">
+        Безопасная конфигурация
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/session%20lifetime/" class="md-nav__link">
+        Время жизни сессии
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/audit%20logs/" class="md-nav__link">
+        Журналы аудита
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/appendix%201/" class="md-nav__link">
+        Приложение. Список событий аудита
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline" class="md-nav__link">
+    Структура Security Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_1" class="md-nav__link">
+    Настройки Security Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-gate-security-pipelines" class="md-nav__link">
+    Добавление Quality Gate в Security Pipelines
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    История сканирований
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cicd" class="md-nav__link">
+    Экспорт в CI/CD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_2" class="md-nav__link">
+    Доступ к Security Pipeline в инструменте оркестрации
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_3" class="md-nav__link">
+    Security Pipeline исходного кода
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Pipeline исходного кода">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-pipeline_4" class="md-nav__link">
+    Security Pipeline нескольких кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checkmarx" class="md-nav__link">
+    Динамические пресеты в Checkmarx
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_5" class="md-nav__link">
+    Security Pipeline артефакта
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Pipeline артефакта">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Тегирование артефактов
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks" class="md-nav__link">
+    Webhooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-webhook" class="md-nav__link">
+    Custom webhook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Сканирование
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-pipeline_6" class="md-nav__link">
+    Security Pipeline нескольких артефактов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-pipeline_7" class="md-nav__link">
+    Security Pipeline экземпляра приложения
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="security-pipelines">Security Pipelines</h1>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Для выполнения нижеописанных действий требуется роль Менеджер.</p>
+</div>
+<h2 id="security-pipeline">Структура Security Pipeline</h2>
+<p>В AppSec.Hub каждый Security Pipeline привязан к приложению. Security Pipeline выполняет сканирование безопасности. Security Pipeline позволяет создать и использовать автоматизированные процессы тестирования безопасности приложений в рабочих пространствах для разработки, тестирования и развертывания приложений в различных средах.</p>
+<p>Security Pipelines предназначены для анализа трех различных типов объектов. Таким образом, существует три вида Security Pipelines:</p>
+<ul>
+<li>Security Pipeline исходного кода (source code Security Pipeline).</li>
+<li>Security Pipeline артефактов (artifact Security Pipeline).</li>
+<li>Security Pipeline экземпляра приложения (application instance Security Pipeline).</li>
+</ul>
+<p>Security Pipelines создаются в инструменте оркестрации (TeamCity) для конкретной кодовой базы / артефакта / экземпляра приложения на основе конфигурации используемых инструментов разработки ПО и инструментов AST.</p>
+<p>AppSec.Hub предоставляет возможность запуска тестирования безопасности нажатием кнопки <strong>Start scan</strong> <img alt="" src="../img/55.png" /> на карточке Security Pipeline.</p>
+<p>Выберите пункт меню <strong>Applications</strong> в верхнем левом углу экрана, чтобы начать работу с приложениями и их пайплайнами. На экране появятся карточки приложений.</p>
+<figure>
+<p><img alt="" src="../img/3.png" /></p>
+</figure>
+<p>Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> в правом нижнем углу карточки приложения на странице <strong>Applications</strong>. Появится экран с названием выбранного приложения в верхнем левом углу и с подробной информацией о выбранном приложении. Выберите элемент меню <strong>DevSecOps</strong> слева. На экране появятся вкладки с тремя типами Security Pipelines для выбранного приложения, а также вкладка <strong>DevSecOps perimeter control</strong>, предназначенная для работы с прокси-репозиториями. Описание работы с прокси-репозиториями приведено в разделе «<a href="../application%20configuration/#_1">Конфигурация приложения</a>».</p>
+<figure>
+<p><img alt="" src="../img/56.png" /></p>
+</figure>
+<p>Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> в правом нижнем углу карточки Security Pipeline, чтобы просмотреть или обновить сведения об этом пайплайне. Например, при нажатии на иконку редактирования <img alt="" src="../img/54.png" /> на карточке Security Pipeline исходного кода можно получить следующую информацию о пайплайне на вкладке <strong>Structure</strong>:</p>
+<ul>
+<li>Используемый инструмент VCS (Version Control System, система управления версиями), URL кодовой базы, тип ветки кода, инструмент сборки.</li>
+<li>Инструмент оркестрации (CI/CD) и его URL.</li>
+<li>Инструмент для сканирования безопасности (например, Checkmarx) и используемый режим сканирования (например, инкрементальный).</li>
+<li>Общая информация — последний экспорт в CI/CD, последнее сканирование, дата последнего обновления, статус автоматического импорта security issues.
+    <img alt="" src="../img/57.png" /></li>
+</ul>
+<p>Security Pipeline исходного кода содержит несколько карточек — по одной на каждый инструмент, задействованный в пайплайне. На рисунке выше показан Security Pipeline исходного кода, который состоит из трех частей (или трех карточек):</p>
+<ul>
+<li>Кодовая база с исходным кодом.</li>
+<li>Инструмент оркестрации CI/CD.</li>
+<li>Инструмент AST (Checkmarx).</li>
+</ul>
+<p>Процесс конфигурации Security Pipeline включает следующие шаги:</p>
+<ul>
+<li>Выбор инструментов разработки ПО и инструментов AST.</li>
+<li>Настройка выбранных инструментов.</li>
+<li>Определение критериев качества и создание Quality Gate (описание работы с QG приведено в разделах «<a href="../security%20pipelines/#quality-gate-security-pipelines">Добавление Quality Gate в Security Pipelines</a>» данного документа и «<a href="../../aag/quality%20gates/#quality-gates">Quality Gates</a>» Руководства прикладного администратора).</li>
+</ul>
+<p>Набор используемых инструментов определяется в зависимости от имеющихся лицензий. Настройки каждого инструмента определяются в AppSec.Hub. Рассмотрим в качестве примера конфигурацию инструмента Checkmarx. Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> в правом нижнем углу карточки Checkmarx. Появится окно <strong>Update SAST scan config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/58.png" /></p>
+</figure>
+<p>Задайте настройки Checkmarx в этом окне:</p>
+<ul>
+<li><strong>Scan mode</strong> — выберите из выпадающего меню пункт Full или Incremental.</li>
+<li><strong>Predefined preset/Dynamically modified preset</strong> — выбор предустановленного или динамического пресета, который будет использоваться при сканировании. Более подробная информация об использовании динамических пресетов для инструмента Checkmarx приведена в разделе «<a href="../security%20pipelines/#security-pipeline_3">Security Pipeline исходного кода</a>».</li>
+<li><strong>Preset</strong> — выберите правила, определенные в Checkmarx (Checkmarx Default, Checkmarx Express, All, High and Medium и т. д.). Данное поле активно, если выбран <strong>Predefined preset</strong>.</li>
+<li><strong>Root team</strong> — определяется в настройках Checkmarx.</li>
+<li><strong>Team</strong> — выберите структурную единицу из выпадающего меню.</li>
+<li><strong>Excluded directories</strong> — указанные здесь каталоги не будут проверяться во время сканирования безопасности.</li>
+</ul>
+<p>Нажмите кнопку <strong>Update</strong>, чтобы сохранить настройки Checkmarx. Карточка инструмента Checkmarx после конфигурации будет отображать вновь заданные настройки. Кроме того, она содержит ссылку на проект в Checkmarx. Если нажать эту ссылку, то через в появившемся окне инструмента можно ввсети свои учетные данные и зайти в проект Checkmarx.</p>
+<p>Обратите внимание, что AppSec.Hub автоматически обновляет настройки в самом инструменте Checkmarx — никакие дополнительные действия пользователя не требуются.</p>
+<p>Пользователь AppSec.Hub с правами Менеджера может выполнить следующие действия с Security Pipeline, нажав кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу и выбрав одно из этих действий из выпадающего меню:</p>
+<ul>
+<li>Экспортировать Security Pipeline в инструмент CI/CD.</li>
+<li>Запустить сканирование (запустить Security Pipeline).</li>
+<li>Добавить новый элемент в Security Pipeline.</li>
+</ul>
+<h2 id="security-pipeline_1">Настройки Security Pipeline</h2>
+<p>Выберите вкладку <strong>Settings</strong>, чтобы установить настройки Security Pipeline.</p>
+<figure>
+<p><img alt="" src="../img/60.png" /></p>
+</figure>
+<p>На этой вкладке с помощью селекторов можно установить следующие настройки:</p>
+<ul>
+<li><strong>Pipeline activity</strong> — если этот переключатель выключен, Security Pipeline не может быть запущена на сканирование. Состояние этой настройки пайплайна в AppSec.Hub отображается с помощью цвета линии вверху карточки пайплайна. Если линия имеет серый цвет, переключатель выключен, Security Pipeline не может быть запущена на сканирование. Если линия имеет зеленый цвет, переключатель выключен, Security Pipeline может быть запущена на сканирование. </li>
+</ul>
+<figure>
+<p><img alt="" src="../img/61.png" /></p>
+</figure>
+<figure>
+<p><img alt="" src="../img/62.png" /></p>
+</figure>
+<ul>
+<li><strong>Bypass</strong> — если этот переключатель включен, сканирование при запуске Security Pipeline не выполняется, при этом артефакт будет помечен тегом BYPASS, а на карточке пайплайна появится значок <strong>Bypass is enabled</strong> <img alt="" src="../img/63.png" />.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Данная функциональность доступна только после добавления в Security Pipeline тегируемого артефакта, см. раздел «<a href="../security%20pipelines/#security-pipeline_4">Security Pipeline артефакта</a>».</p>
+</div>
+<p>При запуске такого Security Pipeline в правом нижнем углу пользовательского интерфейса отображается подтверждающее уведомление, но фактически сканирования не выполняется и в истории сканирования (вкладка <strong>Scans</strong>) отображается соответствующее предупреждение.</p>
+<p>Данная функциональность может, например, применяться при On-boarding с использованием Meta-runner, если необходимо выполнить сканирование только артефакта, но не кодовой базы. В таком случае для Security Pipeline кодовой базы активируется опция Bypass.</p>
+<figure>
+<p><img alt="" src="../img/64.png" /></p>
+</figure>
+<ul>
+<li><strong>CI/CD overwrite protection</strong> — этот переключатель блокирует экспорт Security Pipeline в CI/CD инструмент с помощью пункта меню Export CI/CD. Это позволяет защитить настройки Security Pipeline от нежелательной перезаписи, а на карточке пайплайна появится значок <strong>Overwrite protection is enabled</strong> <img alt="" src="../img/66.png" />.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/65.png" /></p>
+</figure>
+<ul>
+<li><strong>Is template</strong> — этот переключатель активирует функциональность, которая позволяет использовать Security Pipeline в качестве шаблона при создании новых. На карточке появляется значок <strong>This is a template pipeline</strong> <img alt="" src="../img/67.png" />. Важно заметить, что для корректного завершения On-boarding (см. раздел «<a href="../on-boarding/">On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки</a>») необходимо наличие в AppSec.Hub предопределенного шаблона Security Pipeline. В качестве такого шаблона может использоваться любой ранее созданный для данного приложения Security Pipeline соответствующего типа (для кодовых баз, артефактов и т. д.). Если для приложения определено несколько Security Pipelines одного типа, для предсказуемого завершения интеграции важно для нужного Security Pipeline активировать опцию Is template — вновь автоматически создаваемые Security Pipelines для данного приложения будут использовать выбранный шаблон.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/68.png" /></p>
+</figure>
+<ul>
+<li><strong>Issue state policy</strong> — настройка алгоритма изменения состояний проблем безопасности. Может быть выбрана одна из трех настроек:<ul>
+<li><strong>Compare with the 1st scan</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами первого сканирования (стандартная настройка системы).</li>
+<li><strong>Compare with previous scan</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами предыдущего сканирования.</li>
+<li><strong>Compare with the custom</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами произвольного успешного сканирования. При выборе этого варианта на вкладке <strong>Settings</strong> настроек Security Pipelines появляется дополнительное поле <strong>Issue state policy scan task</strong>, в котором необходимо указать соответствующее сканирование.</li>
+</ul>
+</li>
+<li><strong>Delete pipeline</strong> — нажмите кнопку <strong>Delete</strong>, чтобы запретить доступ к пайплайну и действиям с ним.</li>
+</ul>
+<h2 id="quality-gate-security-pipelines">Добавление Quality Gate в Security Pipelines</h2>
+<p>Когда профиль Quality Gate создан и настроен (см. разделы «<a href="../../aag/quality%20gates/#quality-gates">Quality Gates</a>» Руководства прикладного администратора), он может быть добавлен в Security Pipeline (s) одного или нескольких приложений.</p>
+<p>Чтобы добавить Quality Gate в Security Pipeline, предварительно выбрав необходимое приложение (см. раздел «<a href="../work%20with%20applications/#appsechub">Приложения в AppSec.Hub</a>»), перейдите на страницу настроек Security Pipeline, см. раздел «<a href="../security%20pipelines/#security-pipeline_1">Настройки Security Pipeline</a>».</p>
+<p>Перейдите на вкладку <strong>Quality Gate</strong> и, выбрав в раскрывающемся меню предварительно созданный профиль Quality Gate (см. раздел «<a href="../../aag/quality%20gates/#quality-gates">Quality Gates</a>» Руководства прикладного администратора), нажмите кнопку <strong>Save</strong>, чтобы включить Quality Gate в Security Pipeline.</p>
+<figure>
+<p><img alt="" src="../img/69.png" /></p>
+</figure>
+<p>После добавления Quality Gate в Security Pipeline, ниже отобразится перечень условий, определенных в профиле Quality Gate.</p>
+<p>Для подключения другого Quality Gate выберите его в раскрывающемся меню и нажмите кнопку <strong>Save</strong>. На странице отобразятся условия для вновь подключенного Quality Gate.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>К Security Pipeline одновременно может быть подключен только один Quality Gate. При подключении нового Quality Gate ранее подключенный — отключается.</p>
+</div>
+<p>Чтобы отключить Quality Gate от Security Pipeline, нажмите кнопку <strong>Unlink</strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Пример</p>
+<p>Рассмотрим пример использования Quality Gate в Security Pipeline. Предположим, для выпуска релиза приложения определены следующие критерии: отсутствие любых уязвимостей высокой и критической степени серьезности (high/critical severity issues), выявленных инструментами SAST и DAST.
+Чтобы создать Quality Gate с такими критериями, при настройке профиля Quality Gate (см. раздел «<a href="../../aag/quality%20gates/#quality-gates">Quality Gates</a>» Руководства прикладного администратора) выберем следующие параметры.
+<figure markdown><img alt="" src="../img/70.png" /></figure>
+Перечень заданных условий будет выглядеть следующим образом.
+<figure markdown><img alt="" src="../img/71.png" /></figure>
+Таким образом создан Quality Gate, который при включении его в Security Pipeline будет отслеживать выполнение указанных критериев.
+Если критерии Quality Gate не выполняются (для приведенного примера во время сканирования обнаружена минимум одна уязвимость высокой или критической степени серьезности), AppSec.Hub прервет выполнение Security Pipeline и релиз приложения не будет создан. Чтобы выпустить релиз, который соответствует заданному критерию QG, все уязвимости высокой и критической степени серьезности должны быть устранены до запуска Security Pipeline, создающего релиз приложения.</p>
+</div>
+<h2 id="_1">История сканирований</h2>
+<p>Выберите вкладку <strong>Scans</strong>, чтобы получить подробную информацию о результатах сканирования для выбранного Security Pipeline.</p>
+<figure>
+<p><img alt="" src="../img/72.png" /></p>
+</figure>
+<p>Каждое выполненное сканирование представлено отдельной строкой. Эта строка содержит следующие поля:</p>
+<ul>
+<li><strong>ID</strong> выполненного сканирования в AppSec.Hub. Чтобы ознакомиться с подробной информацией о сканировании, нажмите значение в данном столбце. Отобразится следующая страница.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/73.png" /></p>
+</figure>
+<p>На данной странице приведена следующая информация:</p>
+<ul>
+<li><strong>Details</strong> — сводная информация о сканировании.</li>
+<li><strong>Scan target</strong> — информация об объекте сканирования.</li>
+<li><strong>Quality gate</strong> — информации о прохождении установленных критериев качества (Quality gates).</li>
+<li><strong>Quality gate condition violations</strong> — информация о превышении пороговых значений, определенных в профиле подключенного Quality gates.</li>
+<li><strong>Status</strong> — статус сканирования.</li>
+<li><strong>Started</strong> — время и дата запуска сканирования.</li>
+<li><strong>Duration</strong> — продолжительность сканирования.</li>
+<li><strong>CI system</strong> — используемый инструмент CI/CD.</li>
+<li><strong>Ext build ID</strong> — внешний идентификатор сканирования. При нажатии на значение осуществляется переход в соответствующий инструмент CI/CD.</li>
+<li><strong>Started from</strong> — способ запуска сканирования.</li>
+<li><strong>Branch</strong> — ветвь кодовой базы.</li>
+<li>
+<p><strong>Issue import results</strong> — результат импорта Security Issues в виде диаграммы с распределением по статусам (New, Repeated, Fixed). Рядом с диаграммой располагается иконка, нажав которую можно перейти к перечню Security Issues, обнаруженных в ходе данного сканирования. Предусмотрена возможность обновления данных на странице (кнопка <strong>Refresh data</strong>).</p>
+</li>
+<li>
+<p><strong>Details</strong> — статус сканирования в инструменте оркестрации:</p>
+<ul>
+<li><img alt="" src="../img/74.png" /> — SUCCESS.</li>
+<li><img alt="" src="../img/75.png" /> — FAILURE.</li>
+<li><img alt="" src="../img/76.png" /> — BYPASSED.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Заметим, что с учетом установленного Quality Gate, результаты сканирования с точки зрения инструмента оркестрации TeamCity и с точки зрения AppSec.Hub могут значительно различаться. Выполнение сканирования в инструменте оркестрации могло пройти успешно, однако определенные в QG критерии с точки зрения серьезности обнаруженных рисков безопасности (security risks) и рисков, связанных с корректностью использования лицензии (compliance risks), при этом могут быть не выполнены. В этом случае статус QG Check в AppSec.Hub может иметь значение Failed, и выполнение Security Pipeline должно быть прервано, поскольку критерии QG не были выполнены. Например, после невыполнения критерия QG не должен быть осуществлен шаг по разворачиванию этой сборки в целевом окружении. Если QG не был установлен, то результат сканирования в AppSec.Hub определяется как Passed, если оно успешно прошло в инструменте оркестрации TeamCity. Статус сканирования в AppSec.Hub с точки зрения QG отображается в полях SAST QG, SCA QG и DAST QG.</p>
+</div>
+<ul>
+<li><strong>Version</strong> — версия просканированного артефакта.</li>
+<li><strong>Branch</strong> — содержит название ветки. Для артефакта данное поле называется <strong>Version</strong> и содержит версию просканированной сборки.</li>
+<li><strong>Started</strong> — дата и время начала сканирования.</li>
+<li><strong>Duration</strong> — продолжительность сканирования.</li>
+<li><strong>SAST QG</strong> — статус выполнения сканирования в AppSec.Hub с точки зрения установленного SAST QG. Если QG не был установлен, это поле будет пустым. Если QG был установлен, но критерий, заданный в QG, не был выполнен, это поле будет содержать соответствующую иконку <strong>Failed</strong> <img alt="" src="../img/75.png" />. Нажмите эту иконку, чтобы получить детальную информацию о результате сканирования.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/77.png" /></p>
+</figure>
+<ul>
+<li>Если QG был установлен и критерий, заданный в QG, был выполнен, это поле будет содержать соответствующую иконку Passed <img alt="" src="../img/74.png" />.</li>
+<li><strong>SCA QG</strong> — статус выполнения сканирования в AppSec.Hub с точки зрения установленного SCA QG. Если QG не был установлен, это поле будет пустым. Если QG был установлен, но критерий, заданный в QG, не был выполнен, это поле будет содержать соответствующую иконку Failed <img alt="" src="../img/75.png" />. Нажмите эту иконку, чтобы получить детальную информацию о результате. Если QG был установлен, и критерий, заданный в QG, был выполнен, это поле будет содержать соответствующую иконку Passed <img alt="" src="../img/74.png" />.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/78.png" /></p>
+</figure>
+<ul>
+<li><strong>DAST QG</strong> — статус выполнения сканирования в AppSec.Hub с точки зрения установленного DAST QG. Если QG не был установлен, это поле будет пустым. Если QG был установлен, но критерий, заданный в QG, не был выполнен, это поле будет содержать соответствующую иконку Failed <img alt="" src="../img/75.png" />. Нажмите эту иконку, чтобы получить детальную информацию о результате. Если QG был установлен, и критерий, заданный в QG, был выполнен, это поле будет содержать соответствующую иконку Passed <img alt="" src="../img/74.png" />.</li>
+<li><strong>EXTERNAL ID</strong> — внешний идентификатор сканирования. При нажатии на значение осуществляется переход в соответствующий инструмент CI/CD.</li>
+</ul>
+<h2 id="cicd">Экспорт в CI/CD</h2>
+<p>После того, как Security Pipeline создан и сконфигурирован в AppSec.Hub, его можно экспортировать в инструмент CI/CD.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Если в пользовательском интерфейсе AppSec.Hub выполнены какие-либо изменения структуры Security Pipeline, необходимо выполнить повторный экспорт параметров в инструменты CI/CD, см. ниже.</p>
+</div>
+<p>На вкладке <strong>Structure</strong> нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу и выберите в выпадающем меню пункт <strong>Export CI/CD</strong>, чтобы экспортировать Security Pipeline в инструмент CI/CD — TeamCity.</p>
+<figure>
+<p><img alt="" src="../img/79.png" /></p>
+</figure>
+<p>Сообщение о результате экспорта появится в правом нижнем углу экрана.</p>
+<figure>
+<p><img alt="" src="../img/80.png" /></p>
+</figure>
+<p>В результате экспорта, в TeamCity будет создан Security Pipeline с параметрами конфигурации, определенными в AppSec.Hub. Теперь TeamCity может выполнять сконфигурированный Security Pipeline. TeamCity будет запускать все инструменты в пайплайне и предоставлять полученные результаты тестирования безопасности в AppSec.Hub.</p>
+<p>Чтобы выполнить экспорт Security Pipeline в инструмент CI/CD на странице <strong>DevSecOps</strong>, нажмите кнопку <strong>Export CI/CD</strong> <img alt="" src="../img/81.png" /> в правом нижнем углу карточки пайплайна.</p>
+<figure>
+<p><img alt="" src="../img/82.png" /></p>
+</figure>
+<h2 id="security-pipeline_2">Доступ к Security Pipeline в инструменте оркестрации</h2>
+<p>Выберите пункт меню <strong>Applications</strong> в верхнем левом углу экрана и выберите приложение. Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> в правом нижнем углу карточки приложения на странице <strong>Applications</strong>. Выберите элемент меню <strong>DevSecOps</strong> слева. Нажмите на иконку <strong>Show pipeline config</strong> <img alt="" src="../img/54.png" /> в правом нижнем углу карточки Security Pipeline.</p>
+<p>Нажмите на ссылку на инструмент оркестрации <img alt="" src="../img/84.png" /> справа от пункта <strong>Last export CI/CD</strong>, чтобы получить доступ к Security Pipeline в TeamCity.</p>
+<figure>
+<p><img alt="" src="../img/83.png" /></p>
+</figure>
+<p>На экране появится страничка для входа в TeamCity.</p>
+<h2 id="security-pipeline_3">Security Pipeline исходного кода</h2>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Если подготовленной базы исходного кода не существует, ее следует создать перед началом работы с Security Pipeline исходного кода. Процесс создания новой базы кода описан в разделе «<a href="../application%20configuration/#_2">Кодовые базы</a>».</p>
+</div>
+<p>Выберите элемент меню <strong>DevSecOps</strong> в консоли слева, а затем нажмите кнопку <strong>+Add new</strong> в правом вернем углу вкладки <strong>Source code pipelines</strong>, чтобы добавить новый Security Pipeline исходного кода.</p>
+<figure>
+<p><img alt="" src="../img/85.png" /></p>
+</figure>
+<p>В открывшемся окне для добавления новой кодовой базы <strong>Choose the codebase for pipeline</strong> выберите и дважды кликните имя кодовой базы, которую нужно добавить.</p>
+<figure>
+<p><img alt="" src="../img/86.png" /></p>
+</figure>
+<p>Новый Security Pipeline исходного кода появляется на вкладке <strong>Source code pipelines</strong>.</p>
+<figure>
+<p><img alt="" src="../img/87.png" /></p>
+</figure>
+<p>Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> на карточке пайплайна исходного кода. Откроется страница с детальной информацией о пайплайне. На этой странице, как показано на рисунке ниже, выведены два предупреждения о том, что инструмент оркестрации (CI/CD) и инструмент сканирования еще не добавлены в пайплайн.</p>
+<figure>
+<p><img alt="" src="../img/88.png" /></p>
+</figure>
+<p>Обратите внимание, что на карточке кодовой базы появился новый параметр — Checkout path. Он задает ту директорию, в которой будет производиться выгрузка (checkout) данной кодовой базы в CI/CD инструменте.</p>
+<p>Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху и выберите пункт <strong>Add new element</strong> из выпадающего меню.</p>
+<figure>
+<p><img alt="" src="../img/89.png" /></p>
+</figure>
+<p>Выберите пункт <strong>CI</strong> во вновь появившемся окне, чтобы добавить инструмент оркестрации CI/CD TeamCity в пайплайн.</p>
+<figure>
+<p><img alt="" src="../img/90.png" /></p>
+</figure>
+<p>В следующем окне выберите TeamCity из списка инструментов и нажмите кнопку <strong>Create</strong>. Поле <strong>Pipeline auth token</strong> можно оставить пустым.</p>
+<figure>
+<p><img alt="" src="../img/91.png" /></p>
+</figure>
+<p>В результате, на вкладке <strong>Pipeline Structure</strong> появится новая карточка инструмента TeamCity, а также исчезнет одно соответствующее предупреждение.</p>
+<figure>
+<p><img alt="" src="../img/92.png" /></p>
+</figure>
+<p>Следующим шагом является добавление инструмента сканирования.</p>
+<p>Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху и выберите пункт <strong>Add new element</strong> из выпадающего меню.</p>
+<figure>
+<p><img alt="" src="../img/89.png" /></p>
+</figure>
+<p>Выберите пункт <strong>SAST tool</strong> во вновь появившемся окне, чтобы добавить инструмент сканирования Checkmarx в пайплайн.</p>
+<figure>
+<p><img alt="" src="../img/93.png" /></p>
+</figure>
+<p>Выберите пункт Checkmarx из списка инструментов в появившемся окне <strong>Create SAST scan config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/94.png" /></p>
+</figure>
+<p>В появившемся окне выполните настройку следующих параметров:</p>
+<figure>
+<p><img alt="" src="../img/95.png" /></p>
+</figure>
+<ul>
+<li><strong>Scan mode</strong> — выберите режим сканирования (<strong>Full</strong>/<strong>Incremental</strong>).</li>
+<li><strong>Predefined preset/Dynamically modified preset</strong> — выбор соответственно предустановленного или динамического пресета, который будет использоваться при сканировании. Опция <strong>Predefined preset</strong> позволяет следующим шагом выбрать любой импортированный из Checkmarx пресет. Более подробная информация о динамических пресетах приведена ниже в данном разделе.</li>
+<li><strong>Preset</strong> — выберите пресет Checkmarx, который будет использоваться для сканирования. Данный параметр используется, только если в предыдущем поле выбран <strong>Predefined preset</strong>.</li>
+</ul>
+<p>Заполнив остальные поля (<strong>Root team</strong>, <strong>Team</strong>, <strong>Excluded directories</strong>), нажмите кнопку <strong>Create</strong>, см. раздел «<a href="../security%20pipelines/#security-pipeline">Структура Security Pipeline</a>».</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Если поле <strong>Team</strong> отставлено пустым, автоматически будет создана команда с именем, соответствующим названию приложения в AppSec.Hub.</p>
+</div>
+<p>На странице с информацией о пайплайне появится новая карточка инструмента Checkmarx, и последнее предупреждение исчезнет со страницы.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Наименование используемого пресета (-ов) указывается на карточке инструмента.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/96.png" /></p>
+</figure>
+<p>Теперь нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу страницы с детальной информацией о пайплайне и выберите пункт <strong>Export CI/CD</strong> из выпадающего меню, чтобы экспортировать пайплайн в инструмент оркестрации CI/CD (в этом примере — TeamCity). Это необходимо для синхронизации настроек пайплайна в AppSec.Hub и в TeamCity. В правом нижнем углу экрана появится следующее подтверждающее сообщение.</p>
+<figure>
+<p><img alt="" src="../img/97.png" /></p>
+</figure>
+<p>После успешного экспорта в инструмент CI/CD используйте кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и далее пункт <strong>Start scan</strong> в выпадающем меню, чтобы запустить сканирование безопасности исходного кода с помощью инструмента Checkmarx.</p>
+<h3 id="security-pipeline_4">Security Pipeline нескольких кодовых баз</h3>
+<p>AppSec.Hub позволяет создать пайплайн для нескольких кодовых баз. При этом существуют ограничения на состав включаемых в пайплайн кодовых баз.</p>
+<p>Чтобы добавить дополнительтельные кодовые базы в уже существующий пайплайн, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" /> и выберите в выпадающем меню пункт <strong>Add codebase</strong>.</p>
+<figure>
+<p><img alt="" src="../img/236.png" /></p>
+</figure>
+<p>В появившемся окне <strong>Add codebase</strong> приведен лист доступных для добавления в данный пайплайн кодовых баз.</p>
+<figure>
+<p><img alt="" src="../img/237.png" /></p>
+</figure>
+<p>Добавляемые в пайплайн кодовые базы должны быть привязаны к тому же репозиторию VCS (системы контроля версий), что и уже существующая в пайплайне.</p>
+<p>Выберите кодовую базу, которыю необходимо включить в пайплайн, и двойным щелчком мыши добавьте ее в пайплайн.</p>
+<figure>
+<p><img alt="" src="../img/238.png" /></p>
+</figure>
+<p>Для основной кодовой базы, с которой создается пайплайн, параметр <strong>Checkout path</strong> всегда имеет значение «/», то есть он всегда указывает на корневую директорию в CI/CD инструменте. Для всех вновь добавляемых кодовых баз эта директория генерируется автоматически и значение этого параметра можно поменять. Для этого нажмите на иконку <strong>Edit codebase</strong> <img alt="" src="../img/54.png" /> в правом нижнем углу карточки кодовой базы, в появишемся окне <strong>Update codebase</strong> отредактируйте значение параметра <strong>Checkout directory</strong> и нажмите кнопку <strong>Update</strong>.</p>
+<figure>
+<p><img alt="" src="../img/239.png" /></p>
+</figure>
+<p>Для вновь добавляемых кодовых баз эта в качестве параметра нельзя указывать корневую директорию. Также значение параметра <strong>Checkout path</strong> не должно совпадать с уже используемыми другими кодовыми базами директориями. В этих случаях система выведет на экран сообщение о невозможности присвоить параметру заданное значение.</p>
+<p>Сканирование пайплайнов для нескольких кодовых баз поддерживается в AppSec.Hub.</p>
+<p>Система также позволяет провести импорт результатов через CLI.</p>
+<h3 id="checkmarx">Динамические пресеты в Checkmarx</h3>
+<p>Если в качестве SAST-инструмента используется Checkmarx, при его добавлении в AppSec.Hub реализована возможность использования динамических пресетов (<strong>Dynamically modified preset</strong>).</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Если тот или иной язык программирования (и соответствующие проверки) не выбран в <strong>предустановленном</strong> пресете (<strong>Predefined preset</strong>), написанный на нем код при сканировании будет игнорироваться.</p>
+</div>
+<p>При использовании <strong>Dynamically modified preset</strong> во время сканирования происходит автоматическое распознавание языков программирования, составляющих кодовую базу, и формируется новый пресет, в который включаются проверки для обнаруженных языков. Вместе с тем, если в AppSec.Hub создано правило (-а), определяющее условное принятие риска (см. раздел «<a href="../security%20issues/#_1">Проблемы безопасности</a>»), соответствующее условие (-я) также будет автоматически добавлено в динамически обновляемый пресет инструмента.</p>
+<p>Среди преимуществ такого похода можно выделить следующие:</p>
+<ul>
+<li>Оперативная реакция на изменение состава кодовой базы (появление новых языков программирования) с последующим обновлением пресета Checkmarx с целью активации специфических проверок.</li>
+<li>Сокращение времени сканирования в результате пропуска ненужных проверок.</li>
+</ul>
+<p>Если в кодовой базе появляется новый язык программирования или пропадает ранее использовавшийся, происходит динамическое обновление пресета в соответствии с произошедшими изменениями.</p>
+<h2 id="security-pipeline_5">Security Pipeline артефакта</h2>
+<p>Для инструментов сборки артефактом является исходный код программы, скомпилированный для выполнения или тестирования. Артефакты создаются инструментами разработки ПО на базе исходного кода. Артефакты важны с точки зрения разработки приложений как сущности, которые могут быть включены в поставку.</p>
+<p>Выберите приложение и нажмите пункт меню <strong>Development</strong> в консоли слева. Артефакты помещаются на вкладке <strong>Artifacts</strong> на странице приложения.</p>
+<figure>
+<p><img alt="" src="../img/98.png" /></p>
+</figure>
+<p>Для одной базы исходного кода приложения может существовать несколько артефактов (например, WAR-файлы, дистрибутивы в виде архивных файлов, образы Docker и т. д.).</p>
+<p>С точки зрения безопасности приложения, каждый артефакт можно просканировать, чтобы найти проблемы информационной безопасности. AppSec.Hub автоматизирует этот процесс и поддерживает DevSecOps пайплайны артефактов. Выберите пункт меню <strong>DevSecOps</strong> в консоли слева и нажмите иконку <strong>Show pipeline config</strong> <img alt="" src="../img/54.png" /> на карточке пайплайна артефактов на вкладке <strong>Artifact pipelines</strong>, чтобы просмотреть подробную информацию о пайплайне артефактов.</p>
+<figure>
+<p><img alt="" src="../img/99.png" /></p>
+</figure>
+<p>Откроется страница с детальной информацией о пайплайне.</p>
+<figure>
+<p><img alt="" src="../img/100.png" /></p>
+</figure>
+<p>Эта страница содержит пять карточек, или компонентов, для выбранного примера пайплайна артефактов:</p>
+<ul>
+<li>Карточка артефакта.</li>
+<li>Карточка инструмента оркестрации.</li>
+<li>Карточка инструмента AST.</li>
+<li>Карточка тегирования (tagging).</li>
+<li>Карточка Webhook.</li>
+</ul>
+<p>Первая карточка представляет артефакт, который необходимо сканировать на наличие проблем информационной безопасности. Необходимая версия указывается в качестве параметра:</p>
+<ul>
+<li>Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу и выберите пункт <strong>Start scan</strong> в выпадающем меню.</li>
+<li>В появившемся окне <strong>Scan the artifact</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong>.</li>
+<li>Нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/101.png" /></p>
+</figure>
+<p>Следующая карточка для этого пайплайна — карточка инструмента оркестрации TeamCity. Эта карточка позволяет настроить инструмент оркестрации. Если TeamCity работает на нескольких узлах (nodes), можно выбрать конкретный узел для сканирования, указав метку, которой он помечен. Чтобы выбрать для работы узел, помеченный меткой, например, <strong>linux3</strong>, нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке инструмента оркестрации. В открывшемся окне <strong>Update CI tool</strong> выберите режим <strong>Use node name</strong> и выберите <strong>linux3</strong> из выпадающего списка в поле <strong>Node label</strong> и нажмите кнопку <strong>Update</strong>.</p>
+<figure>
+<p><img alt="" src="../img/102.png" /></p>
+</figure>
+<p>Сообщение, подтверждающее обновление конфигурации TeamCity, появится в правом нижнем углу экрана.</p>
+<figure>
+<p><img alt="" src="../img/103.png" /></p>
+</figure>
+<p>Карточка инструмента оркестрации TeamCity теперь содержит информацию о том, что метка «<strong>linux3</strong>» является меткой выбранной узла.</p>
+<figure>
+<p><img alt="" src="../img/104.png" /></p>
+</figure>
+<p>Процесс сканирования будет выполняться на этом узле с меткой «linux3».</p>
+<p>Следующая карточка для этого пайплайна — карточка инструмента AST. В данном примере это инструмент Clair. Для одного пайплайна может быть использовано несколько инструментов сканирования. Clair — это инструмент сканирования SCA (Software Composition Analysis). Нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке инструмента сканирования, чтобы настроить параметры сканирования в окне <strong>Update SCA scan config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/249.png" /></p>
+</figure>
+<p>В этом окне можно выбрать инструмент сканирования и выбрать этап (stage) из выпадающего списка (<strong>Develop</strong>, <strong>Build</strong>, <strong>Stage Release</strong>, <strong>Release</strong>, <strong>Operate</strong>).</p>
+<h3 id="_2">Тегирование артефактов</h3>
+<p>Карточка тегирования (Tagging) и тегирование арефактов само по себе являются опциональными. Чтобы добавить тегирование в Security Pipeline артефакта, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху на вкладке <strong>Structure</strong> и выберите пункт <strong>Add new element</strong> из выпадающего меню. Выберите пункт конфигурации <strong>Tagging config</strong> из списка во вновь появившемся окне.</p>
+<p>Некоторые репозитории, например Nexus Pro, поддерживают механизм тегов и тегирования. Тегирование позволяет наносить метки на артефакты в зависимости от результатов сканирования. Инструмент Nexus IQ Server работает в области SCA. Если сканирование успешно проходит Quality Gate, артефакт будет помечен меткой «QG_SCA_PASS», а в противном случае — меткой «QG_SCA_FAIL». Отсутствие метки на артефакте при определенном QG означает, что артефакт еще не сканировался. Если QG не задан, а сканирование артефактов было выполнено, артефакт вообще не будет помечен тегом в результате этого сканирования.</p>
+<p>Карточка тегирования (tagging) позволяет автоматически выполнять тегирование артефактов в качестве результирующего шага сканирования безопасности.</p>
+<p>Нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке тегирования и выберите имя артефакта из списка <strong>Target artifact</strong> в окне <strong>Update tagging config</strong>, чтобы определить артефакт, который нужно пометить тегом.</p>
+<figure>
+<p><img alt="" src="../img/105.png" /></p>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Tеги, которыми может быть помечен артефакт, определяются пользователем с правами Администратора на странице администрирования с помощью пункта меню <strong>Tagging config</strong>. Соответствующее уведомление расположено в окне <strong>Update tagging config</strong>. Настройка тегирования артефактов описана в разделе «<a href="../../aag/tagging%20settings/#_1">Настройки тегирования</a>» Руководства прикладного администратора.</p>
+</div>
+<p>AppSec.Hub определяет практику, используемую во время сканирования (SAST, DAST или SCA), и результат сканирования (успешно или не успешно), выбирает соответствующий тег из списка (например, QG_SAST_PASS в случае успешного сканирования) и маркирует артефакт этим тегом.</p>
+<h3 id="webhooks">Webhooks</h3>
+<p>Карточка Webhook и использование webhook-механизма не являются обязательными в Security Pipeline артефакта. По сути, webhook — это метод оповещения системы о событиях. Используя webhook, можно вызвать пайплайн в случае, когда произошло какое-либо предопределенное событие. Например, webhook может быть установлен для конкретного репозитория следующим образом: webhook вызывается, если в этот репозиторий помещается конкретный предопределенный артефакт. Параметры webhook можно просмотреть в карточке Webhook. Они могут быть обновлены с помощью кнопки редактирования <img alt="" src="../img/54.png" /> в этом же поле.</p>
+<figure>
+<p><img alt="" src="../img/106.png" /></p>
+</figure>
+<p>Webhook посылает сигнал для запуска некоторых процессов. Он не использует обратную связь от инициированных им процессов. Webhook может использоваться не только в пайплайнах артефактов, но и в пайплайнах исходного кода. Как правило, webhook может быть настроен для процесса заливки нового исходного кода. В этом случае сканирование безопасности вновь залитого кода должно запускаться автоматически с помощью механизма webhook. </p>
+<p>Чтобы скопировать токен в буфер обмена, достаточно нажать на его значение на карточке соответствующего Webhook.</p>
+<figure>
+<p><img alt="" src="../img/107.png" /></p>
+</figure>
+<h3 id="custom-webhook">Custom webhook</h3>
+<p>В некоторых случаях особенности организации рабочего процесса диктуют необходимость использования нестандартных способов взаимодействия с внешними инструментами, например, непосредственное тегирование артефактов через API Nexus RM может иметь определенные ограничения на уровне организации. Зачастую это обусловлено разграничением прав доступа или другими специфическими требованиями. Для преодоления таких ограничений могут использоваться Custom webhook.</p>
+<p>Заметим, что для нормального функционирования данного механизма необходимо соблюдение следующих условий. Во-первых, следует настроить тегирование артефакта, добавив в Security Pipeline конфигурацию тегирования (Tagging config). Во-вторых, к Security Pipeline должен бы подключен профиль Quality Gate, чтобы, в свою очередь, обеспечить возможность функционирования механизма тегирования.</p>
+<p>Прежде чем включить конфигурацию Custom webhook в Security Pipeline, необходимо создать ее на странице администрирования системы. Более подробная информация приведена в разделе «<a href="../../aag/custom%20webhooks%20configuration/#custom-webhooks">Конфигурация Custom webhooks</a>» Руководства прикладного администратора.</p>
+<p>Рассмотрим включение Custom webhook на примере Security Pipeline артефакта. Включение в Security Pipeline исходного кода выполняется аналогично.</p>
+<p>Выберите приложение и на его карточке нажмите на иконку <strong>Show app details</strong> <img alt="" src="../img/54.png" />.</p>
+<figure>
+<p><img alt="" src="../img/3.png" /></p>
+</figure>
+<p>Слева в меню выберите пункт <strong>DevSecOps</strong> и перейдите на вкладку <strong>Artifact pipelines</strong>. Откройте страницу конфигурации <strong>Security Pipeline</strong>, нажав на иконку <strong>Show pipeline config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/108.png" /></p>
+</figure>
+<p>В правом верхнем углу вкладки <strong>Structure</strong> нажмите кнопку <strong>Action</strong> <img alt="" src="../img/59.png" /> и в раскрывающемся меню выберите пункт <strong>Add new element</strong>.</p>
+<figure>
+<p><img alt="" src="../img/109.png" /></p>
+</figure>
+<p>В появившемся диалоговом окне выберите пункт <strong>Custom webhook config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/110.png" /></p>
+</figure>
+<p>Выберите предварительно созданную конфигурацию из раскрывающегося списка появившегося диалогового окна, а затем нажмите кнопку <strong>Create</strong>.</p>
+<figure>
+<p><img alt="" src="../img/110-1.png" /></p>
+</figure>
+<h3 id="_3">Сканирование</h3>
+<p>После того как все компоненты DevSecOps пайплайна артефактов настроены и пайплайн был экспортирован, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу страницы с детальной информацией о пайплайне и выберите пункт <strong>Export CI/CD</strong> в выпадающем меню, чтобы экспортировать пайплайн в инструмент оркестрации CI/CD (TeamCity).</p>
+<figure>
+<p><img alt="" src="../img/111.png" /></p>
+</figure>
+<p>После успешного экспорта в CI/CD нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности артефактов с помощью инструмента Nexus IQ Server. В появившемся окне <strong>Scan the artifact</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong> и нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование.</p>
+<figure>
+<p><img alt="" src="../img/112.png" /></p>
+</figure>
+<p>Подтверждение начала сканирования появится на экране справа внизу и через несколько секунд там же появится следующее подтверждение.</p>
+<figure>
+<p><img alt="" src="../img/113.png" /></p>
+</figure>
+<p>После окончания сканирования его результат будет добавлен на вкладке <strong>Scans</strong>.</p>
+<h3 id="security-pipeline_6">Security Pipeline нескольких артефактов</h3>
+<p>AppSec.Hub позволяет создать пайплайн для нескольких артефактов. При этом существует несколько ограничений на состав включаемых в пайплайн артефактов.</p>
+<p>Чтобы добавить дополнительтельные артефакты в уже существующий пайплайн, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" /> и выберите в выпадающем меню пункт <strong>Add artifact</strong>.</p>
+<figure>
+<p><img alt="" src="../img/240.png" /></p>
+</figure>
+<p>В появившемся окне <strong>Add artifact</strong> приведен лист доступных для добавления в данный пайплайн артефактов.</p>
+<figure>
+<p><img alt="" src="../img/241.png" /></p>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Существует несколько ограничений на добавляемые артефакты:</p>
+<ol>
+<li>
+<p>Артефакт должен быть такого же типа, как и уже существующий в пайплайне. Например, к артефакту Docker container могут быть добавлены только артефакты Docker container, а Maven артефакт, например, WAR-файл, добавлен быть не может. Артефакты, не подходящие по типу для добавления в пайплайн, не отображаются в окне <strong>Add artifact</strong>.</p>
+</li>
+<li>
+<p>В системе не должно существовать пайплайнов с одинаковым набором артефактов. Если в системе уже существует пайплайн с некотором набором артефатов, то создать второй такой же пайплайн не удастся. AppSec.Hub отслеживает уникальность каждого пайплайна с несколькими артефактами. Артефакты, выбор которых мог бы привести к созданию «не уникального» пайплайна, повторяющего уже существующий в системе пайплайн, просто не отображаются в окне <strong>Add artifact</strong>.</p>
+</li>
+</ol>
+</div>
+<p>Выберите артефакт, который необходимо включить в пайплайн, и двойным щелчком мыши добавьте его в пайплайн.</p>
+<figure>
+<p><img alt="" src="../img/242.png" /></p>
+</figure>
+<p>Сканирование пайплайнов для нескольких артефактов на данный момент в AppSec.Hub не поддерживается. Добавление этой функциональности запланировано в следующем релизе.</p>
+<p>Система позволяет провести импорт результатов через CLI.</p>
+<h2 id="security-pipeline_7">Security Pipeline экземпляра приложения</h2>
+<p>Понятие экземпляра приложения (application instance) является важным с точки зрения разработки приложения. Экземпляр приложения предназначен для поставки и развертывания на различных тестовых стендах, промежуточных и производственных окружениях. Для развернутых экземпляров приложения могут быть запущены автоматизированные тесты. AppSec.Hub поддерживает DevSecOps пайплайны экземпляров приложения.</p>
+<p>Выберите приложение и нажмите слева пункт меню <strong>Development</strong>. Экземпляры приложения размещаются на вкладке <strong>Instances</strong> страницы разработки приложения.</p>
+<figure>
+<p><img alt="" src="../img/114.png" /></p>
+</figure>
+<p>Для одного приложения может существовать несколько экземпляров для разных этапов разработки (System test, Stage, Production, Integration Acceptance Test, User Acceptance Test) и для разных конфигураций для одного и того же этапа разработки.</p>
+<p>Для создания Security Pipeline экземпляра приложения, выберите элемент меню <strong>DevSecOps</strong> в консоли слева, а затем нажмите кнопку <strong>+Add new</strong> в правом вернем углу вкладки <strong>Instance pipelines</strong>. В появившемся окне <strong>Choose the AppInstance for pipeline</strong> выберите и дважды кликните имя экземпляра приложения, который нужно добавить.</p>
+<figure>
+<p><img alt="" src="../img/115.png" /></p>
+</figure>
+<p>Новый Security Pipeline экземпляра приложения появляется на вкладке <strong>Instance pipelines</strong>.</p>
+<figure>
+<p><img alt="" src="../img/116.png" /></p>
+</figure>
+<p>Нажмите на иконку редактирования <img alt="" src="../img/54.png" /> в карточке пайплайна. Откроется страница с детальной информацией о пайплайне. На этой странице выведены два предупреждения о том, что инструмент оркестрации и инструмент сканирования еще не добавлены в пайплайн. Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху и выберите пункт <strong>Add new element</strong> из выпадающего меню. Выберите пункт <strong>CI</strong> во вновь появившемся окне, чтобы добавить инструмент оркестрации TeamCity в пайплайн, и введите параметры инструмента. Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху и выберите пункт <strong>Add new element</strong> из выпадающего меню. Выберите пункт <strong>DAST tool</strong> во вновь появившемся окне, чтобы добавить инструмент сканирования в пайплайн, и введите параметры инструмента.</p>
+<p>В появившемся окне <strong>Create DAST scan config</strong> выберите инструмент в поле <strong>Tool</strong>.</p>
+<figure>
+<p><img alt="" src="../img/117.png" /></p>
+</figure>
+<p>После выбора инструмента Netsparker в данном окне появятся следующие обязательные для заполнения поля:</p>
+<ul>
+<li><strong>License</strong> — укажите лицензионный ключ.</li>
+<li><strong>Scan Profile</strong> — выберите профиль сканирования.</li>
+</ul>
+<p>При необходимости отметьте пункт <strong>Include «Accepted Risk» and «False Positive» vulnerabilities</strong> (Включать ложноположительные и добавленные в исключения проблемы безопасности).</p>
+<figure>
+<p><img alt="" src="../img/118.png" /></p>
+</figure>
+<p>Выберите пункт меню <strong>DevSecOps</strong> слева и нажмите иконку редактирования <img alt="" src="../img/54.png" /> в правом нижнем углу карточки Security Pipeline экземпляра приложения на вкладке <strong>Instances</strong>, чтобы получить информацию об этом паплайне. На экране появится детальная информация о Security Pipeline данного экземпляра приложения.</p>
+<p>Типовой Security Pipeline экземпляра приложения состоит из трех компонентов (представленных на экране в виде трех карточек):</p>
+<ul>
+<li>Экземпляр приложения.</li>
+<li>Инструмент оркестрации.</li>
+<li>Инструмент AST.</li>
+</ul>
+<p>Карточка экземпляра приложения представляет тот instance, который нужно сканировать на наличие проблем информационной безопасности. Чтобы настроить его параметры, нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке экземпляра приложения. Откроется окно обновления параметров экземпляра приложения. Описание конфигурации параметров экземпляра приложения представлено в разделе «<a href="../application%20configuration/#_1">Конфигурация приложения</a>».</p>
+<p>Карточка инструмента оркестрации представляет соответствующий инструмент для этого пайплайна (TeamCity). Эта карточка позволяет настроить параметры инструмента оркестрации с помощью иконки редактирования <img alt="" src="../img/54.png" /> на карточке инструмента, включая метку узла, как в случае с Security Pipeline артефактов.</p>
+<p>Карточка инструмента AST представляет инструмент, выбранный для этого пайплайна, например, Netsparker — инструмент DAST (Dynamic Application Security Testing). Для одного пайплайна может быть выбрано несколько инструментов AST. Нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке инструмента AST, чтобы настроить параметры сканирования в окне <strong>Update DAST scan config</strong>.</p>
+<p>Когда все компоненты DevSecOps пайплайна экземпляра приложения настроены, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в верхнем правом углу страницы сведений о пайплайне и выберите в выпадающем меню пункт <strong>Export CI/CD</strong>, чтобы экспортировать пайплайн в инструмент оркестрации CI/CD.</p>
+<p>После успешного экспорта в CI/CD нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности экземпляра приложения. В открывшемся окне нажмите кнопку Start scan. Подтверждение начала сканирования появится в правом нижнем углу экрана.</p>
+<p>Выберите вкладку <strong>Scan history</strong>, чтобы просмотреть статус всех выполненных сканирований.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
+      
+        
+        <a href="../application%20configuration/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Конфигурация приложения" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Конфигурация приложения
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../on-boarding/" class="md-footer__link md-footer__link--next" aria-label="Вперед: On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    © 2020—2022&nbsp;&nbsp;<a href="https://swordfishsecurity.ru/" target="_blank" rel="noopener">
+      Swordfish Security</a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.shares", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d5a3c699.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

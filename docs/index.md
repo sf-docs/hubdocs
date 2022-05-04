@@ -1,5 +1,5 @@
 <head>
-<meta http-equiv="refresh" content="0;URL=gi/">
+<meta http-equiv="refresh" content="0;URL=gi/tool description/">
 </head>
 
 # Документация AppSec.Hub
