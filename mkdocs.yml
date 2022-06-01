@@ -13,6 +13,7 @@ nav:
           - Настройки приложения: ug/application settings.md
           - Конфигурация приложения: ug/application configuration.md
           - Security Pipelines: ug/security pipelines.md
+          - Релизные объекты: ug/release objects.md
           - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
       - Проблемы и дефекты безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md

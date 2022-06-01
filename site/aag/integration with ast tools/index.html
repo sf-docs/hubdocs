@@ -995,6 +995,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dependency-track" class="md-nav__link">
+    ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-inspector" class="md-nav__link">
+    ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1570,6 +1584,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dependency-track" class="md-nav__link">
+    ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-inspector" class="md-nav__link">
+    ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1758,7 +1786,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <h2 id="acunetix">Подключение к Acunetix</h2>
 <p>Подключение Acunetix осуществляется на странице администрирования AppSec.Hub, см. раздел «<a href="../integration%20with%20software%20development%20tools/#_1">Интеграция с инструментами разработки ПО</a>». Выберите пункт <strong>Tools</strong> в меню, расположенном слева, и нажмите кнопку <strong>+Add new</strong> в правом верхнем углу.</p>
-<p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>dast</strong>, а в поле <strong>Product</strong> — <strong>Acunetix</strong>.</p>
+<p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>dast</strong>, а в поле <strong>Product</strong> — <strong>acunetix</strong>.</p>
 <figure>
 <p><img alt="" src="../img/49.png" /></p>
 </figure>
@@ -1785,6 +1813,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="admonition-title">Примечание</p>
 <p>В настоящее время поддерживается только совместная работа Acunetix с Jenkins.</p>
 </div>
+<h2 id="dependency-track">ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK</h2>
+<p>Подключение Dependency-Track осуществляется на странице администрирования AppSec.Hub, см. раздел «<a href="../integration%20with%20software%20development%20tools/">Интеграция с инструментами разработки ПО</a>». Выберите пункт <strong>Tools</strong> в меню, расположенном слева, и нажмите кнопку <strong>+Add new</strong> в правом верхнем углу.</p>
+<p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>sca</strong>, а в поле <strong>Product</strong> — <strong>dependency-track</strong>.</p>
+<figure>
+<p><img alt="" src="../img/160.png" /></p>
+</figure>
+<p>После выбора этих значений окно <strong>Create tool</strong> примет следующий вид.</p>
+<figure>
+<p><img alt="" src="../img/161.png" /></p>
+</figure>
+<p>Для подключения укажите в данном окне следующие параметры:
+* Задайте имя инструмента в поле <strong>Name</strong>.
+* Укажите <strong>URL</strong> инструмента Dependency-Track.
+* В поле <strong>Workspace</strong> выберите рабочее пространство (-а), в котором будет использоваться Dependency-Track. Это может быть любое доступное рабочее пространство в AppSec.Hub.
+* Для данного инструмента доступен только один способ авторизации — с использованием токена. Введите токен в соответствующее поле.
+* Информационное поле <strong>Management</strong> в правом верхнем углу <strong>Create tool</strong> предназначено для отображения информации о категориях используемых учетных записей. На данный момент функциональность в полной мере не реализована.</p>
+<p>Нажмите кнопку <strong>Connect</strong>, чтобы проверить соединение с Dependency-Track.</p>
+<figure>
+<p><img alt="" src="../img/162.png" /></p>
+</figure>
+<p>AppSec.Hub отправит запрос на соединение с инструментом и в правом нижнем углу пользовательского интерфейса отобразится соответствующее уведомление.</p>
+<p>Если соединение произошло успешно, нажмите кнопку <strong>Create</strong>, чтобы подключить инструмент, в противном случае проверьте правильность заполнения всех полей и внесите необходимые изменения.</p>
+<p>Карточка вновь подключенного инструмента отобразится на странице инструментов (<strong>Tools</strong>), а также на странице соответствующего рабочего пространства (<strong>Workspaces/Workspaces name</strong>).</p>
+<h2 id="application-inspector">ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR</h2>
+<p>Подключение Application Inspector осуществляется на странице администрирования AppSec.Hub, см. раздел «<a href="../integration%20with%20software%20development%20tools/">Интеграция с инструментами разработки ПО</a>». Выберите пункт <strong>Tools</strong> в меню, расположенном слева, и нажмите кнопку <strong>+Add new</strong> в правом верхнем углу.</p>
+<p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>sast</strong>, а в поле <strong>Product</strong> — <strong>appinspector</strong>.</p>
+<figure>
+<p><img alt="" src="../img/163.png" /></p>
+</figure>
+<p>После выбора этих значений окно <strong>Create tool</strong> примет следующий вид.</p>
+<figure>
+<p><img alt="" src="../img/164.png" /></p>
+</figure>
+<p>Для подключения укажите в данном окне следующие параметры:</p>
+<ul>
+<li>Задайте имя инструмента в поле <strong>Name</strong>.</li>
+<li>Укажите <strong>URL</strong> инструмента Application Inspector.</li>
+<li>В поле <strong>Workspace</strong> выберите рабочее пространство (-а), в котором будет использоваться Application Inspector. Это может быть любое доступное рабочее пространство в AppSec.Hub.</li>
+<li>Для данного инструмента доступен только один способ авторизации — с использованием токена. Введите токен в соответствующее поле.</li>
+<li>Информационное поле <strong>Management</strong> в правом верхнем углу <strong>Create tool</strong> предназначено для отображения информации о категориях используемых учетных записей. На данный момент функциональность в полной мере не реализована.</li>
+</ul>
+<p>Нажмите кнопку <strong>Connect</strong>, чтобы проверить соединение с Application Inspector.</p>
+<figure>
+<p><img alt="" src="../img/165.png" /></p>
+</figure>
+<p>AppSec.Hub отправит запрос на соединение с инструментом и в правом нижнем углу пользовательского интерфейса отобразится соответствующее уведомление.</p>
+<p>Если соединение произошло успешно, нажмите кнопку <strong>Create</strong>, чтобы подключить инструмент, в противном случае проверьте правильность заполнения всех полей и внесите необходимые изменения.</p>
+<p>Карточка вновь подключенного инструмента отобразится на странице инструментов (<strong>Tools</strong>), а также на странице соответствующего рабочего пространства (<strong>Workspaces/Workspaces name</strong>).</p>
 
               
             </article>

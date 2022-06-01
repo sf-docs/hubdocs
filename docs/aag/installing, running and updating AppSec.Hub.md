@@ -45,11 +45,11 @@ Linux|64-bit|Centos/RHEL 7 и выше
 
 Настройте соединение с репозиторием, в котором выложен дистрибутив AppSec.Hub:
 
-    docker login cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru
+    docker login docker.yourcompany.ru
 
 Скачайте инсталляционный образ:
 
-    docker pull cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:<version>
+    docker pull docker.yourcompany.ru/hub-installer:<version>
     
 Запустите инсталляцию командой:
 
@@ -61,7 +61,7 @@ Linux|64-bit|Centos/RHEL 7 и выше
         --rm \
         --name hub-updater \
         -ti \
-        cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:<version>
+        docker.yourcompany.ru/hub-installer:<version>
 
 где:
 
@@ -105,7 +105,7 @@ Linux|64-bit|Centos/RHEL 7 и выше
         --rm \
         --name hub-updater \
         -ti \
-        cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:<version>
+        docker.yourcompany.ru/hub-installer:<version>
 
 ## Резервное копирование
 

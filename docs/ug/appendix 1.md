@@ -1,6 +1,6 @@
 # Приложение 1. Описание параметров запуска скриптов On-boarding
 
-## Общие параметры для скриптов scan_codebase.py и scan_artifact.py
+## Общие параметры для скриптов scan_codebase.py, scan_artifact.py и import_results.py
 
 !!! note "Примечание"
     Корректное завершение работы скриптов возможно, только если указаны все необходимые параметры.
@@ -19,6 +19,15 @@
 `--external-id`|–|Внешний идентификатор нового приложения. Используется при On-boarding|`--external-id ae8f09fe-987f-11eb-a8b3-0242ac130003`
 
 \* см. раздел «[Приложение 3. Результаты сканирования](../appendix%203/#3)».
+
+## Параметры тегирования релизных объектов
+Параметр|Обязат.<br>параметр<br>|Описание|Пример
+-|:-:|-|-
+--release-object|–|URL релизного объекта (артефакта), на который должна быть поставлена метка в конце сканирования. Этот параметр необходим, если соответствующее действие было добавлено в security pipeline. В противном случае параметр будет проигнорирован.|https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war
+
+!!! note "Примечание"
+    В версиях AppSec.Hub ниже 1.9 параметр `--release-object` назывался `–tagged-artifact`.
+
 
 ## Специфические параметры скрипта scan_codebase.py
 
@@ -106,9 +115,14 @@
 `--version`|+|Версия артефакта|`--version 1.15`
 `--build`|–|Версия сборки артефакта|`--build 12345` -->
 
-## Специфические параметры скрипта import_results.py
+## Атрибуты артефакта
 
-### Общие
+Параметр|Обязат.<br>параметр|Описание|Пример
+-|:-:|-|-
+artifact-url|+|URL репозитория артефакта|https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war
+artifact-name|–|Имя артефакта в AppSec.Hub|web-maven-test
+
+## Специфические параметры скрипта import_results.py
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
@@ -133,20 +147,21 @@
 `--nxiq-stage`|+|Этап сканирования приложения. Возможные значения: build, stage-release, release, operate|`--nxiq-stage build`
 `--nxiq-report`|–|Идентификатор отчета приложения Nexus IQ. При отсутствии параметра импортируются результаты последнего сканирования|`--nxiq-report 014519a0a02e4e5fa4d47c56bd3ca509`
 
-### Параметры для взаимодействия с Dependency track
+### Параметры для взаимодействия с Dependency-Track
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--dt-tool-url`|+|URL экземпляра Dependency track|`--dp-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080`
-`--dt-project-name`|+|Имя проекта в Dependecy track|`--dp-project-name Dependency_Track_java-web-project-master`
-`--dt-project-uuid`|+|Идентификатор в Dependecy track|`--dp-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
+`--dt-tool-url`|+|URL экземпляра Dependency-Track|`--dp-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080`
+`--dt-project-name`|+|Имя проекта в Dependecy-Track|`--dp-project-name Dependency_Track_java-web-project-master`
+`--dt-project-uuid`|+|Идентификатор проекта в Dependecy-Track|`--dp-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
 
-### Параметры для взаимодействия с PT Application
+### Параметры для взаимодействия с PT Application Inspector
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
 `--ptai-tool-url`|+|URL экземпляра PT AI|`--ptai-tool-url https://ptai.dev.swordfishsecurity.com`
 `--ptai-project-id`|+|Идентификатор проекта в PT AI|`--ptai-project-id 2e96ce1d-1a32-4376-bfca-f7f1a17128c9`
+`--ptai-project-language`|+|Язык проекта в PT AI|`--ptai-project-language testproject1`
 `--ptai-scan-results-id`|+|Имя проекта в PT AI|`--ptai-scan-results-id c40b439e-0312-4a38-9bb8-8cea931b3bd9`
 
 ### Параметры для взаимодействия с кодовой базой
@@ -157,11 +172,23 @@
 `--branch-filter`|–|Позволяет осуществить фильтрацию сканируемых ветвей. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — соответствует параметру `--branch`|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
 `--build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven`
 
+### Атрибуты кодовой базы
+
+Параметр|Обязат.<br>параметр|Описание|Пример
+-|:-:|-|-
+`codebase-url`|+|URL кодовой базы|`https://github.com/appsecco/dvja.git`
+`branch`|–|Ветка репозитория. Значение по умолчанию — `master`|`master`
+`commit`|–|Коммит|`9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888`
+`checkout-path`|+|Директория расположения кодовой базы|`/`<br>
+or<br>
+`/conf`
+`name`|–|Имя кодовой базы в AppSec.Hub. Бекэнд AppSec.Hub должен использовать `appcode`, `codebase-url` и branch|`dvja-master`
+
 ### Параметры для взаимодействия с артефактом
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--artifact`|+|[Атрибуты артефакта](../appendix%201/#_5) (указываются через точку с запятой):<br>`<adtifact-url>;<artifact-name>`|`--artifact https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war;web-maven-test`
+`--artifact`|+|[Атрибуты артефакта](../appendix%201/#_5) (указываются через точку с запятой):<br>`<url>;<artifact-name>`|`--artifact https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war;web-maven-test`
 
 #### Атрибуты артефакта
 

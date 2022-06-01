@@ -1689,10 +1689,10 @@ docker-compose ––version
 <h3 id="appsechub_1">Установка AppSec.Hub</h3>
 <p>Программа AppSec.Hub разворачивается в инфраструктуре с использованием контейнеров Docker.</p>
 <p>Настройте соединение с репозиторием, в котором выложен дистрибутив AppSec.Hub:</p>
-<pre class="highlight"><code>docker login cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru
+<pre class="highlight"><code>docker login docker.yourcompany.ru
 </code></pre>
 <p>Скачайте инсталляционный образ:</p>
-<pre class="highlight"><code>docker pull cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:&lt;version&gt;
+<pre class="highlight"><code>docker pull docker.yourcompany.ru/hub-installer:&lt;version&gt;
 </code></pre>
 <p>Запустите инсталляцию командой:</p>
 <pre class="highlight"><code>docker container run \
@@ -1703,7 +1703,7 @@ docker-compose ––version
     --rm \
     --name hub-updater \
     -ti \
-    cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:&lt;version&gt;
+    docker.yourcompany.ru/hub-installer:&lt;version&gt;
 </code></pre>
 <p>где:</p>
 <ul>
@@ -1744,7 +1744,7 @@ docker-compose ––version
     --rm \
     --name hub-updater \
     -ti \
-    cbr-docker-ext-distr-test.nexus-cd.int.yourcompany.ru/hub-installer:&lt;version&gt;
+    docker.yourcompany.ru/hub-installer:&lt;version&gt;
 </code></pre>
 <h2 id="_5">Резервное копирование</h2>
 <p>Для резервного копирования необходимо:</p>
