@@ -33,7 +33,7 @@
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_1) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
+`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_2) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
 `--branch-filter`|–|Позволяет осуществить фильтрацию сканируемых ветвей. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — соответствует параметру `--branch`|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
 `--codebase-build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven`
 
@@ -119,8 +119,8 @@
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-artifact-url|+|URL репозитория артефакта|https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war
-artifact-name|–|Имя артефакта в AppSec.Hub|web-maven-test
+`artifact-url`|+|URL репозитория артефакта|`https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war`
+`artifact-name`|–|Имя артефакта в AppSec.Hub|`web-maven-test`
 
 ## Специфические параметры скрипта import_results.py
 
@@ -168,7 +168,7 @@ artifact-name|–|Имя артефакта в AppSec.Hub|web-maven-test
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_1) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
+`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_2) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
 `--branch-filter`|–|Позволяет осуществить фильтрацию сканируемых ветвей. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — соответствует параметру `--branch`|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
 `--build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven`
 
