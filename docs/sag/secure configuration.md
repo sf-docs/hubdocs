@@ -1,32 +1,176 @@
-# Безопасная конфигурация
+# Безопасная сетевая конфигурация
 
-## Сетевая конфигурация
+Для установки и дальнейшего функционирования системы должны быть разрешены внутренние HTTPS сетевые соединения, для настройки которых следует подписанные удостоверяющим центром сертификаты (открытый и закрытый) в формате PEM.
 
-Для установки и дальнейшего функционирования системы должны быть разрешены внутренние сетевые подключения, указанные в разделе «[Настройка HTTPS соединения](../secure%20configuration/#https)».
-
-## Настройка HTTPS соединения
-
-Для настройки HTTPS соединения необходимо получить подписанные удостоверяющим центром сертификаты (открытый и закрытый) в формате PEM. Шаги настройки:
-
-* Полученные сертификаты положить в папку `/opt/apphub/ssl`:
+1. Полученные сертификаты положить в папку `/opt/apphub/ssl`:
 
         $ ls -l ./ssl/
         total 16
         -rw-r--r-- 1 root root 1277 Mar 9 14:33 hub.crt
         -rw------- 1 root root 1679 Mar 9 14:33 hub.key
 
-* Изменить конфигурацию запуска hub-ui, в секцию volumes добавить папку, в которой будут храниться ключ и сертификат:
+2. Изменить конфигурацию запуска **hub-ui**, в секцию volumes добавить папку, в которой будут храниться ключ и сертификат:
 
         volumes:
-        - ./nginx/hub.conf:/etc/nginx/conf.d/default.conf:ro
-        - ./logs/hub-ui:/var/log/nginx
-        - ./ssl:/etc/ssl/certs/ssl-cert:ro
+        	- ./nginx/hub.conf:/etc/nginx/conf.d/default.conf:ro
+        	- ./logs/hub-ui:/var/log/nginx
+        	- ./ssl:/etc/ssl/certs/ssl-cert:ro
 
-* Изменить конфигурацию `/opt/apphub/nginx/hub.conf` (hub-ui), для использования SSL:
+3. Изменить конфигурацию `/opt/apphub/nginx/hub.conf` (**hub-ui**), для использования SSL:
 
         listen 443 ssl;
         ssl_certificate /etc/ssl/certs/ssl-cert/hub.crt; # certificate
         ssl_certificate_key /etc/ssl/certs/ssl-cert/hub.key; # private key
         if ($scheme != "https") { # redirect 80 to 443
-        return 301 https://$host$request_uri;
+        	return 301 https://$host$request_uri;
         }
+
+## Особенности настройки HTTPS в закрытом контуре
+
+Если AppSec.Hub устанавливается в закрытом контуре, возникает необходимость использования самозаверенных (самоподписанных) сертификатов.
+
+### Создание самозаверенных сертификатов
+
+#### Создание корневого сертификата
+
+1. Сгенерируйте ключ корневого сертификата.
+
+        openssl genrsa -out rootCA.key 2048
+
+2. Создайте корневой сертификат CA.
+
+        openssl req -x509 -new -key rootCA.key -days 10000 -out rootCA.crt
+
+    В ходе создания корневого сертификата указываются следующие параметры:
+
+        Country Name (2 letter code) [AU]:
+        State or Province Name (full name) [Some-State]:
+        Locality Name (eg, city) []:
+        Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+        Organizational Unit Name (eg, section) []:
+        Common Name (e.g. server FQDN or YOUR name) []: 
+        Email Address []:
+
+    Созданный корневой сертификат может использоваться для заверения сертификатов узлов и устанавливаться на клиентские машины.
+
+	!!! fail "Внимание"
+		Сертификат rootCA.crt может копироваться на сервера и клиентские машины, а rootCA.key следует надежно защитить от несанкционированного доступа.
+
+#### Создание самозаверенного сертификата
+
+1. Сгенерируйте приватный ключ.
+
+		openssl genrsa -out server101.mycloud.key 2048
+	
+2. Сформируйте запрос на сертификат.
+
+		openssl req -new -key server101.mycloud.key -out server101.mycloud.csr
+
+	В ходе выполнения данной команды указываются следующие параметры:
+
+		Country Name (2 letter code) [AU]:
+		State or Province Name (full name) [Some-State]:
+		Locality Name (eg, city) []:
+		Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+		Organizational Unit Name (eg, section) []:
+		Common Name (e.g. server FQDN or YOUR name) []:server101.mycloud
+		Email Address []:
+		A challenge password []:
+		An optional company name []:
+
+	Важно отметить, что на данном этапе в качестве параметра `Common Name` необходимо указать имя вашего сервера.
+
+3. Заверяем запрос сертификата созданным корневым сертификатом, см. раздел «[Создание корневого сертификата](./secure%20configuration.md#_3)».
+		
+		openssl x509 -req -in server101.mycloud.csr -CA rootCA.crt -CAkey rootCA.key \
+      		-CAcreateserial -out server101.mycloud.crt -days 5000
+
+### Установка корневого сертификата (rootCA.crt) на стороне клиента
+
+!!! note "Примечание"
+	Все действия выполняются в директории, в которой находится **docker-compose.yml**.
+
+#### Добавление rootCA.crt в hub-core
+
+При необходимости запросите корневой сертификат (rootCA.crt) у администратора (ответственного лица) закрытого контура для добавления его в список доверенных центров сертификации. Если такая возможность отсутствует, можно скачать сертификаты всех узлов, к которым будет обращаться AppSecHub, и для каждого выполнить операции добавления в **keystore**.
+
+1. Измените конфигурацию запуска **hub-core**.
+
+	1. Добавьте в **JAVA_OPTS** следующие строки (пароль произвольный).
+
+			–Djavax.net.ssl.trustStore=/etc/ssl/certs/self-signed/keystoreFile
+			–Djavax.net.ssl.trustStorePassword=qwerty123
+
+	2. В секцию **volumes** добавьте папку, в которой будет храниться **keystore**:
+		
+			volumes:
+				–  ./logs/core/logs:/usr/local/tomcat/logs
+				–  ./certs:/etc/ssl/certs/self-signed
+
+	3. В папку **./certs** скопируйте сертификат **rootCA.crt** и при необходимости другие сертификаты.
+
+2. Запустите **hub-core** с новыми параметрами.
+
+3. В docker-контейнере **hub-core** и выполнить следующие команды:
+
+		$ docker exec -ti hub-core /bin/bash
+		bash-4.4# keytool  -import  -trustcacerts -alias rootCAAlias \
+        	-file /etc/ssl/certs/self-signed/rootCA.crt \
+        	-keystore /etc/ssl/certs/self-signed/keystoreFile
+		Enter keystore password:
+		Re-enter new password:
+		...
+		Trust this certificate? [no]:  yes
+		Certificate was added to keystore
+
+	где:
+
+	– `rootCAAlias` — имя, которое будет отображаться при просмотре сертификатов в keystore;
+
+	– пароль и имя **keystoreFile** должны соответствовать указанным в конфигурации для **JAVA_OPTS**, см. шаг 1.
+
+	– `/etc/ssl/certs/self-signed` — папка, в которую будет скопирован **keystoreFile**, чтобы он сохранился при перезапуске контейнера (подключена как **volume**).
+
+	Если **rootCA.crt** получить не удалось, аналогичную операцию следует выполнить для сертификата каждого узла, к которому будет обращаться AppSec.Hub.
+
+4. При использовании дефолтного **keystore** `/etc/ssl/certs/java/cacerts` (`/usr/lib/jvm/java-11-amazon-corretto/lib/security/cacerts` для **hub-core** на сборке `amazon-corretto-java-11`) установлен пароль по умолчанию: `changeit`.
+
+#### Добавление сертификатов в hub-ui
+
+1. При необходимости запросите сертификат и приватный ключ для AppSec.Hub у администратора (ответственного лица) закрытого контура или создайте свой ключ и передайте его на заверение.
+
+2. Скопируйте полученный сертификат в папку `./ssl`
+
+		$ ls -al ./ssl/
+		total 16
+		drwxr-xr-x 2 root   root   4096 Mar  9 14:33 .
+		drwxr-xr-x 7 ubuntu ubuntu 4096 Mar 10 07:45 ..
+		-rw-r--r-- 1 root   root   1277 Mar  9 14:33 hub.crt
+		-rw------- 1 root   root   1679 Mar  9 14:33 hub.key
+
+3. Измените конфигурацию запуска **hub-ui**. В секцию **volumes** добавьте папку, в которой будут храниться ключ и сертификат:
+
+		volumes:
+			- ./nginx/hub.conf:/etc/nginx/conf.d/default.conf:ro
+			- ./logs/nginx/logs:/var/log/nginx
+			- ./ssl:/etc/ssl/certs/ssl-cert:ro
+	
+4. Измените конфигурацию `./nginx/hub.conf` (**hub-ui**) , для использования SSL:
+	
+		listen 443 ssl; 
+		ssl_certificate /etc/ssl/certs/ssl-cert/hub.crt; # certificate
+		ssl_certificate_key /etc/ssl/certs/ssl-cert/hub.key; #  private key
+
+		if ($scheme != "https") {   #uncomment for redirect 80 to 443
+			return 301 https://$host$request_uri;
+		} 
+ 
+5. Перезапустите **hub-ui**.
+
+#### Запуск python-скриптов
+
+Для запуска python-скриптов, которые будут обращаться к хостам с самозаверенными SSL-сертификатами, необходимо установить следующую переменную окружения:
+
+	REQUESTS_CA_BUNDLE=/etc/ssl/certs/self-signed/rootCA.crt
+
+.
