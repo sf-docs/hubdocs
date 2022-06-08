@@ -17,6 +17,8 @@
 `--result-file`|–|Определяет имя и расположение JSON-файла с результатами сканирования*|`--result-file ./result.json`
 `--unit`|–|Устанавливает соответствие между артефактом/кодовой базой и объектом организационной структуры. Если объект не существует, он создается|`--unit Front`
 `--external-id`|–|Внешний идентификатор нового приложения. Используется при On-boarding|`--external-id ae8f09fe-987f-11eb-a8b3-0242ac130003`
+`--scan-initiator`|–|Информация об инициаторе сканирования (например, ссылка на задачу TeamCity)|
+`--scan-initiator-environment`|–|Среда окружения инициатора сканирования|
 
 \* см. раздел «[Приложение 3. Результаты сканирования](../appendix%203/#3)».
 
@@ -33,94 +35,16 @@
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_2) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
+`--codebase`|+|Атрибуты этого параметра указываются через точку с запятой:<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`, где: `codebase-url`\* — URL кодовой базы;<br>`branch` — ветка репозитория (по умолчанию — `master`);<br>`commit` — коммит;<br>`checkout-path`\* — директория расположения кодовой базы;<br>`name` — имя кодовой базы в AppSec.Hub.<br><sup>\* обязательные атрибуты</sup><br>Для указания нескольких кодовых баз используется несколько параметров `-- codebase`|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
 `--branch-filter`|–|Позволяет осуществить фильтрацию сканируемых ветвей. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — соответствует параметру `--branch`|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
-`--codebase-build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven`
-
-### Атрибуты кодовой базы
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`codebase-url`|+|URL кодовой базы|`https://github.com/appsecco/dvja.git`
-`branch`|–|Ветка репозитория. Значение по умолчанию — master|`master`
-`commit`|–|Коммит|`9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888`
-`checkout-path`|+|Директория расположения кодовой базы|`/`<br>`or`<br>`/conf`
-`name`|–|Имя кодовой базы в AppSec.Hub. Бекэнд  AppSec.Hub должен использовать `appcode`, `codebase-url` и `branch`.|`dvja-master`
+`--codebase-build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven` 
 
 ## Специфические параметры скрипта scan_artifact.py
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--artifact`|–|Атрибуты артефакта (указываются через точку с запятой):<br>`<adtifact-url>;<artifact-name>`|`--artifact https://nexus.dev.swordfishsecurity.com;web-maven-test`
+`--artifact`|–|Атрибуты этого параметра указываются через точку с запятой:<br>`<adtifact-url>;<artifact-name>`, где:<br>`artifact-url`\* — URL репозитория артефакта;<br>`artifact-name` — имя артефакта в AppSec.Hub.<br><sup>\* обязательные атрибуты</sup>|`web-maven-test`|`--artifact https://nexus.dev.swordfishsecurity.com;web-maven-test`
 `--artifact-type`|–|Тип артефакта. Возможные значения: `maven`, `docker`, `file_storage`, `npm`, `yum`, `raw`|`--artifact-type maven`
-
-<!-- #### Параметры для артефакта Maven (type: maven)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--repository-url`|+|URL репозитория артефакта|`--repository_url https://nexus.dev.swordfishsecurity.com/repository/web-maven-test`
-`--repository-name`|+|Имя репозитория|`--repository_name web-maven-test`
-`--maven-group`|+|Идентификатор группы Maven|`--maven-group com.mkyong.web`
-`--maven-artifact`|+|Идентификатор артефакта Maven|`--maven-artifact java-web-project`
-`--maven-classifier`|–|Классификатор Maven|`--maven-classifier SNAPSHOT`
-`--maven-extension`|+|Тип файла или расширение|`--maven-extension war`
-`--version`|+|Версия артефакта|`--version 1.15`
-
-#### Параметры для артефакта Docker (type: docker)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--docker-registry`|+|Имя хоста регистра Docker|`--docker-registry nexus.dev.swordfishsecurity.com`
-`--docker-registry-port`|–|Порт регистра Docker registry. Значение по умолчанию — 443|`--docker-registry-port 8096`
-`--docker-image`|+|Имя образа/контейнера Docker|`--docker-image java-web-project`
-`--version`|+|Версия артефакта|`--version 1.15`
-
-#### Параметры для артефакта NPM (type: npm)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--repository-url`|+|URL репозитория артефакта|`--repository-url https://nexus.dev.swordfishsecurity.com/repository/npm-private/`
-`--repository-name`|+|Имя репозитория|`--repository-name npm-private`
-`--package-name`|+|Имя пакета NodeJS|`--package-name ngclipboard`
-`--version`|+|Версия артефакта|`--version 2.0.0`
-
-#### Параметры для артефакта Yum (type: yum)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--repository-url`|+|URL репозитория артефакта|`--repository_url https://nexus.dev.swordfishsecurity.com/repository/web-yum-test`
-`--repository-name`|+|Имя репозитория|`--repository_name web-yum-test`
-`--relative-url`|+|Относительный URL, включая имя файла|`--relative-url web/web-${artifactVersion}.rpm`
-`--component-name`|+|Имя компонента|`--component-name web`
-`--version`|+|Версия артефакта|`--version 1.15`
-`--build`|–|Версия сборки артефакта|`--build 12345`
-
-#### Параметры для артефакта RAW (type: raw)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--repository-url`|+|URL репозитория артефакта|`--repository-url https://nexus.dev.swordfishsecurity.com/<br>repository/web-raw-test`
-`--repository-name`|+|Имя репозитория|`--repository-name web-raw-test`
-`--relative-url`|+|Относительный URL, включая имя файла|`--relative-url dvja/dvja-${artifactVersion}.zip`
-`--component-name`|+|Имя компонента|`--component-name dvja`
-`--version`|+|Версия артефакта|`--version 1.15`
-`--build`|–|Версия сборки артефакта|`--build 12345`
-
-#### Параметры для файлового хранилища (type: file_storage)
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`--repository-url`|+|URL репозитория артефакта|`--repository-url https://nexus.dev.swordfishsecurity.com/<br>repository/web-raw-test`
-`--relative-url`|+|Относительный URL, включая имя файла|`--relative-url dvja/dvja-${artifactVersion}.zip`
-`--version`|+|Версия артефакта|`--version 1.15`
-`--build`|–|Версия сборки артефакта|`--build 12345` -->
-
-## Атрибуты артефакта
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`artifact-url`|+|URL репозитория артефакта|`https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war`
-`artifact-name`|–|Имя артефакта в AppSec.Hub|`web-maven-test`
 
 ## Специфические параметры скрипта import_results.py
 
@@ -168,7 +92,7 @@
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--codebase`|+|[Атрибуты кодовой базы](../appendix%201/#_2) (указываются через точку с запятой):<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`<br>Для указания нескольких кодовых баз используется несколько параметров -- codebase|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
+`--codebase`|+|Атрибуты этого параметра указываются через точку с запятой:<br>`<codebase-url>;<branch>;<commit>;<checkout-path>;<name>`, где: `codebase-url`\* — URL кодовой базы;<br>`branch` — ветка репозитория (по умолчанию — `master`);<br>`commit` — коммит;<br>`checkout-path`\* — директория расположения кодовой базы;<br>`name` — имя кодовой базы в AppSec.Hub.<br><sup>\* обязательные атрибуты</sup><br>Для указания нескольких кодовых баз используется несколько параметров `-- codebase`|`--codebase https://github.com/appsecco/dvja.git;master;9fe67fc0e3a75e05b4dfe906dfa65e495b4f0888;/;dvja-master`
 `--branch-filter`|–|Позволяет осуществить фильтрацию сканируемых ветвей. Фильтр применяется как к основной, так и к дополнительным кодовым базам. Значение по умолчанию — соответствует параметру `--branch`|`--branch-filter feature/*`<br>  `--branch-filter *`<br>  `--branch-filter develop`  
 `--build-tool`|–|Инструмент сборки. Допустимые значения: maven, gradle, nuget, npm, pip. Значение по умолчанию — не определено|`maven`
 
@@ -188,11 +112,4 @@ or<br>
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--artifact`|+|[Атрибуты артефакта](../appendix%201/#_5) (указываются через точку с запятой):<br>`<url>;<artifact-name>`|`--artifact https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war;web-maven-test`
-
-#### Атрибуты артефакта
-
-Параметр|Обязат.<br>параметр|Описание|Пример
--|:-:|-|-
-`artifact-url`|+|URL репозитория артефакта|`https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war`
-`artifact-name`|–|Имя артефакта в AppSec.Hub|`web-maven-test`
+`--artifact`|+|Атрибуты этого параметра указываются через точку с запятой:<br>`<adtifact-url>;<artifact-name>`, где:<br>`artifact-url`\* — URL репозитория артефакта;<br>`artifact-name` — имя артефакта в AppSec.Hub.<br><sup>\* обязательные атрибуты</sup>|`--artifact https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war;web-maven-test`

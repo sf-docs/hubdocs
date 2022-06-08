@@ -134,8 +134,10 @@ markdown_extensions:
 #  - toc:
 #      permalink: ⚓︎
 
-extra_javascript:
+#extra_javascript:
+# Подсветка кода. Работает не важно
 #  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
 #  - javascripts/highlight.js
-  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - javascripts/tablesort.js
+# Сортировка таблиц
+#  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+#  - javascripts/tablesort.js
