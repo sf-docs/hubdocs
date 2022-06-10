@@ -142,10 +142,10 @@
 5.	При использовании дефолтного **keystore** — **/etc/ssl/certs/java/cacerts** (**/usr/lib/jvm/java-11-amazon-corretto/lib/security/cacerts** для **hub-core** на сборке **amazon-corretto-java-11**) установлен пароль по умолчанию: `changeit`.
 
 !!! note "Примечание"
-	Этот же порядок действий применим для Jenkins и его нод, сборки которых поставляются клиентам.
+	Этот же порядок действий применим для Jenkins и его нод (nodes), сборки которых поставляются клиентам.
 	Пути дефолтного **cacert** в конейнерах приведены в таблице ниже.
 
-	Нода|Путь
+	Нод (Node)|Путь
 	-|-
 	Jenkins|`/opt/java/openjdk/lib/security/cacerts`
 	Fortify|`/opt/Fortify/Fortify_SCA_and_Apps_21.1.1/jre/lib/security/cacerts`<br>`/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts`
