@@ -19,17 +19,9 @@
 `--external-id`|–|Внешний идентификатор нового приложения. Используется при On-boarding|`--external-id ae8f09fe-987f-11eb-a8b3-0242ac130003`
 `--scan-initiator`|–|Информация об инициаторе сканирования (например, ссылка на задачу TeamCity)|
 `--scan-initiator-environment`|–|Среда окружения инициатора сканирования|
+`--release-object`|–|URL релизного объекта (артефакта), на который должна быть поставлена метка в конце сканирования. Этот параметр необходим, если соответствующее действие было добавлено в security pipeline. В противном случае параметр будет проигнорирован.|`https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war`
 
 \* см. раздел «[Приложение 3. Результаты сканирования](../appendix%203/#3)».
-
-## Параметры тегирования релизных объектов
-Параметр|Обязат.<br>параметр<br>|Описание|Пример
--|:-:|-|-
---release-object|–|URL релизного объекта (артефакта), на который должна быть поставлена метка в конце сканирования. Этот параметр необходим, если соответствующее действие было добавлено в security pipeline. В противном случае параметр будет проигнорирован.|https://nexus.test.swordfishsecurity.com/repository/maven-releases/com/appsecco/dvja/5.09/dvja-5.09.war
-
-!!! note "Примечание"
-    В версиях AppSec.Hub ниже 1.9 параметр `--release-object` назывался `–tagged-artifact`.
-
 
 ## Специфические параметры скрипта scan_codebase.py
 
@@ -75,9 +67,9 @@
 
 Параметр|Обязат.<br>параметр|Описание|Пример
 -|:-:|-|-
-`--dt-tool-url`|+|URL экземпляра Dependency-Track|`--dp-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080`
-`--dt-project-name`|+|Имя проекта в Dependecy-Track|`--dp-project-name Dependency_Track_java-web-project-master`
-`--dt-project-uuid`|+|Идентификатор проекта в Dependecy-Track|`--dp-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
+`--dt-tool-url`|+|URL экземпляра Dependency-Track|`--dt-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080`
+`--dt-project-name`|+|Имя проекта в Dependecy-Track|`--dt-project-name Dependency_Track_java-web-project-master`
+`--dt-project-uuid`|+|Идентификатор проекта в Dependecy-Track|`--dt-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9`
 
 ### Параметры для взаимодействия с PT Application Inspector
 

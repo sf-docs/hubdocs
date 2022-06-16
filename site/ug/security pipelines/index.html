@@ -434,6 +434,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2">
@@ -594,8 +596,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Запуск и параметры сканирования кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#security-pipeline_4" class="md-nav__link">
     Security Pipeline нескольких кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitlab-ci" class="md-nav__link">
+    Конфигурация уведомлений в GitLab CI
   </a>
   
 </li>
@@ -621,7 +637,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     Тегирование артефактов
   </a>
   
@@ -642,7 +658,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     Сканирование
   </a>
   
@@ -671,6 +687,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release%20objects/" class="md-nav__link">
+        Релизные объекты
+      </a>
     </li>
   
 
@@ -1515,7 +1545,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <li class="md-nav__item">
       <a href="../../sag/secure%20configuration/" class="md-nav__link">
-        Безопасная конфигурация
+        Безопасная сетевая конфигурация
       </a>
     </li>
   
@@ -1647,8 +1677,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Запуск и параметры сканирования кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#security-pipeline_4" class="md-nav__link">
     Security Pipeline нескольких кодовых баз
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitlab-ci" class="md-nav__link">
+    Конфигурация уведомлений в GitLab CI
   </a>
   
 </li>
@@ -1674,7 +1718,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     Тегирование артефактов
   </a>
   
@@ -1695,7 +1739,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     Сканирование
   </a>
   
@@ -1877,33 +1921,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 <p>Каждое выполненное сканирование представлено отдельной строкой. Эта строка содержит следующие поля:</p>
 <ul>
-<li><strong>ID</strong> выполненного сканирования в AppSec.Hub. Чтобы ознакомиться с подробной информацией о сканировании, нажмите значение в данном столбце. Отобразится следующая страница.</li>
-</ul>
-<figure>
-<p><img alt="" src="../img/73.png" /></p>
-</figure>
+<li>
+<p><strong>ID</strong> выполненного сканирования в AppSec.Hub. Чтобы ознакомиться с подробной информацией о сканировании, нажмите значение в данном столбце. Отобразится следующая страница.</p>
+<p><figure markdown><img alt="" src="../img/73.png" /></figure></p>
 <p>На данной странице приведена следующая информация:</p>
 <ul>
-<li><strong>Details</strong> — сводная информация о сканировании.</li>
-<li><strong>Scan target</strong> — информация об объекте сканирования.</li>
-<li><strong>Quality gate</strong> — информации о прохождении установленных критериев качества (Quality gates).</li>
-<li><strong>Quality gate condition violations</strong> — информация о превышении пороговых значений, определенных в профиле подключенного Quality gates.</li>
-<li><strong>Status</strong> — статус сканирования.</li>
+<li><strong>Scan task</strong> — номер сканирования в системе.</li>
+<li>Общий статус сканирования.</li>
+<li><strong>Application</strong> — имя приложения.</li>
 <li><strong>Started</strong> — время и дата запуска сканирования.</li>
 <li><strong>Duration</strong> — продолжительность сканирования.</li>
 <li><strong>CI system</strong> — используемый инструмент CI/CD.</li>
-<li><strong>Ext build ID</strong> — внешний идентификатор сканирования. При нажатии на значение осуществляется переход в соответствующий инструмент CI/CD.</li>
-<li><strong>Started from</strong> — способ запуска сканирования.</li>
-<li><strong>Branch</strong> — ветвь кодовой базы.</li>
-<li>
-<p><strong>Issue import results</strong> — результат импорта Security Issues в виде диаграммы с распределением по статусам (New, Repeated, Fixed). Рядом с диаграммой располагается иконка, нажав которую можно перейти к перечню Security Issues, обнаруженных в ходе данного сканирования. Предусмотрена возможность обновления данных на странице (кнопка <strong>Refresh data</strong>).</p>
-</li>
-<li>
-<p><strong>Details</strong> — статус сканирования в инструменте оркестрации:</p>
-<ul>
+<li><strong>External build ID</strong> — внешний идентификатор сканирования. При нажатии на значение осуществляется переход в соответствующий инструмент CI/CD.</li>
+<li><strong>Details</strong> — сводная информация о сканировании.</li>
+<li><strong>Scan target</strong> — информация об объекте сканирования.</li>
+<li><strong>Quality gates</strong> — информации о прохождении установленных критериев качества (Quality gates).</li>
+<li><strong>Quality gate condition violations</strong> — информация о превышении пороговых значений, определенных в профиле подключенного Quality gates.</li>
+<li><strong>Issue import results</strong> — результат импорта security issues в виде диаграммы с распределением по статусам (New, Repeated, Fixed). Рядом с диаграммой располагается иконка, нажав которую можно перейти к перечню security issues, обнаруженных в ходе данного сканирования. Предусмотрена возможность обновления данных на странице (кнопка <strong>Refresh data</strong>).</li>
+<li><strong>Release object</strong> — ссылка на релизный объект.</li>
+<li><strong>Details</strong> — статус сканирования в инструменте оркестрации:<ul>
 <li><img alt="" src="../img/74.png" /> — SUCCESS.</li>
 <li><img alt="" src="../img/75.png" /> — FAILURE.</li>
 <li><img alt="" src="../img/76.png" /> — BYPASSED.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2009,7 +2050,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure>
 <p><img alt="" src="../img/94.png" /></p>
 </figure>
-<p>В появившемся окне выполните настройку следующих параметров:</p>
+<p>В появившемся окне выполните настройку следующих параметров.</p>
 <figure>
 <p><img alt="" src="../img/95.png" /></p>
 </figure>
@@ -2035,7 +2076,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure>
 <p><img alt="" src="../img/97.png" /></p>
 </figure>
-<p>После успешного экспорта в инструмент CI/CD используйте кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и далее пункт <strong>Start scan</strong> в выпадающем меню, чтобы запустить сканирование безопасности исходного кода с помощью инструмента Checkmarx.</p>
+<p>Используйте кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и далее пункт <strong>Start scan</strong> в выпадающем меню, чтобы запустить сканирование безопасности исходного кода с помощью инструмента Checkmarx.</p>
+<p>При выборе пункта <strong>Start scan</strong> каждый раз происходит автоматический экспорт пайплайна в инструмент оркестрации CI/CD, а затем производится запуск сканирования. Таким образом, можно произвести изменения в структуре пайплайна, например, добавить инструмент сканирования, а затем запустить сканирование, используя пункт <strong>Start scan</strong>, без предварительного экспорта изменений с помощью пункта <strong>Export CI/CD</strong>. Благодаря автоматическому экспорту, при выборе пункта <strong>Start scan</strong> такая последовательность шагов будет работать корректно при условии, что на вкладке <strong>Settings</strong> данного пайплана переключатель <strong>CI/CD overwrite protection</strong> находится в положении «выключено» (см. описание в разделе «<a href="./#security-pipeline_1">Настройки security pipeline</a>»).</p>
+<figure>
+<p><img alt="" src="../img/269.png" /></p>
+</figure>
+<h3 id="_2">Запуск и параметры сканирования кодовых баз</h3>
+<p>При сканировании кодовых баз в AppSec.Hub можно задавать различные параметры. В частности, для проведения сканирования необходимо выбрать и указать имя ветки (branch) или хеш-сумму коммита (commit) кода в кодовой базе. Если в качестве параметра указано имя ветки, AppSec.Hub автоматически выбирает для сканирования последний коммит кода из этой ветки. Если одновременно указаны и имя ветки, и хеш-сумма коммита кода, приоритетное значение имеет хеш коммита. Также хеш коммита имеет приоритет над именем ветки и при работе с <a href="../on-boarding/#teamcity">Meta-Runner</a>.</p>
+<p>Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" /> в правом верхнем углу и выберите пункт <strong>Start scan</strong> из выпадающего меню, чтобы начать сканирование. В появившемся окне <strong>Scan start</strong> укажите в поле <strong>Branch</strong> имя ветки или в поле <strong>Commit</strong> хеш-сумму коммита кода, который необходимо просканировать. Хеш-сумму коммита кода проще всего скопировать из инструмента, где находится исходный код.</p>
+<figure>
+<p><img alt="" src="../img/270.png" /></p>
+</figure>
+<p>Нажмите кнопку <strong>Start scan</strong> в правом нижнем углу, чтобы начать сканирование. После этого на вкладке <strong>Scans</strong> пайплайна кодовой базы появится новая строка с информацией о запущенном сканировании.</p>
+<figure>
+<p><img alt="" src="../img/271.png" /></p>
+</figure>
+<p>Нажмите <strong>ID</strong> сканирования в левом столбце. На экране появится детальная информация о запущенном сканировании.</p>
+<figure>
+<p><img alt="" src="../img/272.png" /></p>
+</figure>
+<p>Если в качестве параметра сканирования был выбран хеш коммита кода, его значение будет показано в разделе <strong>Scan target</strong> в поле <strong>commit</strong>, а в поле <strong>branch</strong> будет указано значение <strong>detached</strong>. При нажатии на значение в поле <strong>commit</strong> происходит переход на этот коммит в инструменте версионного контроля. </p>
+<p>Если в качестве параметра сканирования было выбрано имя ветки, оно будет указано в разделе <strong>Scan target</strong> в поле <strong>branch</strong>, а в поле <strong>commit</strong> будет указан автоматически выбранный для сканирования последний коммит кода из этой ветки:</p>
+<figure>
+<p><img alt="" src="../img/273.png" /></p>
+</figure>
 <h3 id="security-pipeline_4">Security Pipeline нескольких кодовых баз</h3>
 <p>AppSec.Hub позволяет создать пайплайн для нескольких кодовых баз. При этом существуют ограничения на состав включаемых в пайплайн кодовых баз.</p>
 <p>Чтобы добавить дополнительтельные кодовые базы в уже существующий пайплайн, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" /> и выберите в выпадающем меню пункт <strong>Add codebase</strong>.</p>
@@ -2047,17 +2111,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><img alt="" src="../img/237.png" /></p>
 </figure>
 <p>Добавляемые в пайплайн кодовые базы должны быть привязаны к тому же репозиторию VCS (системы контроля версий), что и уже существующая в пайплайне.</p>
-<p>Выберите кодовую базу, которыю необходимо включить в пайплайн, и двойным щелчком мыши добавьте ее в пайплайн.</p>
+<p>Выберите кодовую базу, которyю необходимо включить в пайплайн, и двойным щелчком мыши добавьте ее в пайплайн.</p>
 <figure>
 <p><img alt="" src="../img/238.png" /></p>
 </figure>
-<p>Для основной кодовой базы, с которой создается пайплайн, параметр <strong>Checkout path</strong> всегда имеет значение «/», то есть он всегда указывает на корневую директорию в CI/CD инструменте. Для всех вновь добавляемых кодовых баз эта директория генерируется автоматически и значение этого параметра можно поменять. Для этого нажмите на иконку <strong>Edit codebase</strong> <img alt="" src="../img/54.png" /> в правом нижнем углу карточки кодовой базы, в появишемся окне <strong>Update codebase</strong> отредактируйте значение параметра <strong>Checkout directory</strong> и нажмите кнопку <strong>Update</strong>.</p>
+<p>Для основной (primary) кодовой базы, с которой создается пайплайн, параметр <strong>Checkout path</strong> всегда имеет значение «/», то есть он всегда указывает на корневую директорию в CI/CD инструменте. Для всех вновь добавляемых (secondary) кодовых баз эта директория генерируется автоматически и значение этого параметра можно поменять. Для этого нажмите на иконку <strong>Edit codebase</strong> <img alt="" src="../img/54.png" /> в правом нижнем углу карточки кодовой базы, в появишемся окне <strong>Update codebase</strong> отредактируйте значение параметра <strong>Checkout directory</strong> и нажмите кнопку <strong>Update</strong>.</p>
 <figure>
 <p><img alt="" src="../img/239.png" /></p>
 </figure>
-<p>Для вновь добавляемых кодовых баз эта в качестве параметра нельзя указывать корневую директорию. Также значение параметра <strong>Checkout path</strong> не должно совпадать с уже используемыми другими кодовыми базами директориями. В этих случаях система выведет на экран сообщение о невозможности присвоить параметру заданное значение.</p>
-<p>Сканирование пайплайнов для нескольких кодовых баз поддерживается в AppSec.Hub.</p>
+<p>Для вновь добавляемых кодовых баз в качестве параметра нельзя указывать корневую директорию. Также значение параметра <strong>Checkout path</strong> не должно совпадать с уже используемыми другими кодовыми базами директориями. В этих случаях система выведет на экран сообщение о невозможности присвоить параметру заданное значение. В поле <strong>Branch filter</strong> можно задавать свой уникальный фильтр ветвей как для основной кодовой базы, так и для всех вновь добавляемых кодовых баз.</p>
+<p>В AppSec.Hub поддерживается сканирование пайплайна с несколькими кодовыми базами. При запуске такого сканирования в окне <strong>Scan start</strong> необходимо указать ветку (поле <strong>Branch</strong>) или коммит (<strong>Commit</strong>) для каждой кодовой базы.</p>
+<figure>
+<p><img alt="" src="../img/274.png" /></p>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Необходимо помнить, что значение в поле <strong>Branch filter</strong> задает фильтр доступных ветвей для каждой из кодовых баз. Если в окне <strong>Scan start</strong> в поле <strong>Branch</strong> будет выбрано значение, которое не подходит под заданный в поле <strong>Branch filter</strong> фильтр ветвей кодовой базы, сканирование не будет запущено.</p>
+</div>
+<p>При сканировании нескольких кодовых баз поле <strong>Scan target</strong> страницы с детальной информацией о запущенном сканировании содержит информацию о каждой из кодовых баз.</p>
+<figure>
+<p><img alt="" src="../img/275.png" /></p>
+</figure>
 <p>Система также позволяет провести импорт результатов через CLI.</p>
+<h3 id="gitlab-ci">Конфигурация уведомлений в GitLab CI</h3>
+<p>Инструмент GitLab CI позволяет включить и сконфигурировать рассылку уведомлений о статусе security pipeline с помощью механизма Notification config. Рассмотрим включение Notification config в security pipeline исходного кода.</p>
+<p>Слева в меню выберите пункт <strong>DevSecOps</strong> и перейдите на вкладку <strong>Source code pipelines</strong>. Откройте страницу конфигурации <strong>Security Pipeline</strong>, нажав на иконку <strong>Show pipeline config</strong>. В правом верхнем углу вкладки <strong>Structure</strong> нажмите кнопку <strong>Action</strong> <img alt="" src="../img/3dot.png" /> и в раскрывающемся меню выберите пункт <strong>Add new element</strong>.</p>
+<figure>
+<p><img alt="" src="../img/277.png" /></p>
+</figure>
+<p>В появившемся диалоговом окне выберите пункт <strong>Notification config</strong>.</p>
+<figure>
+<p><img alt="" src="../img/276.png" /></p>
+</figure>
+<p>Выберите конфигурацию из раскрывающегося списка появившегося диалогового окна, а затем нажмите кнопку <strong>Create</strong>.</p>
+<figure>
+<p><img alt="" src="../img/278.png" /></p>
+</figure>
+<p>На экране появится карточка вновь созданного элемента Notification config.</p>
+<figure>
+<p><img alt="" src="../img/279.png" /></p>
+</figure>
+<p>После добавления Notification config в security pipeline кодовой базы при запуске сканирования в окне <strong>Scan start</strong> появится дополнительный третий шаг (<strong>Step 3</strong>), позволяющий установить параметры конфигурации уведомлений GitLab CI.</p>
+<figure>
+<p><img alt="" src="../img/280.png" /></p>
+</figure>
+<p>Задайте в полях <strong>Project ID</strong>, <strong>Commit hash (SHA)</strong> и <strong>Pipeline ID</strong> необходимые значения. Значение для поля <strong>Project ID</strong> можно скопировать из инструмента GitLab CI.</p>
+<figure>
+<p><img alt="" src="../img/281.png" /></p>
+</figure>
+<p>Значения для полей <strong>Commit hash (SHA)</strong> и <strong>Pipeline ID</strong> также можно скопировать из инструмента GitLab CI.</p>
+<figure>
+<p><img alt="" src="../img/282.png" /></p>
+</figure>
+<p>Результаты работы пайплайна и прохождения Quality Gates в AppSec.Hub обновляются в списке <strong>Jobs</strong> инструмента GitLab CI в соответствии с правилами нотификации после запуска сканирования по нажатию кнопки <strong>Start scan</strong>.</p>
+<figure>
+<p><img alt="" src="../img/283.png" /></p>
+</figure>
+<p>Также результаты работы пайплайна можно отслеживать в GitLab CI в поле <strong>External</strong> на странице <strong>Pipelines</strong>.</p>
+<figure>
+<p><img alt="" src="../img/284.png" /></p>
+</figure>
+<p>Соотвествие статусов пайплайна в AppSec.Hub и статуса коммита в GitLab CI показано в следующей таблице:</p>
+<table>
+<thead>
+<tr>
+<th>Статус пайплайна в AppSec.Hub</th>
+<th>Статус коммита в GitLab CI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Запрос на запуск получен</td>
+<td>pending</td>
+</tr>
+<tr>
+<td>Ожидание в очереди Jenkins/Teamcity</td>
+<td>pending</td>
+</tr>
+<tr>
+<td>Пайплайн выполняется</td>
+<td>running</td>
+</tr>
+<tr>
+<td>Пайплайн завершен, QG пройден</td>
+<td>success</td>
+</tr>
+<tr>
+<td>Пайплайн завершен, QG не пройден</td>
+<td>failed</td>
+</tr>
+<tr>
+<td>Пайплайн завершился ошибкой</td>
+<td>failed</td>
+</tr>
+<tr>
+<td>Пайплайн отменен на стороне Jenkins/Teamcity</td>
+<td>canceled</td>
+</tr>
+</tbody>
+</table>
 <h3 id="checkmarx">Динамические пресеты в Checkmarx</h3>
 <p>Если в качестве SAST-инструмента используется Checkmarx, при его добавлении в AppSec.Hub реализована возможность использования динамических пресетов (<strong>Dynamically modified preset</strong>).</p>
 <div class="admonition note">
@@ -2086,23 +2238,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure>
 <p><img alt="" src="../img/100.png" /></p>
 </figure>
-<p>Эта страница содержит пять карточек, или компонентов, для выбранного примера пайплайна артефактов:</p>
+<p>Эта страница в версиях AppSec.Hub ниже 1.9 может содержать пять карточек, или компонентов, как в показанном на рисунке выше примере пайплайна артефактов:</p>
 <ul>
 <li>Карточка артефакта.</li>
 <li>Карточка инструмента оркестрации.</li>
 <li>Карточка инструмента AST.</li>
-<li>Карточка тегирования (tagging).</li>
+<li>Карточка тегирования (tagging) и подход с ее использованием применяется только в версиях AppSec.Hub ниже 1.9. Тегирование в версиях AppSec.Hub 1.9 и выше описано в разделе «<a href="../release%20objects/#_4">Тегирование релизных объектов</a>».</li>
 <li>Карточка Webhook.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Подход с использованием карточки тегирования используется только в версиях AppSec.Hub ниже 1.9. Его подробное описание приведено ниже в разделе «Тегирование артефактов». В версиях AppSec.Hub 1.9 и выше карточки тегирования в структуре security pipeline артефактов и связанный с ними подход не используются. Тегирование в версиях AppSec.Hub 1.9 и выше описано в разделе «<a href="../release%20objects/#_4">Тегирование релизных объектов</a>».</p>
 <p>Первая карточка представляет артефакт, который необходимо сканировать на наличие проблем информационной безопасности. Необходимая версия указывается в качестве параметра:</p>
+</div>
 <ul>
 <li>Нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу и выберите пункт <strong>Start scan</strong> в выпадающем меню.</li>
-<li>В появившемся окне <strong>Scan the artifact</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong>.</li>
-<li>Нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование.</li>
+<li>В появившемся окне <strong>Scan start</strong> в поле <strong>Step 1</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong> и версию билда (если применимо) в поле <strong>Build version</strong>.</li>
+<li>Если вы хотите просто запустить сканирование артефакта, перейдите к следующему шагу. Если вы хотите сделать данный артефакт релизным объектом, в секции <strong>Step 2</strong> отметьте галочкой поле <strong>Set the artifact as a release object</strong>. Выберите существующий артефакт данного приложения из выпадающего списка в поле <strong>Choose artifact</strong>, чтобы привязать к нему сканирование и сделать его релизным объектом. В поле <strong>Artifact version</strong> укажите версию создаваемого релизного объекта и версию билда в поле <strong>Build version</strong> (если применимо, это зависит от типа релизного объекта – обязательные поля отмечены звездочкой).</li>
 </ul>
 <figure>
-<p><img alt="" src="../img/101.png" /></p>
+<p><img alt="" src="../img/268.png" /></p>
 </figure>
+<ul>
+<li>Нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование. Если была выбрана опция <strong>Set the artifact as a release object</strong>, одновременно будет создан релизный объект.</li>
+</ul>
 <p>Следующая карточка для этого пайплайна — карточка инструмента оркестрации TeamCity. Эта карточка позволяет настроить инструмент оркестрации. Если TeamCity работает на нескольких узлах (nodes), можно выбрать конкретный узел для сканирования, указав метку, которой он помечен. Чтобы выбрать для работы узел, помеченный меткой, например, <strong>linux3</strong>, нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке инструмента оркестрации. В открывшемся окне <strong>Update CI tool</strong> выберите режим <strong>Use node name</strong> и выберите <strong>linux3</strong> из выпадающего списка в поле <strong>Node label</strong> и нажмите кнопку <strong>Update</strong>.</p>
 <figure>
 <p><img alt="" src="../img/102.png" /></p>
@@ -2121,9 +2280,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><img alt="" src="../img/249.png" /></p>
 </figure>
 <p>В этом окне можно выбрать инструмент сканирования и выбрать этап (stage) из выпадающего списка (<strong>Develop</strong>, <strong>Build</strong>, <strong>Stage Release</strong>, <strong>Release</strong>, <strong>Operate</strong>).</p>
-<h3 id="_2">Тегирование артефактов</h3>
+<h3 id="_3">Тегирование артефактов</h3>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Описанный в этом разделе подход к тегированию артефактов может быть применен только в версиях AppSec.Hub ниже 1.9. При переходе с версии AppSec.Hub ниже 1.9 на версию AppSec.Hub 1.9 и выше, уже существующие карточки тегирования пропадут из структуры security pipeline, а все протегированные артефакты автоматически преобразуются в системе в релизные объекты. Тегирование в версиях AppSec.Hub 1.9 и выше описано в разделе «<a href="../release%20objects/#_4">Тегирование релизных объектов</a>».</p>
+</div>
 <p>Карточка тегирования (Tagging) и тегирование арефактов само по себе являются опциональными. Чтобы добавить тегирование в Security Pipeline артефакта, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> справа вверху на вкладке <strong>Structure</strong> и выберите пункт <strong>Add new element</strong> из выпадающего меню. Выберите пункт конфигурации <strong>Tagging config</strong> из списка во вновь появившемся окне.</p>
-<p>Некоторые репозитории, например Nexus Pro, поддерживают механизм тегов и тегирования. Тегирование позволяет наносить метки на артефакты в зависимости от результатов сканирования. Инструмент Nexus IQ Server работает в области SCA. Если сканирование успешно проходит Quality Gate, артефакт будет помечен меткой «QG_SCA_PASS», а в противном случае — меткой «QG_SCA_FAIL». Отсутствие метки на артефакте при определенном QG означает, что артефакт еще не сканировался. Если QG не задан, а сканирование артефактов было выполнено, артефакт вообще не будет помечен тегом в результате этого сканирования.</p>
+<p>Некоторые репозитории, например Nexus Pro, поддерживают механизм тегов и тегирования. Тегирование позволяет наносить метки на артефакты в зависимости от результатов сканирования. Инструмент Nexus IQ Server работает в области SCA. Если сканирование успешно проходит Quality Gate, артефакт будет помечен меткой «QG_SCA_PASS», а в противном случае — меткой «QG_SCA_FAIL». Отсутствие метки на артефакте при определенном QG означает, что артефакт еще не сканировался после установки QG. Если QG не задан, а сканирование артефактов было выполнено, артефакт вообще не будет помечен тегом в результате этого сканирования.</p>
 <p>Карточка тегирования (tagging) позволяет автоматически выполнять тегирование артефактов в качестве результирующего шага сканирования безопасности.</p>
 <p>Нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке тегирования и выберите имя артефакта из списка <strong>Target artifact</strong> в окне <strong>Update tagging config</strong>, чтобы определить артефакт, который нужно пометить тегом.</p>
 <figure>
@@ -2146,7 +2309,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </figure>
 <h3 id="custom-webhook">Custom webhook</h3>
 <p>В некоторых случаях особенности организации рабочего процесса диктуют необходимость использования нестандартных способов взаимодействия с внешними инструментами, например, непосредственное тегирование артефактов через API Nexus RM может иметь определенные ограничения на уровне организации. Зачастую это обусловлено разграничением прав доступа или другими специфическими требованиями. Для преодоления таких ограничений могут использоваться Custom webhook.</p>
-<p>Заметим, что для нормального функционирования данного механизма необходимо соблюдение следующих условий. Во-первых, следует настроить тегирование артефакта, добавив в Security Pipeline конфигурацию тегирования (Tagging config). Во-вторых, к Security Pipeline должен бы подключен профиль Quality Gate, чтобы, в свою очередь, обеспечить возможность функционирования механизма тегирования.</p>
+<p>Заметим, что для нормального функционирования данного механизма необходимо соблюдение следующих условий. Во-первых, следует разрешить тегирование релизного объекта с помощью переключателя <strong>Tagging</strong> на вкладке <strong>Settings</strong> пункта меню <strong>DevSecOps</strong> страницы приложения. Во-вторых, к Security Pipeline должен быть подключен профиль Quality Gate, чтобы, в свою очередь, обеспечить возможность функционирования механизма тегирования.</p>
 <p>Прежде чем включить конфигурацию Custom webhook в Security Pipeline, необходимо создать ее на странице администрирования системы. Более подробная информация приведена в разделе «<a href="../../aag/custom%20webhooks%20configuration/#custom-webhooks">Конфигурация Custom webhooks</a>» Руководства прикладного администратора.</p>
 <p>Рассмотрим включение Custom webhook на примере Security Pipeline артефакта. Включение в Security Pipeline исходного кода выполняется аналогично.</p>
 <p>Выберите приложение и на его карточке нажмите на иконку <strong>Show app details</strong> <img alt="" src="../img/54.png" />.</p>
@@ -2169,12 +2332,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure>
 <p><img alt="" src="../img/110-1.png" /></p>
 </figure>
-<h3 id="_3">Сканирование</h3>
+<h3 id="_4">Сканирование</h3>
 <p>После того как все компоненты DevSecOps пайплайна артефактов настроены и пайплайн был экспортирован, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в правом верхнем углу страницы с детальной информацией о пайплайне и выберите пункт <strong>Export CI/CD</strong> в выпадающем меню, чтобы экспортировать пайплайн в инструмент оркестрации CI/CD (TeamCity).</p>
 <figure>
 <p><img alt="" src="../img/111.png" /></p>
 </figure>
-<p>После успешного экспорта в CI/CD нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности артефактов с помощью инструмента Nexus IQ Server. В появившемся окне <strong>Scan the artifact</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong> и нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование.</p>
+<p>Используйте кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности артефактов с помощью инструмента Nexus IQ Server. В появившемся окне <strong>Scan the artifact</strong> выберите версию артефакта для сканирования из списка доступных версий в поле <strong>Artifact version</strong> и нажмите кнопку <strong>Start scan</strong> внизу окна, чтобы начать сканирование.</p>
 <figure>
 <p><img alt="" src="../img/112.png" /></p>
 </figure>
@@ -2251,7 +2414,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Карточка инструмента оркестрации представляет соответствующий инструмент для этого пайплайна (TeamCity). Эта карточка позволяет настроить параметры инструмента оркестрации с помощью иконки редактирования <img alt="" src="../img/54.png" /> на карточке инструмента, включая метку узла, как в случае с Security Pipeline артефактов.</p>
 <p>Карточка инструмента AST представляет инструмент, выбранный для этого пайплайна, например, Netsparker — инструмент DAST (Dynamic Application Security Testing). Для одного пайплайна может быть выбрано несколько инструментов AST. Нажмите иконку редактирования <img alt="" src="../img/54.png" /> на карточке инструмента AST, чтобы настроить параметры сканирования в окне <strong>Update DAST scan config</strong>.</p>
 <p>Когда все компоненты DevSecOps пайплайна экземпляра приложения настроены, нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> в верхнем правом углу страницы сведений о пайплайне и выберите в выпадающем меню пункт <strong>Export CI/CD</strong>, чтобы экспортировать пайплайн в инструмент оркестрации CI/CD.</p>
-<p>После успешного экспорта в CI/CD нажмите кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности экземпляра приложения. В открывшемся окне нажмите кнопку Start scan. Подтверждение начала сканирования появится в правом нижнем углу экрана.</p>
+<p>Используйте кнопку <strong>Actions</strong> <img alt="" src="../img/59.png" /> и выберите в выпадающем меню пункт <strong>Start scan</strong>, чтобы запустить сканирование безопасности экземпляра приложения. В открывшемся окне нажмите кнопку Start scan. Подтверждение начала сканирования появится в правом нижнем углу экрана.</p>
 <p>Выберите вкладку <strong>Scan history</strong>, чтобы просмотреть статус всех выполненных сканирований.</p>
 
               
@@ -2287,13 +2450,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
         
-        <a href="../on-boarding/" class="md-footer__link md-footer__link--next" aria-label="Вперед: On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки" rel="next">
+        <a href="../release%20objects/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Релизные объекты" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки
+              Релизные объекты
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2325,10 +2488,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     
       <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
-      
-        <script src="../../javascripts/tablesort.js"></script>
       
     
 

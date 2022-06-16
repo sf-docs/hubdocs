@@ -4,8 +4,8 @@
     py scan_codebase.py --url http://hub.dev.swordfishsecurity.com/ \
         --token ***** \
         --appcode 0902202-1_cli \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/;java-web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project;web-project \
         --branch-filet develop
 
 ## Сканирование артефакта по URL scan_artifact.py
@@ -155,9 +155,8 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
-        --build-tool maven \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/;java-web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project;web-project \
         --cx-tool-url https://cx93.dev.swordfishsecurity.com \
         --cx-project-name kg_19082021_2_-master_1 \
         --cx-team /CxServer/asdfsadfASDFASDF/kg_19082021_2 \
@@ -183,9 +182,8 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
-        --build-tool maven \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/;java-web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project;web-project \
         --dp-tool-url https://nxiq.dev.swordfishsecurity.com \
         --nxiq-app 12072021_nxiq_2_java-web-project-master \
         --nxiq-org 12072021_nxiq_2 \
@@ -199,9 +197,8 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
-        --build-tool maven \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/;java-web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project;web-project \
         --dt-tool-url http://dep-track.rnd.swordfishsecurity.com/:8080 \
         --dt-project-name Dependency_Track_java-web-project-master \
         --dt-project-uuid 619821d4-368d-4f5e-a52f-18d73d97ecb9 \
@@ -213,9 +210,8 @@
         --url https://hub.dev.swordfishsecurity.com \
         --token ***** \
         --appcode 09022021_cli \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/ \
-        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project \
-        --build-tool maven \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/java-web-project.git;master;;/;java-web-project \
+        --codebase http://gitlab.service.swordfishsecurity.com/test/web-project.git;master;;/web-project;web-project \
         --ptai-tool-url https://ptai.dev.swordfishsecurity.com \
         --ptai-project-id 2e96ce1d-1a32-4376-bfca-f7f1a17128c9 \
         --ptai-scan-results-id c40b439e-0312-4a38-9bb8-8cea931b3bd9 \

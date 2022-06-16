@@ -430,6 +430,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2_2">
@@ -508,6 +510,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../ug/security%20pipelines/" class="md-nav__link">
         Security Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/release%20objects/" class="md-nav__link">
+        Релизные объекты
       </a>
     </li>
   
@@ -997,14 +1013,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <li class="md-nav__item">
   <a href="#dependency-track" class="md-nav__link">
-    ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK
+    Подключение к Dependency-Track
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#application-inspector" class="md-nav__link">
-    ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR
+    Подключение к Application Inspector
   </a>
   
 </li>
@@ -1454,7 +1470,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <li class="md-nav__item">
       <a href="../../sag/secure%20configuration/" class="md-nav__link">
-        Безопасная конфигурация
+        Безопасная сетевая конфигурация
       </a>
     </li>
   
@@ -1586,14 +1602,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
         <li class="md-nav__item">
   <a href="#dependency-track" class="md-nav__link">
-    ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK
+    Подключение к Dependency-Track
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#application-inspector" class="md-nav__link">
-    ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR
+    Подключение к Application Inspector
   </a>
   
 </li>
@@ -1813,7 +1829,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="admonition-title">Примечание</p>
 <p>В настоящее время поддерживается только совместная работа Acunetix с Jenkins.</p>
 </div>
-<h2 id="dependency-track">ПОДКЛЮЧЕНИЕ К DEPENDENCY-TRACK</h2>
+<h2 id="dependency-track">Подключение к Dependency-Track</h2>
 <p>Подключение Dependency-Track осуществляется на странице администрирования AppSec.Hub, см. раздел «<a href="../integration%20with%20software%20development%20tools/">Интеграция с инструментами разработки ПО</a>». Выберите пункт <strong>Tools</strong> в меню, расположенном слева, и нажмите кнопку <strong>+Add new</strong> в правом верхнем углу.</p>
 <p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>sca</strong>, а в поле <strong>Product</strong> — <strong>dependency-track</strong>.</p>
 <figure>
@@ -1823,12 +1839,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure>
 <p><img alt="" src="../img/161.png" /></p>
 </figure>
-<p>Для подключения укажите в данном окне следующие параметры:
-* Задайте имя инструмента в поле <strong>Name</strong>.
-* Укажите <strong>URL</strong> инструмента Dependency-Track.
-* В поле <strong>Workspace</strong> выберите рабочее пространство (-а), в котором будет использоваться Dependency-Track. Это может быть любое доступное рабочее пространство в AppSec.Hub.
-* Для данного инструмента доступен только один способ авторизации — с использованием токена. Введите токен в соответствующее поле.
-* Информационное поле <strong>Management</strong> в правом верхнем углу <strong>Create tool</strong> предназначено для отображения информации о категориях используемых учетных записей. На данный момент функциональность в полной мере не реализована.</p>
+<p>Для подключения укажите в данном окне следующие параметры:</p>
+<ul>
+<li>Задайте имя инструмента в поле <strong>Name</strong>.</li>
+<li>Укажите <strong>URL</strong> инструмента Dependency-Track.</li>
+<li>В поле <strong>Workspace</strong> выберите рабочее пространство (-а), в котором будет использоваться Dependency-Track. Это может быть любое доступное рабочее пространство в AppSec.Hub.</li>
+<li>Для данного инструмента доступен только один способ авторизации — с использованием токена. Введите токен в соответствующее поле.</li>
+<li>Информационное поле <strong>Management</strong> в правом верхнем углу <strong>Create tool</strong> предназначено для отображения информации о категориях используемых учетных записей. На данный момент функциональность в полной мере не реализована.</li>
+</ul>
 <p>Нажмите кнопку <strong>Connect</strong>, чтобы проверить соединение с Dependency-Track.</p>
 <figure>
 <p><img alt="" src="../img/162.png" /></p>
@@ -1836,7 +1854,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>AppSec.Hub отправит запрос на соединение с инструментом и в правом нижнем углу пользовательского интерфейса отобразится соответствующее уведомление.</p>
 <p>Если соединение произошло успешно, нажмите кнопку <strong>Create</strong>, чтобы подключить инструмент, в противном случае проверьте правильность заполнения всех полей и внесите необходимые изменения.</p>
 <p>Карточка вновь подключенного инструмента отобразится на странице инструментов (<strong>Tools</strong>), а также на странице соответствующего рабочего пространства (<strong>Workspaces/Workspaces name</strong>).</p>
-<h2 id="application-inspector">ПОДКЛЮЧЕНИЕ К APPLICATION INSPECTOR</h2>
+<h2 id="application-inspector">Подключение к Application Inspector</h2>
 <p>Подключение Application Inspector осуществляется на странице администрирования AppSec.Hub, см. раздел «<a href="../integration%20with%20software%20development%20tools/">Интеграция с инструментами разработки ПО</a>». Выберите пункт <strong>Tools</strong> в меню, расположенном слева, и нажмите кнопку <strong>+Add new</strong> в правом верхнем углу.</p>
 <p>В раскрывающемся меню поля <strong>Tool type</strong> открывшегося диалогового окна <strong>Create tool</strong> выберите пункт <strong>sast</strong>, а в поле <strong>Product</strong> — <strong>appinspector</strong>.</p>
 <figure>
@@ -1933,10 +1951,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     
       <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
-      
-        <script src="../../javascripts/tablesort.js"></script>
       
     
 
