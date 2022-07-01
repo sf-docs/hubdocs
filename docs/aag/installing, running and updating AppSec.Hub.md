@@ -55,6 +55,7 @@ Linux|64-bit|Centos/RHEL 7 и выше
 
     docker container run \
         -v /hub/install/path:/opt/apphub \
+        -v /root/.docker/config.json:/root/.docker/config.json \
         -v /var/run/docker.sock:/var/run/docker.sock \
         -e REPAIR_DB_ENABLE="disable" \
         -e REPAIR_DW_ENABLE="disable" \
