@@ -13,7 +13,7 @@
     
     
       
-        <title>Приложение 1. Список параметров системы, заполняемыx в процессе установки - Документация</title>
+        <title>Приложение 1. Конфигурационный файл .env - Документация</title>
       
     
     
@@ -70,7 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div data-md-component="skip">
       
         
-        <a href="#1-x" class="md-skip">
+        <a href="#1-env" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Приложение 1. Список параметров системы, заполняемыx в процессе установки
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Приложение 1. Конфигурационный файл .env
             
           </span>
         </div>
@@ -686,8 +686,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_2_5">
@@ -752,20 +750,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../ug/appendix%204/" class="md-nav__link">
         Приложение 4. Коды выхода Meta-runner
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ug/appendix%205/" class="md-nav__link">
-        Приложение 5. Конфигурационный файл app.properties
       </a>
     </li>
   
@@ -1215,6 +1199,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_6">
@@ -1245,7 +1231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Приложение 1. Список параметров системы, заполняемыx в процессе установки
+        Приложение 1. Конфигурационный файл .env
       </a>
       
     </li>
@@ -1275,6 +1261,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../appendix%203/" class="md-nav__link">
         Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%205/" class="md-nav__link">
+        Приложение 4. Конфигурационный файл app.properties
       </a>
     </li>
   
@@ -1470,7 +1470,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 
 
 
-<h1 id="1-x">Приложение 1. Список параметров системы, заполняемыx в процессе установки</h1>
+<h1 id="1-env">Приложение 1. Конфигурационный файл .env</h1>
+<p>Для удобства ряд системных настроек AppSec.Hub вынесен в конфигурационный файл <strong><em>.env</em></strong>. Если рекомендуемая директория установки AppSec.Hub не изменена, данный файл располагается в директории <code>/opt/apphub/</code>.</p>
 <table>
 <thead>
 <tr>
@@ -1496,9 +1497,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>Hubdb</code></td>
 </tr>
 <tr>
-<td><code>hub_app_user</code></td>
-<td>Имя пользователя с доступом к основной схеме БД</td>
-<td><code>hubapp</code></td>
+<td><code>pgsql_admin_user</code></td>
+<td>Имя пользователя с административным доступом к основной схеме БД</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pgsql_admin_password</code></td>
+<td>Пароль пользователя с административным доступом к основной схеме БД</td>
+<td><code>&lt;Password&gt;</code></td>
 </tr>
 <tr>
 <td><code>hub_app_password</code></td>
@@ -1506,34 +1512,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td><code>&lt;Password&gt;</code></td>
 </tr>
 <tr>
-<td><code>hub_auth_user</code></td>
-<td>Имя пользователя для сервиса аутентификации</td>
-<td><code>Hubauth</code></td>
-</tr>
-<tr>
 <td><code>hub_auth_password</code></td>
-<td>Пароль пользователя</td>
+<td>Пароль пользователя для сервиса аутентификации</td>
 <td><code>&lt;Password&gt;</code></td>
 </tr>
 <tr>
-<td><code>hub_db_pool_size</code></td>
-<td>Размер пула соединений с БД</td>
-<td><code>10</code></td>
+<td><code>hub_adm_password</code></td>
+<td>Пароль пользователя AppSec.Hub с правами администратора</td>
+<td><code>&lt;Password&gt;</code></td>
 </tr>
 <tr>
-<td><code>hub_app_url</code></td>
-<td>Внешний URL экземпляра AppSec.Hub</td>
-<td><code>http://localhost</code></td>
+<td><code>hub_bi_password</code></td>
+<td>Пароль пользователя с правами работы с AppSec.Hub DWH</td>
+<td><code>&lt;Password&gt;</code></td>
 </tr>
 <tr>
-<td><code>hub_encrypt_key</code></td>
-<td>Ключ шифрования паролей используемых для доступа к инструментам ИБ. Рекомендованный размер ключа — 32 символа</td>
-<td><code>&lt;Random key&gt;</code></td>
+<td><code>hub_core_version</code></td>
+<td>Текущая версия hub_core</td>
+<td></td>
 </tr>
 <tr>
-<td><code>hub_token_key</code></td>
-<td>Ключ подписи пользовательских токенов для доступа в AppSec.Hub без логина/пароля</td>
-<td><code>&lt;Random key&gt;</code></td>
+<td><code>hub_ui_version</code></td>
+<td>Текущая версия hub_ui</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hub_db_version</code></td>
+<td>Текущая версия hub_db</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hub_air_version</code></td>
+<td>Текущая версия hub_air</td>
+<td></td>
+</tr>
+<tr>
+<td><code>IP_EXTERNAL</code></td>
+<td></td>
+<td><code>0.0.0.0</code></td>
+</tr>
+<tr>
+<td><code>MODEL_USE_ENCRYPTION</code></td>
+<td></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>MODEL_SECRET_KEY</code></td>
+<td></td>
+<td><code>change it</code></td>
 </tr>
 </tbody>
 </table>

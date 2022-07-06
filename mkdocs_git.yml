@@ -26,7 +26,6 @@ nav:
         - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
         - Приложение 3. Результаты сканирования: ug/appendix 3.md
         - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
-        - Приложение 5. Конфигурационный файл app.properties: ug/appendix 5.md
   - Руководство администратора:
     - aag/index.md
     - aag/installing, running and updating AppSec.Hub.md
@@ -53,6 +52,7 @@ nav:
       - aag/appendix 1.md
       - aag/appendix 2.md
       - aag/appendix 3.md
+      - ug/appendix 5.md
   - Руководство администратора ИБ:
     - sag/index.md
     - sag/protected objects.md
@@ -102,8 +102,8 @@ plugins:
         - en
         - ru
 
-# repo_url: https://github.com/andreygladilin/mktest
-# repo_name: andreygladilin/mktest
+repo_url: https://github.com/sf-docs/hubdocs
+repo_name: AppSec.Hub/documentation
 
 # extra:
 #  social:

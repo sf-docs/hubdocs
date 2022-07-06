@@ -53,7 +53,6 @@ nav:
       - aag/appendix 2.md
       - aag/appendix 3.md
       - ug/appendix 5.md
-
   - Руководство администратора ИБ:
     - sag/index.md
     - sag/protected objects.md
@@ -103,8 +102,8 @@ plugins:
         - en
         - ru
 
-repo_url: https://github.com/sf-docs/hubdocs
-repo_name: AppSec.Hub/documentation
+# repo_url: https://github.com/andreygladilin/mktest
+# repo_name: andreygladilin/mktest
 
 # extra:
 #  social:

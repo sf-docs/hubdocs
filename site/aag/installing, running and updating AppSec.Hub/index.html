@@ -686,8 +686,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_2_5">
@@ -752,20 +750,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../../ug/appendix%204/" class="md-nav__link">
         Приложение 4. Коды выхода Meta-runner
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ug/appendix%205/" class="md-nav__link">
-        Приложение 5. Конфигурационный файл app.properties
       </a>
     </li>
   
@@ -1323,6 +1307,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_3_6">
@@ -1344,7 +1330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
     <li class="md-nav__item">
       <a href="../appendix%201/" class="md-nav__link">
-        Приложение 1. Список параметров системы, заполняемыx в процессе установки
+        Приложение 1. Конфигурационный файл .env
       </a>
     </li>
   
@@ -1373,6 +1359,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <li class="md-nav__item">
       <a href="../appendix%203/" class="md-nav__link">
         Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%205/" class="md-nav__link">
+        Приложение 4. Конфигурационный файл app.properties
       </a>
     </li>
   
@@ -1724,11 +1724,14 @@ docker-compose ––version
 </code></pre>
 <p>где:</p>
 <ul>
-<li><code>/hub/install/path</code> — папка, куда будут скопированы конфигурационные файлы, этот параметр можно поменять, в этом случае мы рекомендуем указать директорий <code>/opt/apphub</code>. При этом содержимое папки, при совпадении имен файлов, будет очищено. В этой же папке будет по умолчанию расположена папка с БД.</li>
-<li><code>version</code> — версия релиза, который необходимо установить.</li>
-<li>В файле <code>.env</code> будут сгенерированы пароли и ключи.</li>
-<li>В процессе инсталляции будет предложено ввести URL или IP адрес вашего сервера, по которому будет доступен веб интерфейс AppSec.Hub.</li>
-<li>В процессе инсталляции так же будет предложено внести в базу данных системы демо-данные.</li>
+<li><code>/hub/install/path</code> — папка, куда будут скопированы конфигурационные файлы, этот параметр можно поменять, в этом случае мы рекомендуем указать директорий <code>/opt/apphub</code>. При совпадении имен файлов содержимое папки будет очищено. В этой же папке будет по умолчанию расположена папка с БД. В процессе установки автоматически заполняются конфигурационные параметры в <strong><em>.env</em></strong> файле, описанные в разделе «<a href="../appendix%201/">Приложение 1. Список параметров системы, заполняемыx в процессе установки</a>», и конфигурационные параметры в <strong><em>app.properties</em></strong> файле, описанные в разделе «<a href="../../ug/appendix%205/">Приложение 5. Конфигурационный файл app.properties</a>»;</li>
+<li><code>-v ~/.docker/config.json</code> — путь к файлу, куда записываются данные после docker login;</li>
+<li><code>-e REPAIR_DB_ENABLE="disable"</code> — режим восстановления hub-db; </li>
+<li><code>-e REPAIR_DW_ENABLE="disable"</code> — режим восстановления hub-dw;</li>
+<li><code>version</code> — версия релиза, который необходимо установить;</li>
+<li>в файлах <strong><em>.env</em></strong> и <strong><em>app.properties</em></strong> будут сгенерированы пароли и ключи;</li>
+<li>в процессе инсталляции будет предложено ввести URL или IP адрес вашего сервера, по которому будет доступен веб интерфейс AppSec.Hub. Это значение в дальнейшем будет использоваться для интеграции с другими инструментами, такими как Jenkins, TeamCity и т. д.;</li>
+<li>в процессе инсталляции так же будет предложено внести в базу данных системы демо-данные.</li>
 </ul>
 <h2 id="appsechub_2">Запуск AppSec.Hub</h2>
 <p>В папке <code>/hub/install/path</code> выполните команды:</p>
