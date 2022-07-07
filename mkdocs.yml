@@ -26,8 +26,8 @@ nav:
         - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
         - Приложение 3. Результаты сканирования: ug/appendix 3.md
         - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
-  - Руководство администратора:
-    - aag/index.md
+  - Установка и интеграция:
+    - ii/index.md
     - aag/installing, running and updating AppSec.Hub.md
     - Интеграции:
       - aag/integration with tools.md
@@ -36,6 +36,14 @@ nav:
       - aag/itegration with wiki tools.md
       - aag/selection of priority tools.md
       - aag/disabling tools.md
+    - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
+    - Приложения:
+      - aag/appendix 1.md
+      - aag/appendix 2.md
+      - aag/appendix 3.md
+      - ug/appendix 5.md
+  - Руководство администратора:
+    - aag/index.md
     - Конфигурация:
       - aag/appsechub configuration.md
       - aag/users and teams.md
@@ -47,12 +55,6 @@ nav:
       - aag/custom webhooks configuration.md
       - aag/application vulnerability correlation settings.md
       - aag/managing the number of tasks import streams.md
-    - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
-    - Приложения:
-      - aag/appendix 1.md
-      - aag/appendix 2.md
-      - aag/appendix 3.md
-      - ug/appendix 5.md
   - Руководство администратора ИБ:
     - sag/index.md
     - sag/protected objects.md
@@ -61,6 +63,8 @@ nav:
     - sag/session lifetime.md
     - sag/audit logs.md
     - sag/appendix 1.md
+
+
 theme:
   language: ru
   logo: assets/logo.png
