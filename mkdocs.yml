@@ -14,7 +14,6 @@ nav:
           - Конфигурация приложения: ug/application configuration.md
           - Security Pipelines: ug/security pipelines.md
           - Релизные объекты: ug/release objects.md
-          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
       - Проблемы и дефекты безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
           - Проблемы безопасности: ug/security issues.md
@@ -30,12 +29,9 @@ nav:
     - ii/index.md
     - aag/installing, running and updating AppSec.Hub.md
     - Интеграции:
-      - aag/integration with tools.md
-      - aag/integration with software development tools.md
-      - aag/integration with ast tools.md
-      - aag/itegration with wiki tools.md
-      - aag/selection of priority tools.md
-      - aag/disabling tools.md
+      - ug/on-boarding.md
+      - ii/teamcity.md
+      - ii/cli.md
     - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
     - Приложения:
       - aag/appendix 1.md
@@ -44,6 +40,12 @@ nav:
       - ug/appendix 5.md
   - Руководство администратора:
     - aag/index.md
+    - Подключение инструментов:
+      - aag/integration with software development tools.md
+      - aag/integration with ast tools.md
+      - aag/itegration with wiki tools.md
+      - aag/selection of priority tools.md
+      - aag/disabling tools.md
     - Конфигурация:
       - aag/appsechub configuration.md
       - aag/users and teams.md
