@@ -36,7 +36,7 @@
 `hub.jira.users.maxResults`|Максимальное количество пользователей Jira|`1000`
 `hub.jira.issues.maxResults`|By theTh1rt3en: максимальное количество тикетов для экспорта|`1000`
 `hub.config.importIssueThreadPoolSize`|By theTh1rt3en: размер пула потоков для импорта уязвимостей в хаб|`8`
-`hub.config.importConfigThreadPoolSize`|By theTh1rt3en: размер пула потоков для экспорта уязвимостей из инструментов|`8`
+`hub.config.importConfigThreadPoolSize`|By theTh1rt3en: размер пула потоков для экспорта уязвимостей из инструментов |`8`
 `hub.config.dwImportThreadPoolSize`|количество потоков импорта данных в Data Warehouse|`6`
 `hub.config.orchestrationThreadPoolSize`|количество потоков для работы с системами отслеживания дефектов|`16`
 `hub.config.notificationThreadPoolSize`|количество потоков для работы с рассылаемыми уведомлениями|`4`
