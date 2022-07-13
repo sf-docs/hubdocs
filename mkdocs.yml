@@ -31,7 +31,10 @@ nav:
     - Интеграции:
       - ug/on-boarding.md
       - ii/teamcity.md
+      - ii/circleci.md
       - ii/cli.md
+      - ii/integration_api.md
+      - ii/gitlab.md
     - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
     - Приложения:
       - aag/appendix 1.md
