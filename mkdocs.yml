@@ -25,25 +25,6 @@ nav:
       #   - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
       #   - Приложение 3. Результаты сканирования: ug/appendix 3.md
       #   - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
-  - Установка и интеграция:
-    - ii/index.md
-    - aag/installing, running and updating AppSec.Hub.md
-    - Интеграции:
-      - ug/on-boarding.md
-      - ii/teamcity.md
-      - ii/circleci.md
-      - ii/cli.md
-      - ii/integration_api.md
-      - ii/gitlab.md
-    - Приложения:
-      - aag/appendix 1.md
-      - aag/appendix 2.md
-      - aag/appendix 3.md
-      - ug/appendix 5.md
-      - ug/appendix 1.md
-      - ug/appendix 2.md
-      - ug/appendix 3.md
-      - ug/appendix 4.md
   - Руководство администратора:
     - aag/index.md
     - Подключение инструментов:
@@ -64,6 +45,25 @@ nav:
       - aag/application vulnerability correlation settings.md
       - aag/managing the number of tasks import streams.md
     - aag/appsechub licence management.md
+  - Установка и интеграция:
+    - ii/index.md
+    - aag/installing, running and updating AppSec.Hub.md
+    - Интеграции:
+      - ug/on-boarding.md
+      - ii/teamcity.md
+      - ii/circleci.md
+      - ii/cli.md
+      - ii/integration_api.md
+      - ii/gitlab.md
+    - Приложения:
+      - aag/appendix 1.md
+      - aag/appendix 2.md
+      - aag/appendix 3.md
+      - ug/appendix 5.md
+      - ug/appendix 1.md
+      - ug/appendix 2.md
+      - ug/appendix 3.md
+      - ug/appendix 4.md
   - Руководство администратора ИБ:
     - sag/index.md
     - sag/protected objects.md
