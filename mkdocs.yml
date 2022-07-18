@@ -20,11 +20,11 @@ nav:
           - Дефекты безопасности: ug/security defects.md
           - Синхронизация с Jira — настройки: ug/setting of synchronisation with Jira.md
       - Аналитика: ug/analytics.md
-      - Приложения:
-        - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
-        - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
-        - Приложение 3. Результаты сканирования: ug/appendix 3.md
-        - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
+      # - Приложения:
+      #   - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
+      #   - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
+      #   - Приложение 3. Результаты сканирования: ug/appendix 3.md
+      #   - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md
   - Установка и интеграция:
     - ii/index.md
     - aag/installing, running and updating AppSec.Hub.md
@@ -41,6 +41,10 @@ nav:
       - aag/appendix 2.md
       - aag/appendix 3.md
       - ug/appendix 5.md
+      - ug/appendix 1.md
+      - ug/appendix 2.md
+      - ug/appendix 3.md
+      - ug/appendix 4.md
   - Руководство администратора:
     - aag/index.md
     - Подключение инструментов:

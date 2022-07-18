@@ -1,4 +1,4 @@
-# Приложение 2. Примеры запуска скриптов для интеграции
+# Приложение 6. Примеры запуска скриптов AppSec.Hub CLI
 
 ## Сканирование кодовой базы scan_codebase.py
     py scan_codebase.py --url http://hub.dev.swordfishsecurity.com/ \

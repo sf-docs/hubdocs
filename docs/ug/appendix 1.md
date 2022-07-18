@@ -1,4 +1,4 @@
-# Приложение 1. Описание параметров запуска скриптов On-boarding
+# Приложение 5. Параметры скриптов AppSec.Hub CLI
 
 ## Общие параметры для скриптов scan_codebase.py, scan_artifact.py и import_results.py
 
