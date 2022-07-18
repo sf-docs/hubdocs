@@ -35,7 +35,6 @@ nav:
       - ii/cli.md
       - ii/integration_api.md
       - ii/gitlab.md
-    - Управление лицензией AppSec.Hub: aag/appsechub licence management.md
     - Приложения:
       - aag/appendix 1.md
       - aag/appendix 2.md
@@ -64,6 +63,7 @@ nav:
       - aag/custom webhooks configuration.md
       - aag/application vulnerability correlation settings.md
       - aag/managing the number of tasks import streams.md
+    - aag/appsechub licence management.md
   - Руководство администратора ИБ:
     - sag/index.md
     - sag/protected objects.md
