@@ -25,11 +25,11 @@
 `encrypt.key`|Ключ шифрования паролей, используемых для доступа к инструментам ИБ. Рекомендованный размер ключа — 32 символа|`<Random key>`
 `hub.app.url`|Внешний URL экземпляра AppSec.Hub|`http://localhost`
 `hub.issue-import.strategy`|Не используется|`${issue-import.strategy:hub-history-strategy}`
-`dw.hub.importer.delay.timeMillSec`|Не используется, кандидат на удаление|`1000`
+`dw.hub.importer.delay.timeMillSec`|Не используется|`1000`
 `dw.hub.importer.delay.poolSize`|Не используется|`10`
 `hub.dw.import.on.startup`|Автоматический запуск импорта данных в схему BI при старте приложения|`false`
 `dw.scheduledImport.cron.expression`|Cron-выражение, задающее период импорта security issues|`0 0 1,22 * * ?`
-`hub.ci.jenkins.poll.period`|Промежуток времени между обращениями AppSec.Hub к Jenkins|`10000`
+`hub.ci.jenkins.poll.period`|Промежуток между обращениями AppSec.Hub к Jenkins|`10000`
 `hub.ci.jenkins.poll.max.tries`|Количество обращений AppSec.Hub к Jenkins|`50`
 `hub.scan.check.rate`|Частота проверки результатов сканирования в CI инструменте|`hub.scan.check.rate:30000`
 `hub.avc.training.schedule`|Cron-выражение, задающее период тренировки модели AVC|`0 0 2 * * ?`

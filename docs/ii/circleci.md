@@ -1,48 +1,48 @@
-# Интеграция с CircleCI
-
-## Использование облачного сервиса CircleCI 
+# Интеграция с Circle CI
 
 Включение AppSec.Hub в пайплайн разработки, построенный с использованием Circle CI, позволяет автоматизировать и значительно ускорить сканирование кодовых баз и артефактов в рамках проверок проблем информационной безопасности разрабатываемого ПО.
 
-В данном разделе описано использование облачной версии CircleCI, а также установка/запуск среды с использованием собственных программно-аппаратных средств.
+В данном разделе описано использование облачной версии Circle CI, а также установка/запуск среды с использованием собственных программно-аппаратных средств.
 
-Для обеспечения успешной интеграции и безопасной работы с репозиториями необходимо добавить в проект CircleCI следующие переменные среды (**Project Settings** > **Environment Variables**). Болле подробная информация приведена в [документации](https://circleci.com/docs/2.0/env-vars/#) сервиса.
+## Использование облачного сервиса Circle CI 
 
-* `DOCKER_USERNAME` — логин для доступа к Docker-регистру, содержащему образ ***hub-cli***, размещенный разработчиком AppSec.Hub.
-* `DOCKER_PASSWORD` — пароль для доступа к Docker-регистру, содержащему образ ***hub-cli***, размещенный разработчиком AppSec.Hub.
-* `HUB_URL` — URL AppSec.Hub (например, `https://hub.your.domain.local`).
-* `HUB_TOKEN` — токен аутентификации AppSec.Hub.
-* `PROJECT_NAME` — имя текущего проекта (например, **OurBank**), который содержит следующие репозитории: ***our-bank-core.git***, ***our-bank-front.git***, ***our-bank-db.git*** и т. д.).
-* `PROJECT_RELEASE` — релиз проекта (например, 2021.4).
+1. Для успешной интеграции и безопасной работы с репозиториями необходимо добавить в проект Circle CI следующие переменные среды (**Project Settings** > **Environment Variables**). Болле подробная информация приведена в [документации](https://circleci.com/docs/2.0/env-vars/#) сервиса.
 
-Далее необходимо в конфигурационный файл пайплайна каждого репозитория (***.circleci/config.yml***) включить следующее задание. Более подробная информация приведена в [документации](https://circleci.com/docs/2.0/workflows/#) сервиса.
+    * `DOCKER_USERNAME` — логин для доступа к Docker-регистру, содержащему образ ***hub-cli***.
+    * `DOCKER_PASSWORD` — пароль для доступа к Docker-регистру, содержащему образ ***hub-cli***.
+    * `HUB_URL` — URL AppSec.Hub (например, `https://hub.your.domain.local`).
+    * `HUB_TOKEN` — токен аутентификации AppSec.Hub.
+    * `PROJECT_NAME` — имя текущего проекта (например, **OurBank**), который содержит следующие репозитории: ***our-bank-core.git***, ***our-bank-front.git***, ***our-bank-db.git*** и т. д.).
+    * `PROJECT_RELEASE` — релиз проекта (например, 2021.4).
 
-    jobs:
-    security_checks:
-        docker:
-        - image: docker.swordfishsecurity.com/hub-cli:latest
-            auth:
-            username: $DOCKER_USERNAME  # can be specified either direct values
-            password: $DOCKER_PASSWORD  # or project environment variables
-        steps:
-            - run:
-                name: check_source_code
-            command: |
-                python3 /opt/scan/scan_codebase.py \
-                    --url  $HUB_URL --token "$HUB_TOKEN" \
-                    --appcode "$PROJECT_NAME" \
-                    --codebase-url "ssh://$CIRCLE_REPOSITORY_URL"
-                    --codebase-build-tool maven \
-                    --branch "$CIRCLE_BRANCH" \
-                    --unit "$CIRCLE_PROJECT_REPONAME"
-            - run:
-                name: check_artifact
+2. Далее необходимо в конфигурационный файл пайплайна каждого репозитория (***.circleci/config.yml***) включить следующее задание. Более подробная информация приведена в [документации](https://circleci.com/docs/2.0/workflows/#) сервиса.
+
+        jobs:
+        security_checks:
+            docker:
+            - image: docker.swordfishsecurity.com/hub-cli:latest
+                auth:
+                username: $DOCKER_USERNAME  # следует использовать переменные среды (см. шаг 1), 
+                password: $DOCKER_PASSWORD  # а не указывать непосредственные значения
+            steps:
+                - run:
+                    name: check_source_code
                 command: |
-                    python3 /opt/scan/scan_artifact.py \
-                    --url  $HUB_URL --token "$HUB_TOKEN" \
-                    --appcode "$PROJECT_NAME" \
-                    --artifact-url https://nexus.company.com/repository/docker-private/v2/$CIRCLE_PROJECT_REPONAME/manifests/$PROJECT_RELEASE.$CIRCLE_BUILD_NUM
-                    --unit "$CIRCLE_PROJECT_REPONAME"
+                    python3 /opt/scan/scan_codebase.py \
+                        --url  $HUB_URL --token "$HUB_TOKEN" \
+                        --appcode "$PROJECT_NAME" \
+                        --codebase-url "ssh://$CIRCLE_REPOSITORY_URL"
+                        --codebase-build-tool maven \
+                        --branch "$CIRCLE_BRANCH" \
+                        --unit "$CIRCLE_PROJECT_REPONAME"
+                - run:
+                    name: check_artifact
+                    command: |
+                        python3 /opt/scan/scan_artifact.py \
+                        --url  $HUB_URL --token "$HUB_TOKEN" \
+                        --appcode "$PROJECT_NAME" \
+                        --artifact-url https://nexus.company.com/repository/docker-private/v2/$CIRCLE_PROJECT_REPONAME/manifests/$PROJECT_RELEASE.$CIRCLE_BUILD_NUM
+                        --unit "$CIRCLE_PROJECT_REPONAME"
 
 ## Локальная установка среды выполнения заданий
 
@@ -50,11 +50,11 @@
 
 1.	Запустите виртуальную машину (Ubuntu 20.04 с Docker), на которой планируется запуск среды.
 
-2.	Установите  **CircleCI CLI** на машину с ОС Linux или на эту же виртуальную машину. Использовать эту же виртуальную машину — небезопасно. Более подробная информация приведена в [документации](https://circleci.com/docs/local-cli) сервиса.
+2.	Установите  **Circle CI CLI** на машину с ОС Linux или на эту же виртуальную машину. В целях повышения информационной безопасности рекомендуется использовать отдельную виртуальную машину. Более подробная информация приведена в [документации](https://circleci.com/docs/local-cli) сервиса.
 
         curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | sudo bash
     
-3.	На странице настроек CircleCI (**User Settings** > **Personal API Tokens**) создайте API-токен.
+3.	На странице настроек **Circle CI** (**User Settings** > **Personal API Tokens**) создайте API-токен.
  
 4.	Запустите `circleci setup` и укажите созданный токен. Также укажите `CircleCI Server URL` (или используйте значение по умолчанию):
 
@@ -78,7 +78,7 @@
         
                 circleci namespace create your-company-namespace github circleci
 
-    и класс ресурсов
+    и класс ресурсов.
 
         circleci runner resource-class create <name>/<resource-class> <description> --generate-token
 
@@ -88,7 +88,7 @@
     !!! note "Важно"
         Скопируйте сгенерированный токен!
 
-6.	Создайте скрипт ***install_circleci.sh***, чтобы установить бинарные файлы СircleCI на виртуальную машину.
+6.	Создайте скрипт ***install_circleci.sh***, чтобы установить бинарные файлы Сircle CI на виртуальную машину.
 
         #!/bin/bash
         # Set up runner directory
@@ -111,9 +111,9 @@
         echo "Verifying CircleCI Launch Agent download"
         grep "$file" checksums.txt | sha256sum --check && chmod +x "$file"; sudo cp "$file" "$prefix/circleci-launch-agent" || echo "Invalid checksum for CircleCI Launch Agent, please try download again"
 
-    и выполните следующую команду (обязательна учетная запись с правами sudo):
+    И выполните следующую команду.
 
-        bash install_circleci.sh
+        sudo bash install_circleci.sh
 
 7.	На виртуальной машине создайте конфигурационный файл ***/opt/circleci/launch-agent-config.yaml***.
     
@@ -127,12 +127,13 @@
         command_prefix: ["sudo", "-niHu", "circleci", "--"]
         working_directory: /opt/circleci/workdir/%s
         cleanup_working_directory: true
-        , где AUTH_TOKEN — токен созданный в шаге 5.
-        Измените права доступа для данного файла:
+
+    , где `AUTH_TOKEN` — токен, созданный в шаге 5. Измените права доступа для данного файла:
+
         sudo chown root: /opt/circleci/launch-agent-config.yaml
         sudo chmod 600 /opt/circleci/launch-agent-config.yaml
 
-8.	На виртуальной машине создайте пользователя и рабочую директорию `circleci`. 
+8.	На виртуальной машине создайте имя пользователя и рабочую директорию `circleci`. 
 
         id -u circleci &>/dev/null || sudo adduser --disabled-password --gecos GECOS circleci
 
@@ -246,7 +247,7 @@
                     --unit "unit-name"
 
 !!!note "Примечание"
-    Имена кодовых баз и артефактов в системе AppSec.HubИмена передаются с помощью параметров `--codebase-name` и `--artifact-name` (запросите у инженера ИБ). `--unit` — имя структурного подразделения в AppSec.Hub (запросите у инженера ИБ). `--version` — актуальная версия.
+    Имена кодовых баз и артефактов в системе AppSec.Hub передаются с помощью параметров `--codebase-name` и `--artifact-name` (запросите у инженера ИБ). `--unit` — структурная единица приложения в AppSec.Hub (запросите у инженера ИБ). `--version` — актуальная версия.
 
 !!!example "Например"
     
