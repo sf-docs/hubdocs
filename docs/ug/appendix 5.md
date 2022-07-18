@@ -31,6 +31,7 @@
 `dw.scheduledImport.cron.expression`|Cron-выражение, задающее период импорта security issues|`0 0 1,22 * * ?`
 `hub.ci.jenkins.poll.period`|Промежуток времени между обращениями AppSec.Hub к Jenkins|`10000`
 `hub.ci.jenkins.poll.max.tries`|Количество обращений AppSec.Hub к Jenkins|`50`
+`hub.scan.check.rate`|Частота проверки результатов сканирования в CI инструменте|`hub.scan.check.rate:30000`
 `hub.avc.training.schedule`|Cron-выражение, задающее период тренировки модели AVC|`0 0 2 * * ?`
 `export.docker.repository.url-creation-strategy`|Cтратегия создания URL для репозиториев Docker. С использованием имени репозитория или порта|`port`
 `hub.jira.users.maxResults`|Максимальное количество пользователей Jira|`1000`
