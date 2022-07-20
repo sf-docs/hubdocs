@@ -17,6 +17,6 @@
 `hub_ui_version`|Текущая версия hub_ui|	
 `hub_db_version`|Текущая версия hub_db|	
 `hub_air_version`|Текущая версия hub_air|	
-`IP_EXTERNAL`||`0.0.0.0`
-`MODEL_USE_ENCRYPTION`||`0`
-`MODEL_SECRET_KEY`||`change it`
+`IP_EXTERNAL`|Внешний IP|`0.0.0.0`
+`MODEL_USE_ENCRYPTION`|Использование шифрования|`0`
+`MODEL_SECRET_KEY`|Ключ шифрования|`change it`

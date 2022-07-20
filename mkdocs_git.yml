@@ -14,7 +14,7 @@ nav:
           - Конфигурация приложения: ug/application configuration.md
           - Security Pipelines: ug/security pipelines.md
           - Релизные объекты: ug/release objects.md
-          - On-boarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
+          - Onboarding — автоматизация интеграции AppSec.Hub в цикл разработки: ug/on-boarding.md
       - Проблемы и дефекты безопасности:
           - Работа с проблемами и дефектами безопасности: ug/handling security problems and defects.md
           - Проблемы безопасности: ug/security issues.md
@@ -22,7 +22,7 @@ nav:
           - Синхронизация с Jira — настройки: ug/setting of synchronisation with Jira.md
       - Аналитика: ug/analytics.md
       - Приложения:
-        - Приложение 1. Описание параметров запуска скриптов On-boarding: ug/appendix 1.md
+        - Приложение 1. Описание параметров запуска скриптов Onboarding: ug/appendix 1.md
         - Приложение 2. Примеры запуска скриптов для интеграции: ug/appendix 2.md
         - Приложение 3. Результаты сканирования: ug/appendix 3.md
         - Приложение 4. Коды выхода Meta-runner: ug/appendix 4.md

@@ -51,7 +51,7 @@
                         --artifact-url https://nexus.company.com/repository/docker-private/v2/$CIRCLE_PROJECT_REPONAME/manifests/$PROJECT_RELEASE.$CIRCLE_BUILD_NUM
                         --unit "$CIRCLE_PROJECT_REPONAME"
 
-## Интеграция с локально установленным CircleCI
+## Интеграция с CircleCI with private node
 
 В отдельных случаях для запуска среды выполнения заданий может потребоваться использование собственных программно-аппаратных средств.
 
