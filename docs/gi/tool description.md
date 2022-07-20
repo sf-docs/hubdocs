@@ -47,14 +47,14 @@ AppSec.Hub управляет процессом тестирования без
 
 * Статическое тестирование безопасности приложений (Static Application Security Testing, SAST):
     * Checkmarx.
-    * Micro Focus Fortify.
+    <!-- * Micro Focus Fortify. -->
     * Solar appScreener.
     * SonarQube.
     * DerScanner.
 * Анализ структуры программного обеспечения (Software Composition Analysis, SCA):
-    * Sonatype Nexus IQ.
     * Clair.
     * Aqua.
+    <!-- * Sonatype Nexus IQ. -->
 * Динамическое тестирование безопасности приложений (Dynamic Application Security Testing, DAST):
     * Netsparker.
     * Wallarm FAST.

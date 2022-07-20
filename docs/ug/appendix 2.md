@@ -162,7 +162,7 @@
         --cx-team /CxServer/asdfsadfASDFASDF/kg_19082021_2 \
         --quality-gate no-critical-issues
 
-### Импорт результатов из Nexus IQ (артефакт)
+<!-- ### Импорт результатов из Nexus IQ (артефакт)
 
     py import_results.py \
         --url https://hub.dev.swordfishsecurity.com \
@@ -174,9 +174,9 @@
         --nxiq-org 12072021_nxiq \
         --nxiq-stage operate \
         --nxiq-report 5bbfc21a24864254a58c905d475a0ea4 \
-        --quality-gate no-critical-issues
+        --quality-gate no-critical-issues -->
 
-### Импорт результатов из Nexus IQ (кодовая база)
+<!-- ### Импорт результатов из Nexus IQ (кодовая база)
     
     py import_results.py \
         --url https://hub.dev.swordfishsecurity.com \
@@ -189,7 +189,7 @@
         --nxiq-org 12072021_nxiq_2 \
         --nxiq-stage operate \
         --nxiq-report 5bbfc21a24864254a58c905d475a0ea4 \
-        --quality-gate no-critical-issues
+        --quality-gate no-critical-issues -->
 
 ### Импорт результатов из Dependency track (кодовая база)
 

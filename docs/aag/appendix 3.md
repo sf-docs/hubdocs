@@ -9,10 +9,10 @@ Bitbucket|N/A
 Checkmarx|SAST Admin
 Clair|N/A
 Confluence|N/A
-Fortify|Security Lead
 Jira|Jira Administrator + Global permissions
 Netsparker|Account Owner
-Nexus IQ|Owner
-Nexus Repository Manager|nx-admin
 TeamCity|Project Administrator + System Administrator for Export Pipeline
+Nexus Repository Manager|nx-admin
+<!-- Nexus IQ|Owner -->
+<!-- Fortify|Security Lead -->
 </figure>

@@ -148,8 +148,8 @@
 	Нод (Node)|Путь
 	-|-
 	Jenkins|`/opt/java/openjdk/lib/security/cacerts`
-	Fortify|`/opt/Fortify/Fortify_SCA_and_Apps_21.1.1/jre/lib/security/cacerts`<br>`/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts`
 	Прочие|`/etc/default/cacerts`<br>`/etc/ssl/certs/java/cacerts`<br>`/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts`
+<!-- Fortify|`/opt/Fortify/Fortify_SCA_and_Apps_21.1.1/jre/lib/security/cacerts`<br>`/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts` -->
 	
 #### Добавление сертификатов в hub-ui
 

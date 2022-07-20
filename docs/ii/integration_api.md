@@ -88,7 +88,7 @@
 
 
 
-**Nexus IQ**
+<!-- **Nexus IQ**
 
 Параметр|Тип|Описание
 -|-|-
@@ -97,7 +97,7 @@
 `nxiqApp`|String|Публичный ID приложения в Nexus IQ
 `nxiqOrg`|String|Имя организации
 `nxiqStage`|String|Этап сканирования приложения<br>Доступные значения: `build`, `stage-release`, `release`, `operate`
-`nxiqReport`|String|ID отчета приложения Nexus IQ. При отсутствии импортируются результаты последнего отчета
+`nxiqReport`|String|ID отчета приложения Nexus IQ. При отсутствии импортируются результаты последнего отчета -->
 
 
 
@@ -169,7 +169,7 @@
     "qualityGateCode": "no-critical"
     }
 
-**Nexus IQ с кодовой базой**
+<!-- **Nexus IQ с кодовой базой**
 
     {
     "application": {
@@ -222,7 +222,7 @@
         }
     ],
     "qualityGateCode": "no-critical"
-    }
+    } -->
 
 ### Ответ
 
