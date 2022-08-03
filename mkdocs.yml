@@ -50,6 +50,7 @@ nav:
     - aag/installing, running and updating AppSec.Hub.md
     - Конфигурационные параметры:
       - aag/managing the number of tasks import streams.md
+      - ii/automatic_sync_safety_defects.md
     - Интеграция в DevOps:
       - ii/cli.md
       - ii/integration_api.md
