@@ -1,0 +1,2357 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Проблемы безопасности - Документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WT4F2GS');</script>
+<!-- End Google Tag Manager -->
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="appsechub" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация" class="md-header__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Проблемы безопасности
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sf-docs/hubdocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AppSec.Hub/documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gi/" class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Руководство пользователя
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aag/" class="md-tabs__link">
+        Руководство администратора
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ii/" class="md-tabs__link">
+        Установка и интеграция
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sag/" class="md-tabs__link">
+        Руководство администратора ИБ
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация" class="md-nav__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Документация
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sf-docs/hubdocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AppSec.Hub/documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../gi/">Общая информация</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Общая информация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/tool%20description/" class="md-nav__link">
+        Описание инструмента
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/user%20workstation%20requirements/" class="md-nav__link">
+        Требования к рабочему месту пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/glossary/" class="md-nav__link">
+        Термины и сокращения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Руководство пользователя</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство пользователя" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство пользователя
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Работа с приложениями
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Работа с приложениями" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Работа с приложениями
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work%20with%20applications/" class="md-nav__link">
+        Приложения в AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding%20a%20new%20application/" class="md-nav__link">
+        Добавление нового приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20settings/" class="md-nav__link">
+        Настройки приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../application%20configuration/" class="md-nav__link">
+        Конфигурация приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20pipelines/" class="md-nav__link">
+        Security Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release%20objects/" class="md-nav__link">
+        Релизные объекты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../on-boarding/" class="md-nav__link">
+        Onboarding
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Проблемы и дефекты безопасности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Проблемы и дефекты безопасности" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Проблемы и дефекты безопасности
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../handling%20security%20problems%20and%20defects/" class="md-nav__link">
+        Работа с проблемами и дефектами безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Проблемы безопасности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Проблемы безопасности
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Импорт проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Информация о проблемах безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Группировка проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Добавление проблем безопасности в исключения
+  </a>
+  
+    <nav class="md-nav" aria-label="Добавление проблем безопасности в исключения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Безусловное принятие риска
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Условное принятие риска
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Информация о добавленных в исключения уязвимостях
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Настройка алгоритма изменения состояний проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#false-positive" class="md-nav__link">
+    Присвоение проблеме безопасности статуса False positive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Удаление правил
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Экспорт проблем безопасности в файл
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security%20defects/" class="md-nav__link">
+        Дефекты безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting%20of%20synchronisation%20with%20Jira/" class="md-nav__link">
+        Синхронизация с Jira — настройки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/" class="md-nav__link">
+        Аналитика
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../aag/">Руководство администратора</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Подключение инструментов
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Подключение инструментов" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Подключение инструментов
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20software%20development%20tools/" class="md-nav__link">
+        Подключение инструментов разработки ПО
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20ast%20tools/" class="md-nav__link">
+        Подключение инструментов AST
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/itegration%20with%20wiki%20tools/" class="md-nav__link">
+        Подключение Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/selection%20of%20priority%20tools/" class="md-nav__link">
+        Выбор приоритетных инструментов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/disabling%20tools/" class="md-nav__link">
+        Отключение инструментов
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Конфигурация
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурация" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20configuration/" class="md-nav__link">
+        Конфигурация AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/users%20and%20teams/" class="md-nav__link">
+        Пользователи и команды
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/organisation%20of%20workspaces/" class="md-nav__link">
+        Организация рабочих пространств
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/setting%20up%20notifications/" class="md-nav__link">
+        Настройка уведомлений
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/quality%20gates/" class="md-nav__link">
+        Quality Gates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/tagging%20settings/" class="md-nav__link">
+        Настройки тегирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/categories%20of%20vulnerabilities/" class="md-nav__link">
+        Категории уязвимостей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/custom%20webhooks%20configuration/" class="md-nav__link">
+        Конфигурация Custom webhooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/application%20vulnerability%20correlation%20settings/" class="md-nav__link">
+        Настройки корреляции уязвимостей приложения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20licence%20management/" class="md-nav__link">
+        Управление лицензией AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ii/">Установка и интеграция</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Установка и интеграция" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Установка и интеграция
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/" class="md-nav__link">
+        Установка, запуск и обновление AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Конфигурационные параметры
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурационные параметры" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурационные параметры
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/managing%20the%20number%20of%20tasks%20import%20streams/" class="md-nav__link">
+        Управление количеством задач/потоков импорта
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/automatic_sync_safety_defects/" class="md-nav__link">
+        Автоматическая синхронизация дефектов безопасности
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Интеграция в DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Интеграция в DevOps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Интеграция в DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/cli/" class="md-nav__link">
+        AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/integration_api/" class="md-nav__link">
+        Интеграционный API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/teamcity/" class="md-nav__link">
+        Интеграция с TeamCity с использованием Meta-Runner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/circleci/" class="md-nav__link">
+        Интеграция с CircleCI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/gitlab/" class="md-nav__link">
+        Интеграция с GitLab CI/CD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%201/" class="md-nav__link">
+        Приложение 1. Конфигурационный файл .env
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%202/" class="md-nav__link">
+        Приложение 2. Список контейнеров
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%203/" class="md-nav__link">
+        Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%205/" class="md-nav__link">
+        Приложение 4. Конфигурационный файл app.properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%201/" class="md-nav__link">
+        Приложение 5. Параметры скриптов AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%202/" class="md-nav__link">
+        Приложение 6. Примеры запуска скриптов AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%203/" class="md-nav__link">
+        Приложение 7. Результаты сканирования AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%204/" class="md-nav__link">
+        Приложение 8. Коды выхода Meta-Runner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../sag/">Руководство администратора ИБ</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора ИБ" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора ИБ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/protected%20objects/" class="md-nav__link">
+        Объекты защиты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/users%20and%20groups/" class="md-nav__link">
+        Пользователи и группы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/secure%20configuration/" class="md-nav__link">
+        Безопасная сетевая конфигурация
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/session%20lifetime/" class="md-nav__link">
+        Время жизни сессии
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/audit%20logs/" class="md-nav__link">
+        Журналы аудита
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sag/appendix%201/" class="md-nav__link">
+        Приложение. Список событий аудита
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Импорт проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Информация о проблемах безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Группировка проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Добавление проблем безопасности в исключения
+  </a>
+  
+    <nav class="md-nav" aria-label="Добавление проблем безопасности в исключения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Безусловное принятие риска
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Условное принятие риска
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Информация о добавленных в исключения уязвимостях
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Настройка алгоритма изменения состояний проблем безопасности
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#false-positive" class="md-nav__link">
+    Присвоение проблеме безопасности статуса False positive
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Удаление правил
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Экспорт проблем безопасности в файл
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/sf-docs/hubdocs/edit/master/docs/ug/security issues.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="_1">Проблемы безопасности</h1>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Для выполнения нижеописанных действий требуется роль Инженер ИБ.</p>
+</div>
+<p>Каждый инструмент AST создает отчет по безопасности (Security Report) во время каждого запуска тестирования безопасности. Это происходит в рамках работы Security Pipeline. Отчет по безопасности содержит список проблем безопасности (Security Issues), обнаруженных в ходе тестирования. Работу с отчетом по безопасности следует начинать с импорта выявленных проблем из инструментов AST в AppSec.Hub.</p>
+<p>Информация о проблемах безопасности всех приложений, к которым пользователь имеет доступ, отображается на общей странице <strong>Issues</strong>.</p>
+<figure>
+<p><img alt="" src="../img/297.png" /></p>
+</figure>
+<h2 id="_2">Импорт проблем безопасности</h2>
+<p>Несмотря на то, что импорт Security Issues после завершения сканирования осуществляется автоматически, предусмотрена возможность выполнить его «вручную», используя пользовательский интерфейс AppSec.Hub.</p>
+<p>Чтобы начать работу с проблемами безопасности для одного выбранного приложения, выберите пункт меню <strong>Applications</strong>. На экране появится страница с приложениями.</p>
+<figure>
+<p><img alt="" src="../img/1.png" /></p>
+</figure>
+<p>Нажмите строку выбранного приложения.</p>
+<p>Слева в меню выберите пункт <strong>Issues</strong> и нажмите кнопку <strong>Import issues</strong> <img alt="" src="../img/127.png" /> в правом верхнем углу, чтобы импортировать проблемы из инструментов AST. В правом нижнем углу появится подтверждение начала импорта <strong>Import started</strong>.</p>
+<figure>
+<p><img alt="" src="../img/128.png" /></p>
+</figure>
+<p>После завершения на экране появятся импортированные проблемы. В показанном на рисунке выше примере проблемы были обнаружены в результате запуска инструмента SCA.</p>
+<p>Общее количество открытых на данный момент проблем безопасности (еще не исправленных и не имеющих статус <strong>Fixed</strong>), относящихся к данному приложению, отображается рядом с пунктом меню <strong>Issues</strong>.</p>
+<p>Чтобы импортировать проблемы для нескольких приложений из ранее проведенных сканирований, выберите в меню пункт <strong>Issues</strong>.</p>
+<p>Нажмите кнопку <strong>Import issues</strong> <img alt="" src="../img/imp.png" /> в правом верхнем углу. На экране появится окно <strong>Choose application</strong>.</p>
+<figure>
+<p><img alt="" src="../img/244.png" /></p>
+</figure>
+<p>Выберите в этом окне приложения, для которых необходимо импортировать проблемы. Чтобы выбрать все доступные пользователю приложения, нажмите пункт <strong>Select all</strong>. Отдельные приложения можно выбрать, нажав на выпадающее меню <strong>Enter Application Name</strong>. Можно воспользоваться поиском нужных приложений, введя имя или часть имени приложения в поле <strong>Search</strong>.</p>
+<figure>
+<p><img alt="" src="../img/245.png" /></p>
+</figure>
+<p>Список уже выбранных приложений можно скорректировать. Чтобы исключить из списка уже выбранное приложение, достаточно в списке нажать значок <img alt="" src="../img/grcross.png" /> справа от его имени. Чтобы очистить весь список, нажмите кнопку <strong>Deselect all</strong> в левом нижнем углу окна.</p>
+<figure>
+<p><img alt="" src="../img/246.png" /></p>
+</figure>
+<p>Чтобы начать импорт, нажмите кнопку <strong>Import</strong> в правом нижнем углу окна. На экране появится окно <strong>The import process started</strong>. В этом окне содержится информация о том, для каких приложений был начат процесс импорта проблем, а для каких он не стартовал по каким-либо причинам с указанием ID приложения, его имени и описанием ошибки. Нажмите кнопку <strong>Ok</strong> внизу окна.</p>
+<figure>
+<p><img alt="" src="../img/247.png" /></p>
+</figure>
+<p>После завершения на экране появятся импортированные проблемы.</p>
+<h2 id="_3">Информация о проблемах безопасности</h2>
+<p>AppSec.Hub предоставляет информацию и позволяет работать с проблемами безопасности как для одного выбранного приложения, так и для всех приложений, к которым пользователь имеет доступ.
+Информация о проблемах безопасности всех доступных пользователю приложений отображается на общей странице проблем безопасности <strong>Issues</strong>. По сути, собранная на этой странице информация объединяет и дублирует все сведения о проблемах безопасности, содержащиеся на страницах <strong>Issues</strong> для каждого отдельного приложения.</p>
+<figure>
+<p><img alt="" src="../img/248.png" /></p>
+</figure>
+<p>Каждая проблема представлена на экране отдельной строкой, которая содержит краткое описание проблемы в следующих столбцах:</p>
+<ul>
+<li><strong>ID</strong> — идентификатор проблемы в системе.</li>
+<li><strong>TYPE</strong> — тип проблемы (SAST, DAST, SCA Compliance и SCA Security).</li>
+<li><strong>APPLICATION</strong> — ссылка на приложение, к которому относится проблема.</li>
+<li><strong>SOURCE</strong> — источник проблемы, имя файла для проблем, выявленных SAST, или имя и версия компонента для проблем, выявленных SCA.</li>
+<li><strong>CATEGORY</strong> — тип категории проблемы (например, Potential_SQL_Injection для проблем, выявленных SAST и т. д.).</li>
+<li><strong>STATUS</strong> — статус проблемы в системе (To Verify, Confirmed, Open, Fixed, False Positive).</li>
+<li><strong>SEVERITY</strong> — серьезность проблемы в инструменте AST (Low, Medium, High, Critical).</li>
+<li><strong>CWE</strong> (Common Weakness Enumeration) — указывается, если применимо. CW — это список типов слабых мест (weakness) программного и аппаратного обеспечения, разработанный сообществом специалистов в этих областях. Он используется в качестве общего языка и стандарта для инструментов безопасности, а также в качестве базы для идентификации выявленных слабых мест, для уменьшения последствий от их присутствия, и для их предотвращения.</li>
+<li><strong>DEFECT</strong> — ссылка на соответствующий дефект безопасности, если он уже существует.</li>
+</ul>
+<p>Вся отображенная на экране информация о проблемах безопасности импортируется в AppSec.Hub из инструментов AST.</p>
+<p>Нажмите идентификатор проблемы безопасности в столбце <strong>ID</strong>, чтобы поработать с этой проблемой. На экране появится окно с подробной информацией о ней. Окно содержит шесть вкладок.</p>
+<ul>
+<li>
+<p><strong>Details</strong> — подробная информация о проблеме с указанием потенциальной опасности, причины ее возникновения, а также рекомендаций по устранению. Для проблем безопасности, обнаруженных в ходе сканирования, привязанного к релизному объекту, приводится дополнительная ссылка на релизный объект. Кроме того, в полях <strong>AVC Status</strong> и <strong>AVC Accuracy</strong> приведены результаты AVC-анализа (Application Vulnerabilities Correlation), см. раздел «<a href="../../aag/application%20vulnerability%20correlation%20settings/#_1">Настройки корреляции уязвимостей приложения</a>» Руководства администратора.</p>
+<p><figure markdown><img alt="" src="../img/129.png" /></figure></p>
+</li>
+<li>
+<p><strong>Path</strong> — информация, позволяющая локализовать источник проблемы.</p>
+<p><figure markdown><img alt="" src="../img/130.png" /></figure></p>
+</li>
+<li>
+<p><strong>Status history</strong> — история сканирования проблемы безопасности. Эта вкладка содержит информацию о каждом случае обнаружения проблемы во время выполненных проверок безопасности, а также на ней можно проследить историю изменения статусов уязвимости (поля <strong>Old Status</strong> и <strong>New status</strong>). Обновление статуса отображается только в случае его действительного изменения — если, например, было проведено сканирование, но статус Security Issue не изменился, обновляется только дата. Поле <strong>Scan Task Id</strong> автоматически заполняется по результатам проведенного сканирования, а при нажатии на эту ссылку происходит переход на страницу с детальной информацией об этом сканировании.</p>
+<p><figure markdown><img alt="" src="../img/131.png" /></figure></p>
+</li>
+<li>
+<p><strong>State history</strong> — история изменения состояний проблемы безопасности. Помимо даты, времени и идентификатора сканирования на вкладке отображается состояние проблемы безопасности (<strong>NEW</strong>, <strong>REPEATED</strong>),  выбранный алгоритм изменения статуса (<strong>ISSUE STATE POLICY</strong>), а также идентификатор сканирования, с результатами которого осуществлялось сравнение (<strong>REGARDING THE SCAN TASK</strong>).</p>
+<p><figure markdown><img alt="" src="../img/132.png" /></figure></p>
+</li>
+<li>
+<p><strong>Comments</strong> и <strong>Recommendation</strong> — обеспечивают возможность добавления соответственно комментариев и рекомендаций. Они будут сохранены после нажатия кнопок <strong>Send</strong> на вкладке <strong>Comments</strong> или <strong>Save</strong> на вкладке <strong>Recommendation</strong>. Если в дальнейшем будут обнаружены похожие проблемы безопасности, все сохраненные рекомендации будут автоматически добавлены к ним. Эта функциональность реализована в AppSec.Hub на основе анализа корреляции проблем.</p>
+<p><figure markdown><img alt="" src="../img/133.png" /></figure></p>
+</li>
+</ul>
+<p>AppSec.Hub анализирует историю каждой проблемы безопасности. Если проблема была обнаружена во время сканирования безопасности, но затем не была обнаружена во время следующего сканирования безопасности, она автоматически получает статус <strong>Fixed</strong>.</p>
+<p>Нажмите ссылку на инструмент AST в поле <strong>Found by</strong> справа на вкладке <strong>Details</strong>. На экране откроется страница входа в инструмент AST. Введите учетные данные, чтобы просмотреть и при необходимости отредактировать проблему безопасности в инструменте AST. Проблемы безопасности невозможно редактировать в AppSec.Hub. Если проблемы безопасности были отредактированы и обновлены в инструменте AST, необходимо импортировать это обновление в AppSec.Hub. Чтобы импортировать обновленные задачи, нажмите на кнопку <strong>Import issues</strong> <img alt="" src="../img/127.png" />. Информацию о проблемах безопасности можно экспортировать в файл, см. раздел «<a href="../security%20issues/#_11">Экспорт проблем безопасности в файл</a>».</p>
+<h2 id="_4">Группировка проблем безопасности</h2>
+<p>AppSec.Hub определяет корреляцию между импортированными из инструментов AST проблемами безопасности и группирует их. Система выполняет автоматический анализ выявленных проблем безопасности в контексте истинно/ложноположительных проблем на основе модели машинного обучения. Для схожих истинно положительных результатов в системе документируются один и тот же статус, а также рекомендации, предположения о причинах возникновения и меры по устранению. На основе используемой модели корреляции выявленные проблемы безопасности группируются и объединяются в дефекты безопасности.</p>
+<p>Проблемы безопасности можно сгруппировать вручную. Чтобы настроить правила фильтрации, нажмите кнопку <strong>Show filters</strong> <img alt="" src="../img/filter.png" /> в правом верхнем углу страницы. Реализованы четыре механизма фильтрации: один с применением правил корреляции, а также три настраиваемых.</p>
+<p>Кроме того, на общей странице проблем безопасности <strong>Issues</strong> можно задать фильтр по приложению – <strong>by application</strong>. После того, как в поле <strong>by application</strong> выбрано приложение, можно поставить дополнительный фильтр на структурные единицы приложения в поле <strong>by structure unit</strong>.</p>
+<p>Чтобы активировать режим фильтрации с использованием правила корреляции, переведите селектор <strong>Apply correlation rules by default</strong> в положение «включено» и выберите используемое правило корреляции (только для SAST уязвимостей).</p>
+<figure>
+<p><img alt="" src="../img/134.png" /></p>
+</figure>
+<p>Три настраиваемых режима фильтрации предлагают следующие возможности:</p>
+<ul>
+<li>Фильтрация с использованием <strong>Issue properties</strong>.</li>
+<li>Фильтрация с использованием <strong>Linked entities</strong>.</li>
+<li>Фильтрация с использованием <strong>AVC</strong>.</li>
+</ul>
+<p>Выбрав вариант фильтрации <strong>Issue properties</strong>, получаем возможность сортировки проблем безопасности по следующим критериям:</p>
+<ul>
+<li><strong>by structure unit</strong> — по структурным единицам приложения;</li>
+<li><strong>sort by</strong> — по уровню серьезности — <strong>Severity: High to Low/Low to High</strong> (от более серьезных к менее, и наоборот) или по времени занесения/последнего обновления — <strong>Newest first/Last updated</strong> (сначала новые/сначала старые);</li>
+<li><strong>by type</strong> — по типу (<strong>SAST</strong>, <strong>SCA Compliance</strong>, <strong>SCA Security</strong> и <strong>DAST</strong>);</li>
+<li><strong>by status</strong> — по статусу (<strong>To Verify</strong>, <strong>Confirmed</strong>, <strong>Open</strong>, <strong>Fixed</strong> и <strong>False Positive</strong>);</li>
+<li><strong>by tool</strong> — по инструменту, с помощью которого обнаружена уязвимость (<strong>NetSparker</strong>, <strong>Acunetix</strong>, <strong>MDast</strong>, <strong>Wallarm</strong>, <strong>IBM Security AppScan</strong>, <strong>Fortify Static Code Analyzer</strong> и <strong>SonarQube</strong>);</li>
+<li><strong>by severity</strong> — по серьезности (<strong>Low</strong>, <strong>Medium</strong>, <strong>High</strong> и <strong>Critical</strong>);</li>
+<li><strong>by source</strong> — по источнику;</li>
+<li><strong>by category</strong> — по категории;</li>
+<li><strong>by CWE ID</strong> — по CWE ID;</li>
+<li><strong>updated in</strong> — по дате последнего обновления (<strong>Last week</strong>, <strong>Last month</strong>, <strong>Last 3 months</strong>, <strong>Last 6 months</strong>, <strong>Last year</strong>, <strong>Last 2 years</strong> и <strong>Last 3 years</strong>).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В полях <strong>by type</strong>, <strong>by status</strong>, <strong>by tool</strong>, <strong>by severity</strong> и <strong>updated in</strong> может быть одновременно выбрано несколько параметров, см. рис. ниже.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/135.png" /></p>
+</figure>
+<p>Выберите группу проблем безопасности из доступных вариантов. Для более точной группировки проблем в AppSec.Hub доступно применение нескольких критериев фильтрации одновременно. Проблемы на рисунке ниже сгруппированы в соответствии с выбранными опциями (<strong>SAST</strong> и <strong>DAST</strong> в поле <strong>by type</strong>, <strong>To verify</strong> в поле <strong>by status</strong>, <strong>WEB-INF</strong> в поле <strong>by source</strong>).</p>
+<figure>
+<p><img alt="" src="../img/136.png" /></p>
+</figure>
+<p>Выберите вариант фильтрации <strong>Linked entities</strong>, чтобы отсортировать проблемы безопасности с учетом связанных с ними сущностей (кодовых баз, артефактов или инстансов), используя следующие поля:</p>
+<ul>
+<li><strong>Sort by</strong> — по уровню серьезности — <strong>Severity: High to Low/Low to High</strong> (от более серьезных к менее, и наоборот) или по времени занесения/последнего обновления — <strong>Newest first/Last updated</strong> (сначала новые/сначала старые).</li>
+<li><strong>By type</strong> — по типу уязвимости (<strong>SAST</strong>, <strong>SCA Compliance</strong>, <strong>SCA Security</strong> и <strong>DAST</strong>).</li>
+<li><strong>By codebase</strong> — по кодовым базам.</li>
+<li><strong>By artifact</strong> — по артефактам.</li>
+<li><strong>By instance</strong> — по инстансам.</li>
+<li><strong>By repository proxy</strong> — по проски-репозиториям.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В полях <strong>by type</strong>, <strong>by codebase</strong>, <strong>by artifact</strong>, <strong>by instance</strong> и <strong>by repository proxy</strong> может быть одновременно выбрано несколько параметров, см. рис. ниже.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/137.png" /></p>
+</figure>
+<p>Выберите вариант фильтрации <strong>AVC</strong>, чтобы отсортировать проблемы безопасности с использованием результатов AVC-анализа:</p>
+<ul>
+<li><strong>Sort by</strong> — по уровню серьезности — <strong>Severity: High to Low/Low to High</strong> (от более серьезных к менее, и наоборот) или по времени занесения/последнего обновления — <strong>Newest first/Last updated</strong> (сначала новые/сначала старые).</li>
+<li><strong>By type</strong> — по типу уязвимости (<strong>SAST</strong>, <strong>SCA Compliance</strong>, <strong>SCA Security</strong> и <strong>DAST</strong>).</li>
+<li><strong>By AVC status</strong> — по статусу AVC (<strong>False Positive</strong> (ложноположительные), <strong>True Positive</strong> (истинно положительные)).</li>
+<li><strong>By lower limit of accuracy</strong> — по нижнему пределу точности оценки AVC.</li>
+<li><strong>By upper limit of accuracy</strong> — по верхнему пределу точности оценки AVC.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В полях <strong>by type</strong> и <strong>by AVC status</strong> может быть одновременно выбрано несколько параметров, см. рис. ниже.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/138.png" /></p>
+</figure>
+<p>Для опции <strong>AVC</strong> для каждой проблемы на экран выводится статус AVC в соответствующем столбце — здесь указывается, имеет ли проблема «истинно положительный» (TP) или «ложноположительный» (FP) статус в соответствии с оценкой AppSec.Hub, а также вероятность этой оценки в процентах, предоставленная AppSec.Hub для этой проблемы. Вероятность отображается в виде числа в синем кружке рядом с аббревиатурой TP или FP: <img alt="" src="../img/139.png" /> (в этом примере AppSec.Hub указывает, что эта проблема является «истинно положительной» с вероятностью 73 процента).</p>
+<figure>
+<p><img alt="" src="../img/140.png" /></p>
+</figure>
+<h2 id="_5">Добавление проблем безопасности в исключения</h2>
+<div class="admonition note">
+<p class="admonition-title">Важное замечание</p>
+<p>Для выполнения нижеописанных действий требуется роль Инженер ИБ. Для других ролей в AppSec.Hub данная функциональность недоступна.</p>
+</div>
+<p>Некоторые компоненты (например, open-source библиотеки), используемые при разработке приложений, могут не иметь безопасных версий. В такой ситуации Инженеры ИБ, в результате соответствующих управленческих решений, могут разрешать использование таких компонентов, допуская наличие соответствующего риска (Accepted Risk), путем добавления проблем безопасности в исключения. В результате при сканировании AppSec.Hub не воспринимает данную уязвимость как подлежащую учету при расчете критериев QG. Таким образом, по сути происходит преднамеренный отказ от использования тех или иных критериев или политик безопасности в отношении проблем, добавленных в исключения.</p>
+<p>В AppSec.Hub реализован механизм добавления выявленных проблем безопасности в исключения. Наличие уязвимости, добавленной с помощью данного механизма в исключения, считается допустимым и не является блокирующим фактором, например, при принятии окончательного решения о готовности релиза к развертыванию в промышленную эксплуатацию. На данный момент в AppSec.Hub статус <strong>Accepted Risk</strong> может устанавливаться только для уязвимостей, выявленных инструментами SCA (например, Clair).</p>
+<p>Заметим, что добавление уязвимостей в исключения в том или ином виде реализовано во многих инструментах AST. Для получения дополнительной информации, пожалуйста, обращайтесь к сопроводительной документации соответствующих продуктов. Важно подчеркнуть, что обмен информацией о Security Issues между AppSec.Hub и инструментами носит двухсторонний характер. Например, после изменения статуса в AppSec.Hub также изменяется статус в отчете Nexus IQ.</p>
+<p>Если в SCA инструменте (например, Nexus IQ) уязвимость добавлена в исключения (waived), то при импорте в AppSec.Hub она получает статус <strong>Accepted risk</strong>. И наоборот, если какая-либо уязвимость будет добавлена в исключения в AppSec.Hub, соответствующий компонент автоматически получит статус waived в инструменте. Также в инструмент будут переданы данные о пользователе, создавшем данное исключение, идентификационные данные уязвимости с указанием CVE и соответствующий комментарий. </p>
+<p>Если для приложения включен прокси-репозиторий и в нем уязвимость добавлена в исключения, а также к исключению добавлен комментарий «Autowaive: True», то при импорте уязвимостей в AppSec.Hub создается правило, которое отображается на вкладке <strong>Rules</strong> страницы <strong>Risk Acceptance</strong>. Также аналогичное правило может быть создано и непосредственно из интерфейса AppSec.Hub, см. разделы «<a href="../security%20issues/#_6">Безусловное принятие риска</a>» и «<a href="../security%20issues/#_7">Условное принятие риска</a>».</p>
+<figure>
+<p><img alt="" src="../img/141.png" /></p>
+</figure>
+<p>Для каждого правила указывается следующая информация:</p>
+<ul>
+<li><strong>ID</strong> — идентификатор правила в системе.</li>
+<li><strong>ISSUE TYPE</strong> — тип Security Issue.</li>
+<li><strong>LIBRARY</strong> — используемая библиотека.</li>
+<li><strong>CVE</strong> — ссылка на описание уязвимости в базе данных общеизвестных уязвимостей информационной безопасности (CVE, Common Vulnerabilities and Exposures).</li>
+<li><strong>IS OBSOLETE</strong> — статус правила — если правило распространяется на какие-либо проблемы безопасности в приложении, в данном поле появляется значение <strong>true</strong>, в противном случае — <strong>false</strong>. </li>
+<li><strong>CREATED</strong> — дата и время создания.</li>
+<li><strong>EXPIRED</strong> — срок действия.</li>
+</ul>
+<p>Справа от каждого правила располагается иконка <img alt="" src="../img/bin.png" />, нажав которую его можно удалить, см. раздел «<a href="../security%20issues/#_10">Удаление правил</a>».</p>
+<p>Если при последующем сканировании кодовой базы или артефакта будет обнаружена уязвимость с таким же названием, такой же версии и идентичным значением severity, то на основе созданного правила ей будет автоматически присвоен статус <strong>Accepted risk</strong>. Такой подход позволяет избежать заметных временных затрат на повторное изменение статуса с <strong>To verify</strong> на <strong>Accepted risk</strong> для аналогичных проблем безопасности — однажды определив риск как допустимый, в дальнейшем нет необходимости изменять статус «вручную».</p>
+<p>В AppSec.Hub реализована возможность импорта комментариев из инструментов, т. е. информацию о причине добавления уязвимости в исключения можно посмотреть на вкладке <strong>Comments</strong> соответствующей Security Issue. Аналогично комментарии передаются из AppSec.Hub в соответствующий инструмент.</p>
+<p>В свою очередь, если в AppSec.Hub для уязвимости установлен статус <strong>Accepted Risk</strong>, в инструмент (например, Nexus IQ) также отправляется запрос на изменение статуса соответствующей уязвимости (в случае Nexus IQ уязвимость получит статус <strong>waived</strong>).</p>
+<p>В системе реализованы два типа механизмов принятия рисков: безусловный и условный. В случае безусловного принятия риска Инженер ИБ безоговорочно допускает наличие определенной уязвимости и она не учитывается при расчете Quality Gates. Во втором случае, как очевидно из названия, риск принимается с определенным условием — он также считается допустимым и наличие уязвимости не учитывается при расчете QG, но только до тех пор, пока выполняется определенное условие (правило) — в исходном коде не найдено ни одной уязвимости, обусловленной данным правилом (см. раздел «<a href="../../aag/categories%20of%20vulnerabilities/#_1">Категории уязвимостей</a>» Руководства администратора). Для условного принятия риска зачастую используется термин митигация (от англ. mitigation — ослабление/смягчение условий).</p>
+<p>Суть условного принятия заключается в том, что за счёт специальных конструкций кода, уязвимость не может быть эксплуатируемой. То есть, код написан так, что он защищает от злоумышленника, фильтрует и контролирует пользовательские данные, передаваемые в компоненту. Либо правило условного принятия контролирует, что уязвимый метод/класс не используется или вызывается.</p>
+<p>Проиллюстрируем последнее утверждение следующим примером. Предположим, что необходимо разрешить использование некоторой библиотеки, в которой инструментами SCA выявлена уязвимость, но только до тех пор, пока в исходном коде SAST инструментом не будет обнаружена уязвимость определенной категории, например All_Passwords. Таким образом, понимая, что общая уязвимость библиотеки обусловлена наличием в ней отдельных небезопасных методов или функций и ограничивая именно их использование (посредством задания определенного условия), Инженер ИБ принимает допустимость соответствующего риска. При этом, как только использование небезопасных методов или функций будет обнаружено инструментом SAST (заданное условие, в нашем примере All_Passwords, будет нарушено), добавленная в исключения SCA-уязвимость начнет учитываться при расчете Quality Gate.</p>
+<p>В AppSec.Hub создается необходимое правило (о практической реализации ниже), см. блок <strong>Risk accepted</strong> на рисунке ниже. В соответствии с ним, данная уязвимость учитывается при расчете Quality Gate, только если в ходе сканирования выявлена SAST-уязвимость типа All_Passwords (см. поле <strong>Condition</strong>).</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Важно заметить, что пока в AppSec.Hub существует действующее правило, все соответствующие импортируемые из инструмента уязвимости, будут получать определенный этим правилом статус, независимо от предыдущих изменений их статусов. Небольшой пример: в ходе очередного сканирования уязвимость не обнаружена инструментом и для нее в системе устанавливается статус <strong>Fixed</strong>.</p>
+<p>Однако если при следующем сканировании эта же уязвимость будет обнаружена вновь, то при импорте в AppSec.Hub она снова получит статус, например, <strong>False Positive</strong>.</p>
+<p>Другими словами, статус, задаваемый правилом в AppSec.Hub, имеет более высокий приоритет, чем статус инструмента.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/142.png" /></p>
+</figure>
+<p>Чтобы из AppSec.Hub добавить проблему безопасности в исключения, переходим на страницу <strong>Security Issue</strong> и, нажав кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" />, расположенную в правом верхнем углу пользовательского интерфейса, в раскрывающемся меню выбираем пункт <strong>Accept risk</strong>.</p>
+<figure>
+<p><img alt="" src="../img/143.png" /></p>
+</figure>
+<h3 id="_6">Безусловное принятие риска</h3>
+<p>Чтобы выполнить безусловное принятие риска и исключить уязвимость из расчета Quality Gate, в появившемся окне <strong>Accept the risk</strong> достаточно указать причину в поле <strong>Comment</strong> и нажать кнопку <strong>Accept</strong>. При необходимости можно указать срок принятия риска в поле <strong>Expiration Date</strong>. Если срок не указан, риск будет принят на постоянной основе — без ограничений по времени.</p>
+<p>Если выбрана опция <strong>With similar issues in the current application</strong>, то в исключения будут добавлены все аналогичные уязвимости данного приложения (эта опция доступна только для OSA практики, т. е. уязвимостей, найденных в компонентах из карантина репозитория). </p>
+<figure>
+<p><img alt="" src="../img/144.png" /></p>
+</figure>
+<p>В правом нижнем углу пользовательского интерфейса на странице уязвимости появляется соответствующее подтверждающее сообщение, а в правой колонке вкладки <strong>Details</strong> — блок <strong>Risk Accepted</strong>, содержащий краткую информацию о созданном правиле:</p>
+<ul>
+<li><strong>Acceptor</strong> — логин пользователя, принявшего данный риск.</li>
+<li><strong>Accepted at</strong> — дата и время создания правила.</li>
+<li><strong>Expired at</strong> — срок действия созданного правила.</li>
+<li><strong>Comment</strong> — комментарий.</li>
+</ul>
+<figure>
+<p><img alt="" src="../img/145.png" /></p>
+</figure>
+<h3 id="_7">Условное принятие риска</h3>
+<p>Условное принятие риска выполняется аналогично безусловному (см. раздел «<a href="../security%20issues/#_6">Безусловное принятие риска</a>»), с той разницей, что в окне <strong>Accept the risk</strong> необходимо выбрать опцию <strong>With condition</strong>.</p>
+<figure>
+<p><img alt="" src="../img/146.png" /></p>
+</figure>
+<p>Затем в раскрывающемся меню поля <strong>Considered SAST category</strong> выбираем необходимое условие. </p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В данном поле отображаются только SAST-категории, подгружаемые из соответствующих инструментов. Более подробная информация приведена в разделе «<a href="../../aag/categories%20of%20vulnerabilities/">Категории уязвимостей</a>» Руководства администратора.</p>
+</div>
+<figure>
+<p><img alt="" src="../img/147.png" /></p>
+</figure>
+<p>При необходимости можно указать срок принятия риска в поле <strong>Expiration Date</strong>. Если срок не указан, риск будет принят на постоянной основе — без ограничений по времени. </p>
+<figure>
+<p><img alt="" src="../img/148.png" /></p>
+</figure>
+<p>Поле <strong>Comment</strong> является обязательным для заполнения. Если выбрана опция <strong>With similar issues in the current application</strong>, то в исключения будут добавлены все аналогичные уязвимости данного приложения (эта опция доступна только для OSA практики, т. е. уязвимостей, найденных в компонентах из карантина репозитория). После нажатия кнопки <strong>Accept</strong> в правом нижнем углу пользовательского интерфейса отображается подтверждающее сообщение, а в системе создается соответствующее правило. При условном принятии риска в блоке <strong>Risk accepted</strong> появляется дополнительное поле <strong>Condition</strong>, в котором указывается выбранное условие.</p>
+<figure>
+<p><img alt="" src="../img/149.png" /></p>
+</figure>
+<h3 id="_8">Информация о добавленных в исключения уязвимостях</h3>
+<p>Информация об уязвимостях, добавленных в исключения, отображается на странице <strong>Risk Acceptance</strong>.</p>
+<figure>
+<p><img alt="" src="../img/150.png" /></p>
+</figure>
+<p>Для каждой Security Issue, имеющей статус Accepted Risk, отображается следующая информация:</p>
+<ul>
+<li><strong>ID</strong> — идентификационный номер правила, созданного в AppSec.Hub.</li>
+<li><strong>ISSUE ID</strong> — идентификационный номер Security Issue.</li>
+<li><strong>ISSUE TYPE</strong> — тип Security Issue.</li>
+<li><strong>CONDITIONAL SAST CATEGORY</strong> — используемое SAST категория (условие) в случае условного принятия риска.</li>
+<li><strong>ACCEPTED</strong> — дата и время создания соответствующего правила (принятия риска).</li>
+<li><strong>ACCEPTOR</strong> — учетная запись пользователя, создавшего соответствующее правило.</li>
+<li><strong>EXPIRED</strong> — срок действия правила.</li>
+</ul>
+<p>Кроме этого, на вкладке <strong>Rules</strong> данной страницы отображается перечень созданных для данного приложения правил.</p>
+<h2 id="_9">Настройка алгоритма изменения состояний проблем безопасности</h2>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Для выполнения нижеописанных действий требуется роль Менеджер.</p>
+</div>
+<p>В отдельных случаях специфические особенности организации работы команд разработки требуют нестандартных подходов к настройкам алгоритма изменения состояний проблем безопасности.</p>
+<p>Чтобы более ярко обозначить потенциальную проблему, рассмотрим гипотетическую ситуацию, когда Quality Gate настроен на полное отсутствие новых проблем безопасности (имеющих состояние NEW). Более подробная информация о критериях качества (Quality Gates) и их настройках приведена в разделе «<a href="../../aag/quality%20gates/#quality-gates">Quality Gates</a>» Руководства администратора. При первой проверке безопасности все проблемы получают состояние NEW, Quality Gate определяет наличие недопустимого количества проблем безопасности, о чем система информирует Инженера ИБ. Однако при последующих сканированиях найденные ранее проблемы безопасности изменяют состояние на REPEATED и настроенный указанным выше способом Quality Gate не срабатывает, что может привести к выпуску в промышленную эксплуатацию приложения, имеющего неустраненные уязвимости. Чтобы исключить описанную ситуацию, необходимо либо более тщательно подходить к определению критериев качества (Quality Gate), либо, при необходимости, использовать предусмотренную в системе возможность настройки алгоритма изменения состояний проблем безопасности.</p>
+<p>При настройке Security Pipeline пользователь с ролью Менеджер может выбрать одну из трех настроек (поле <strong>Issue state policy</strong> на вкладке <strong>Settings</strong>). Более подробная информация о настройках Security Pipeline приведена в разделе «<a href="../security%20pipelines/#security-pipelines">Security Pipelines</a>».</p>
+<ul>
+<li><strong>Compare with the 1st scan</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами первого сканирования (стандартная настройка системы).</li>
+<li><strong>Compare with previous scan</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами предыдущего сканирования.</li>
+<li><strong>Compare with the custom</strong> — определять состояние обнаруживаемых проблем безопасности в сравнении с результатами произвольного успешного сканирования. При выборе этого варианта на вкладке <strong>Settings</strong> настроек Security Pipelines появляется дополнительное поле <strong>Issue state policy scan task</strong>, в котором необходимо указать соответствующее сканирование. </li>
+</ul>
+<figure>
+<p><img alt="" src="../img/151.png" /></p>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Для сравнения не могут использоваться сканирования, завершившиеся с ошибкой (статус FAILED), за исключением получивших такой статус в результате непрохождения Quality Gate.</p>
+</div>
+<h2 id="false-positive">Присвоение проблеме безопасности статуса False positive</h2>
+<p>Чтобы исключить необходимость обработки проблем безопасности, которые являются результатом ложных срабатываний инструментов, Инженер ИБ может присвоить им статус <strong>False positive</strong>, указывающий на то, что проблема безопасности является ложноположительной. Такой подход позволят не учитывать соответствующие проблемы безопасности при расчете Quality Gates.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Статус <strong>False positive</strong> может быть присвоен только проблемам безопасности, находящимся в статусе <strong>To verify</strong>.</p>
+</div>
+<p>Одновременно с присвоением проблеме безопасности данного статуса в системе создается соответствующее правило, которое работает только в рамках текущего приложения. В дальнейшем, если среди импортируемых проблем безопасности будут встречаться те, на которые распространяется созданное правило, они будут автоматически получать статус <strong>False positive</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В настоящее время реализована возможность присвоения статуса <strong>False positive</strong> только проблемам безопасности типа SCA Security, выявленным инструментами Nexus IQ. </p>
+</div>
+<p>Чтобы присвоить проблеме безопасности статус <strong>False positive</strong> и создать правило в системе, перейдите на страницу с детальной информацией о соответствующей проблеме, нажав ее <strong>ID</strong> на странице <strong>Issues</strong>.</p>
+<p>Нажмите на кнопку <strong>Actions</strong> <img alt="" src="../img/3dot.png" />.</p>
+<p>В раскрывающемся меню выберите пункт <strong>False positive</strong>.</p>
+<figure>
+<p><img alt="" src="../img/152.png" /></p>
+</figure>
+<p>В открывшемся окне <strong>Accept the False Positive</strong> заполните или отредактируйте необходимые поля. Часть полей данного окна будет заполнена автоматически на основе информации, полученной из инструмента AST.</p>
+<figure>
+<p><img alt="" src="../img/153.png" /></p>
+</figure>
+<ul>
+<li><strong>Target status</strong> — устанавливаемый статус.</li>
+<li><strong>Target issue type</strong> — тип проблемы безопасности.</li>
+<li><strong>Expiration date</strong> — срок действия создаваемого правила. При наступлении указанной даты статус уязвимости изменится с <strong>False positive</strong> на <strong>To verify</strong>.   </li>
+<li><strong>Comment</strong> — комментарии Инженера ИБ с указанием причины присвоения статуса <strong>False positive</strong>.</li>
+<li><strong>Category</strong> — категория проблемы безопасности.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Категории уязвимостей подгружаются из соответствующего инструмента. Более подробная информация приведена в разделе «<a href="../../aag/categories%20of%20vulnerabilities/#_1">Категории уязвимостей</a>» Руководства администратора.</p>
+</div>
+<ul>
+<li><strong>Component group</strong> — группа компонента, содержащего проблему безопасности.</li>
+<li><strong>Component name</strong> — наименование компонента, содержащего проблему безопасности.</li>
+<li><strong>Component version</strong> — версия компонента, содержащего проблему безопасности.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>В полях <strong>Component group</strong>, <strong>Component name</strong>, <strong>Component version</strong> можно использовать символ «<code>*</code>» в качестве универсального знака, заменяющего один или несколько символов. Например, если в поле Component name указать <code>log*</code>, будет создано правило для всех компонентов, начинающихся с log.</p>
+</div>
+<ul>
+<li><strong>CVE</strong> — идентификатор уязвимости в базе данных общеизвестных уязвимостей информационной безопасности, также в данном поле можно указать CVE в формате, предлагаемом компанией Sonatype. Если поле пустое, добавляются все CVE для данной компоненты.</li>
+</ul>
+<p>Нажмите кнопку <strong>Create</strong>.</p>
+<p>В случае успешного создания правила в правом нижнем углу интерфейса пользователя появляется подтверждающее сообщение.</p>
+<p>Кроме этого, в правом нижнем углу страницы с подробной информацией о соответствующей уязвимости (вкладка <strong>Details</strong>) появится карточка <strong>Risk recognized</strong>, содержащая сведения о созданном правиле.</p>
+<figure>
+<p><img alt="" src="../img/154.png" /></p>
+</figure>
+<p>В карточке <strong>Risk recognized</strong> содержится следующая информация:</p>
+<ul>
+<li><strong>FP Rule</strong> — номер правила в системе.</li>
+<li><strong>Date of recognition</strong> — дата и время создания правила.</li>
+<li><strong>Expiration date</strong> — срок действия правила (дата и время).</li>
+<li><strong>Vulnerability type</strong> — тип проблемы безопасности.</li>
+<li><strong>Category</strong> — категория (-ии) уязвимости (-ей).</li>
+<li><strong>Component group</strong> — группа компонента.</li>
+<li><strong>Component name</strong> — наименование компонента.</li>
+<li><strong>Component version</strong> — версия компонента.</li>
+<li><strong>Comments</strong> — комментарии Инженера ИБ.</li>
+</ul>
+<p>Кроме этого, информация о созданных для приложения правилах добавляется на вкладки <strong>Issue processing rules</strong> страницы <strong>Settings</strong> и <strong>Rules</strong> страницы <strong>Risk Acceptance</strong>.</p>
+<figure>
+<p><img alt="" src="../img/155.png" /></p>
+</figure>
+<p>На данной вкладке приводится следующая информация о правилах:</p>
+<ul>
+<li><strong>ID</strong> — идентификационный номер правила в системе. </li>
+<li><strong>RULE TYPE</strong> — тип правила. </li>
+<li><strong>ISSUE TYPE</strong> — тип проблемы безопасности. </li>
+<li><strong>CATEGORY</strong> — выбранная категория (-ии). </li>
+<li><strong>LIBRARY</strong> — библиотека. </li>
+<li><strong>CVE</strong> — идентификатор уязвимости в базе данных общеизвестных уязвимостей информационной безопасности.</li>
+<li><strong>IS OBSOLETE</strong> — статус правила — если правило распространяется на какие-либо проблемы безопасности в приложении, в данном поле появляется значение <strong>true</strong>, в противном случае — <strong>false</strong>. </li>
+<li><strong>CREATED</strong> — дата создания правила. </li>
+<li><strong>EXPIRED</strong> — срок действия правила. </li>
+</ul>
+<p>Также правило может быть создано непосредственно на вкладке <strong>Issue processing rules</strong> страницы <strong>Settings</strong>:</p>
+<p>Нажмите кнопку <strong>+Add new</strong>.</p>
+<p>В появившемся окне <strong>New issue processing rule</strong> в поле <strong>Target status</strong> укажите статус, который необходимо установить для проблемы безопасности, а в поле <strong>Target issue type</strong> — тип уязвимости, после чего количество полей в окне увеличится и их необходимо заполнить/отредактировать аналогично тому, как было писано выше.</p>
+<p>После создания правила, нажав его идентификационный номер, можно просмотреть перечень проблем безопасности, на которое оно распространяется.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Важно заметить, что пока в AppSec.Hub существует действующее правило, все соответствующие импортируемые из инструмента уязвимости, будут получать определенный этим правилом статус, независимо от предыдущих изменений их статусов. Небольшой пример: в ходе очередного сканирования уязвимость не обнаружена инструментом и для нее в системе устанавливается статус <strong>Fixed</strong>.</p>
+<p>Однако если при следующем сканировании эта же уязвимость будет обнаружена вновь, то при импорте в AppSec.Hub она снова получит статус, например, <strong>False Positive</strong>. </p>
+<p>Другими словами, статус задаваемый правилом в AppSec.Hub имеет более высокий приоритет, чем статус инструмента. </p>
+</div>
+<h2 id="_10">Удаление правил</h2>
+<p>Если необходимо удалить правило, перейдите на вкладку <strong>Issue processing rules</strong> страницы <strong>Settings</strong> и нажмите расположенную справа от него иконку <strong>Cancel rule</strong> <img alt="" src="../img/bin.png" />.</p>
+<figure>
+<p><img alt="" src="../img/156.png" /></p>
+</figure>
+<p>В появившемся диалоговом окне <strong>Cancel issue processing rule</strong> нажмите кнопку <strong>Submit</strong>, чтобы отменить правило. Если выбрана опция <strong>Change the Status of the all Issue covered by this Rule to To Verify</strong>, статус всех проблем безопасности, которым в соответствии с данным правилом был присвоен статус <strong>False positive</strong>, будет изменен на <strong>To Verify</strong>, в противном случае — останется без изменений.</p>
+<figure>
+<p><img alt="" src="../img/157.png" /></p>
+</figure>
+<p>В результате успешного удаления правила в правом нижнем углу пользовательского интерфейса отображается подтверждающее сообщение, а информация о правиле удаляется с вкладки <strong>Issue processing rules</strong>.</p>
+<figure>
+<p><img alt="" src="../img/158.png" /></p>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Аналогично правило может быть удалено на вкладке <strong>Rules</strong> страницы <strong>Risk Acceptance</strong> соответствующего приложения.</p>
+</div>
+<h2 id="_11">Экспорт проблем безопасности в файл</h2>
+<p>Предусмотрена возможность скачивания отчета о выбранных проблемах безопасности в файлы формата XLSX или PDF. Кроме этого, можно скачать ZIP-архив, который объединяет XLSX-отчет с описанием уязвимостей в формате HTML.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Если к перечню Security Issues были применены какие-либо фильтры, они учитываются при формировании отчета. Например, если необходимо сформировать отчет, содержащий Security Issues в порядке убывания степени их серьезности, применим фильтр Severity: High to Low и сгенерируем отчет.</p>
+</div>
+<p>Перейдите на страницу <strong>Issues</strong> и нажмите на кнопку <strong>Export Issues</strong> <img alt="" src="../img/exp.png" />, расположенную в правом верхнем углу пользовательского интерфейса.</p>
+<figure>
+<p><img alt="" src="../img/159.png" /></p>
+</figure>
+<p>В раскрывающемся меню выберите необходимый формат (XLSX, PDF или ZIP). В правом нижнем углу пользовательского интерфейса появится подтверждающее сообщение и, спустя несколько секунд, начнется скачивание файла отчета в выбранном формате.</p>
+<p>Не останавливаясь подробно на структуре отчетов, отметим, что в них, помимо прочего, реализовано отображение ссылок на уязвимости, обнаруженные продуктами Sonatype (<strong>CVE id</strong>), а также безопасных версий библиотек (<strong>Non-vulnerable versions</strong>).</p>
+<figure>
+<p><img alt="" src="../img/160.png" /></p>
+</figure>
+<p>При нажатии на идентификатор уязвимости в XLSX-отчете происходит переход на страницу описания соответствующей уязвимости в AppSec.Hub или, если выбран отчет в формате ZIP, открывается скачанная HTML-страница с аналогичным описанием.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
+      
+        
+        <a href="../handling%20security%20problems%20and%20defects/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Работа с проблемами и дефектами безопасности" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Работа с проблемами и дефектами безопасности
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../security%20defects/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Дефекты безопасности" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Дефекты безопасности
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    © 2020—2022&nbsp;&nbsp;<a href="https://swordfishsecurity.ru/" target="_blank" rel="noopener">
+      Swordfish Security</a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.shares", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d5a3c699.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
+      
+    
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4F2GS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  </body>
+</html>

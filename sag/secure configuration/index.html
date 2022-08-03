@@ -1,0 +1,2173 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>Безопасная сетевая конфигурация - Документация</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WT4F2GS');</script>
+<!-- End Google Tag Manager -->
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="appsechub" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация" class="md-header__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+            Документация&nbsp;&nbsp;/&nbsp;&nbsp;Безопасная сетевая конфигурация
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sf-docs/hubdocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AppSec.Hub/documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gi/" class="md-tabs__link">
+        Общая информация
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ug/" class="md-tabs__link">
+        Руководство пользователя
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aag/" class="md-tabs__link">
+        Руководство администратора
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ii/" class="md-tabs__link">
+        Установка и интеграция
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Руководство администратора ИБ
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация" class="md-nav__button md-logo" aria-label="Документация" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Документация
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sf-docs/hubdocs" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AppSec.Hub/documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../gi/">Общая информация</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Общая информация" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Общая информация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/tool%20description/" class="md-nav__link">
+        Описание инструмента
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/user%20workstation%20requirements/" class="md-nav__link">
+        Требования к рабочему месту пользователя
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gi/glossary/" class="md-nav__link">
+        Термины и сокращения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ug/">Руководство пользователя</a>
+          
+            <label for="__nav_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство пользователя" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство пользователя
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Работа с приложениями
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Работа с приложениями" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Работа с приложениями
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/work%20with%20applications/" class="md-nav__link">
+        Приложения в AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/adding%20a%20new%20application/" class="md-nav__link">
+        Добавление нового приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/application%20settings/" class="md-nav__link">
+        Настройки приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/application%20configuration/" class="md-nav__link">
+        Конфигурация приложения
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/security%20pipelines/" class="md-nav__link">
+        Security Pipelines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/release%20objects/" class="md-nav__link">
+        Релизные объекты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/on-boarding/" class="md-nav__link">
+        Onboarding
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" data-md-state="indeterminate" type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Проблемы и дефекты безопасности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Проблемы и дефекты безопасности" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Проблемы и дефекты безопасности
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/handling%20security%20problems%20and%20defects/" class="md-nav__link">
+        Работа с проблемами и дефектами безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/security%20issues/" class="md-nav__link">
+        Проблемы безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/security%20defects/" class="md-nav__link">
+        Дефекты безопасности
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/setting%20of%20synchronisation%20with%20Jira/" class="md-nav__link">
+        Синхронизация с Jira — настройки
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/analytics/" class="md-nav__link">
+        Аналитика
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../aag/">Руководство администратора</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" data-md-state="indeterminate" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Подключение инструментов
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Подключение инструментов" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Подключение инструментов
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20software%20development%20tools/" class="md-nav__link">
+        Подключение инструментов разработки ПО
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/integration%20with%20ast%20tools/" class="md-nav__link">
+        Подключение инструментов AST
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/itegration%20with%20wiki%20tools/" class="md-nav__link">
+        Подключение Wiki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/selection%20of%20priority%20tools/" class="md-nav__link">
+        Выбор приоритетных инструментов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/disabling%20tools/" class="md-nav__link">
+        Отключение инструментов
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" data-md-state="indeterminate" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Конфигурация
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурация" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурация
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20configuration/" class="md-nav__link">
+        Конфигурация AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/users%20and%20teams/" class="md-nav__link">
+        Пользователи и команды
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/organisation%20of%20workspaces/" class="md-nav__link">
+        Организация рабочих пространств
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/setting%20up%20notifications/" class="md-nav__link">
+        Настройка уведомлений
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/quality%20gates/" class="md-nav__link">
+        Quality Gates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/tagging%20settings/" class="md-nav__link">
+        Настройки тегирования
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/categories%20of%20vulnerabilities/" class="md-nav__link">
+        Категории уязвимостей
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/custom%20webhooks%20configuration/" class="md-nav__link">
+        Конфигурация Custom webhooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/application%20vulnerability%20correlation%20settings/" class="md-nav__link">
+        Настройки корреляции уязвимостей приложения
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appsechub%20licence%20management/" class="md-nav__link">
+        Управление лицензией AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../ii/">Установка и интеграция</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Установка и интеграция" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Установка и интеграция
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/" class="md-nav__link">
+        Установка, запуск и обновление AppSec.Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" data-md-state="indeterminate" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Конфигурационные параметры
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Конфигурационные параметры" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Конфигурационные параметры
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/managing%20the%20number%20of%20tasks%20import%20streams/" class="md-nav__link">
+        Управление количеством задач/потоков импорта
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/automatic_sync_safety_defects/" class="md-nav__link">
+        Автоматическая синхронизация дефектов безопасности
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" data-md-state="indeterminate" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Интеграция в DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Интеграция в DevOps" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Интеграция в DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/cli/" class="md-nav__link">
+        AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/integration_api/" class="md-nav__link">
+        Интеграционный API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/teamcity/" class="md-nav__link">
+        Интеграция с TeamCity с использованием Meta-Runner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/circleci/" class="md-nav__link">
+        Интеграция с CircleCI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ii/gitlab/" class="md-nav__link">
+        Интеграция с GitLab CI/CD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" data-md-state="indeterminate" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Приложения
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Приложения" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Приложения
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%201/" class="md-nav__link">
+        Приложение 1. Конфигурационный файл .env
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%202/" class="md-nav__link">
+        Приложение 2. Список контейнеров
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aag/appendix%203/" class="md-nav__link">
+        Приложение 3. Необходимые права в интегрируемых инструментах
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%205/" class="md-nav__link">
+        Приложение 4. Конфигурационный файл app.properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%201/" class="md-nav__link">
+        Приложение 5. Параметры скриптов AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%202/" class="md-nav__link">
+        Приложение 6. Примеры запуска скриптов AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%203/" class="md-nav__link">
+        Приложение 7. Результаты сканирования AppSec.Hub CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ug/appendix%204/" class="md-nav__link">
+        Приложение 8. Коды выхода Meta-Runner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Руководство администратора ИБ</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Руководство администратора ИБ" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Руководство администратора ИБ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../protected%20objects/" class="md-nav__link">
+        Объекты защиты
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users%20and%20groups/" class="md-nav__link">
+        Пользователи и группы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Безопасная сетевая конфигурация
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Безопасная сетевая конфигурация
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    Настройка HTTPS соединения
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https_1" class="md-nav__link">
+    Особенности настройки HTTPS в закрытом контуре
+  </a>
+  
+    <nav class="md-nav" aria-label="Особенности настройки HTTPS в закрытом контуре">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Создание самоподписанных сертификатов
+  </a>
+  
+    <nav class="md-nav" aria-label="Создание самоподписанных сертификатов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    Создание корневого сертификата CA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Создание самоподписанного сертификата
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rootcacrt" class="md-nav__link">
+    Установка корневого сертификата (rootca.crt) на стороне клиента
+  </a>
+  
+    <nav class="md-nav" aria-label="Установка корневого сертификата (rootca.crt) на стороне клиента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rootcacrt-hub-core" class="md-nav__link">
+    Добавление rootca.crt в hub-core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hub-ui" class="md-nav__link">
+    Добавление сертификатов в hub-ui
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-" class="md-nav__link">
+    Запуск python-скриптов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../session%20lifetime/" class="md-nav__link">
+        Время жизни сессии
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audit%20logs/" class="md-nav__link">
+        Журналы аудита
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix%201/" class="md-nav__link">
+        Приложение. Список событий аудита
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#https" class="md-nav__link">
+    Настройка HTTPS соединения
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#https_1" class="md-nav__link">
+    Особенности настройки HTTPS в закрытом контуре
+  </a>
+  
+    <nav class="md-nav" aria-label="Особенности настройки HTTPS в закрытом контуре">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Создание самоподписанных сертификатов
+  </a>
+  
+    <nav class="md-nav" aria-label="Создание самоподписанных сертификатов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ca" class="md-nav__link">
+    Создание корневого сертификата CA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Создание самоподписанного сертификата
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rootcacrt" class="md-nav__link">
+    Установка корневого сертификата (rootca.crt) на стороне клиента
+  </a>
+  
+    <nav class="md-nav" aria-label="Установка корневого сертификата (rootca.crt) на стороне клиента">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rootcacrt-hub-core" class="md-nav__link">
+    Добавление rootca.crt в hub-core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hub-ui" class="md-nav__link">
+    Добавление сертификатов в hub-ui
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-" class="md-nav__link">
+    Запуск python-скриптов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/sf-docs/hubdocs/edit/master/docs/sag/secure configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="_1">Безопасная сетевая конфигурация</h1>
+<p>Для установки и дальнейшего функционирования системы должны быть разрешены внутренние HTTPS сетевые соединения.</p>
+<h2 id="https">Настройка HTTPS соединения</h2>
+<p>Для настройки HTTPS-соединения следует получить подписанные удостоверяющим центром (CA, Certificate Authority) сертификаты (открытый и закрытый) в формате PEM.</p>
+<p>Шаги настройки:</p>
+<ol>
+<li>
+<p>Cкопируйте полученные сертификаты в папку <strong>/opt/apphub/ssl</strong>:</p>
+<pre class="highlight"><code>$ ls -l ./ssl/
+total 16
+-rw-r--r-- 1 root root 1277 Mar 9 14:33 hub.crt
+-rw------- 1 root root 1679 Mar 9 14:33 hub.key
+</code></pre>
+</li>
+<li>
+<p>Измените конфигурацию запуска <strong>hub-ui</strong> — в секцию <strong>volumes</strong> добавьте папку, в которой будут храниться ключ и сертификат:</p>
+<pre class="highlight"><code>volumes:
+    - ./nginx/hub.conf:/etc/nginx/conf.d/default.conf:ro
+    - ./logs/hub-ui:/var/log/nginx
+    - ./ssl:/etc/ssl/certs/ssl-cert:ro
+</code></pre>
+</li>
+<li>
+<p>Измените конфигурацию <strong>/opt/apphub/nginx/hub.conf</strong> (<strong>hub-ui</strong>), для использования SSL:</p>
+<pre class="highlight"><code>listen 443 ssl;
+ssl_certificate /etc/ssl/certs/ssl-cert/hub.crt; # certificate
+ssl_certificate_key /etc/ssl/certs/ssl-cert/hub.key; # private key
+if ($scheme != "https") { # redirect 80 to 443
+    return 301 https://$host$request_uri;
+}
+</code></pre>
+</li>
+</ol>
+<h2 id="https_1">Особенности настройки HTTPS в закрытом контуре</h2>
+<p>Если AppSec.Hub устанавливается в закрытом контуре, возникает необходимость использования самоподписанных сертификатов.</p>
+<h3 id="_2">Создание самоподписанных сертификатов</h3>
+<h4 id="ca">Создание корневого сертификата CA</h4>
+<ol>
+<li>
+<p>Сгенерируйте ключ корневого сертификата.</p>
+<pre class="highlight"><code>openssl genrsa -out rootCA.key 2048
+</code></pre>
+</li>
+<li>
+<p>Создайте корневой сертификат CA.</p>
+<pre class="highlight"><code>openssl req -x509 -new -key rootCA.key -days 10000 -out rootCA.crt
+</code></pre>
+<p>В ходе создания корневого сертификата указываются следующие параметры:</p>
+<pre class="highlight"><code>Country Name (2 letter code) [AU]:
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []: 
+Email Address []:
+</code></pre>
+<p>Созданный корневой сертификат может использоваться для заверения сертификатов серверов и устанавливаться на клиентские машины.</p>
+<div class="admonition fail">
+<p class="admonition-title">Внимание</p>
+<p>Сертификат <strong>rootCA.crt</strong> может копироваться на сервера и клиентские машины, а ключ <strong>rootCA.key</strong> следует надежно защитить от несанкционированного доступа.</p>
+</div>
+</li>
+</ol>
+<h4 id="_3">Создание самоподписанного сертификата</h4>
+<ol>
+<li>
+<p>Сгенерируйте приватный ключ.</p>
+<pre class="highlight"><code>openssl genrsa -out server101.mycloud.key 2048
+</code></pre>
+</li>
+<li>
+<p>Сформируйте запрос на сертификат.</p>
+<pre class="highlight"><code>openssl req -new -key server101.mycloud.key -out server101.mycloud.csr
+</code></pre>
+<p>В ходе выполнения данной команды указываются следующие параметры:</p>
+<pre class="highlight"><code>Country Name (2 letter code) [AU]:
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:server101.mycloud
+Email Address []:
+A challenge password []:
+An optional company name []:
+</code></pre>
+<p>Важно отметить, что на данном этапе в качестве параметра <code>Common Name</code> необходимо указать имя вашего сервера (домен или IP, например, домен <strong>server101.mycloud</strong>).</p>
+</li>
+<li>
+<p>Подпишите запрос сертификата созданным корневым сертификатом, см. раздел «<a href="./#ca">Создание корневого сертификата CA</a>».</p>
+<pre class="highlight"><code>openssl x509 -req -in server101.mycloud.csr -CA rootCA.crt -CAkey rootCA.key \
+    -CAcreateserial -out server101.mycloud.crt -days 5000
+</code></pre>
+</li>
+</ol>
+<h3 id="rootcacrt">Установка корневого сертификата (rootca.crt) на стороне клиента</h3>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Все действия выполняются в директории, в которой находится <strong>docker-compose.yml</strong>.</p>
+</div>
+<h4 id="rootcacrt-hub-core">Добавление rootca.crt в hub-core</h4>
+<ol>
+<li>
+<p>При необходимости запросите корневой сертификат (<strong>rootCA.crt</strong>) у администратора (ответственного лица) закрытого контура для добавления его в список доверенных корневых сертификатов. Если такая возможность отсутствует, можно скачать сертификаты всех узлов, к которым будет обращаться AppSec.Hub, и для каждого выполнить операции добавления в <strong>keystore</strong>.</p>
+</li>
+<li>
+<p>Измените конфигурацию запуска <strong>hub-core</strong>.</p>
+<ol>
+<li>
+<p>Добавьте в <strong>JAVA_OPTS</strong> следующие строки (путь и пароль можно выбрать произвольные).</p>
+<pre class="highlight"><code>–Djavax.net.ssl.trustStore=/etc/ssl/certs/self-signed/keystoreFile
+–Djavax.net.ssl.trustStorePassword=qwerty123
+</code></pre>
+</li>
+<li>
+<p>В секцию <strong>volumes</strong> добавьте папку, в которой будет храниться <strong>keystore</strong>.</p>
+<pre class="highlight"><code>volumes:
+    –  ./logs/core/logs:/usr/local/tomcat/logs
+    –  ./certs:/etc/ssl/certs/self-signed
+</code></pre>
+</li>
+<li>
+<p>В папку <strong>./certs</strong> скопируйте сертификат <strong>rootCA.crt</strong> и при необходимости другие сертификаты.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Запустите <strong>hub-core</strong> с новыми параметрами.</p>
+</li>
+<li>
+<p>Зайдите в docker-контейнер <strong>hub-core</strong> и выполните следующие команды:</p>
+<pre class="highlight"><code>$ docker exec -ti hub-core /bin/bash
+bash-4.4# keytool  -import  -trustcacerts -alias rootCAAlias \
+    -file /etc/ssl/certs/self-signed/rootCA.crt \
+    -keystore /etc/ssl/certs/self-signed/keystoreFile
+Enter keystore password:
+Re-enter new password:
+...
+Trust this certificate? [no]:  yes
+Certificate was added to keystore
+</code></pre>
+<p>где:</p>
+<p>– <code>rootCAAlias</code> — имя, которое будет отображаться при просмотре сертификатов в keystore;</p>
+<p>– пароль и имя <strong>keystoreFile</strong> должны соответствовать указанным в конфигурации для <strong>JAVA_OPTS</strong>, см. шаг 2. Важно понимать, что именно в этой команде задается пароль, а в <strong>JAVA_OPTS</strong> он уже используется, как установленный.</p>
+<p>– <code>/etc/ssl/certs/self-signed</code> — папка, в которую будет скопирован <strong>keystoreFile</strong>, чтобы он сохранился при перезапуске контейнера (подключена как <strong>volume</strong>).</p>
+<p>Если <strong>rootCA.crt</strong> получить не удалось, аналогичную операцию следует выполнить для сертификата каждого узла, к которому будет обращаться AppSec.Hub.</p>
+</li>
+<li>
+<p>При использовании дефолтного <strong>keystore</strong> — <strong>/etc/ssl/certs/java/cacerts</strong> (<strong>/usr/lib/jvm/java-11-amazon-corretto/lib/security/cacerts</strong> для <strong>hub-core</strong> на сборке <strong>amazon-corretto-java-11</strong>) установлен пароль по умолчанию: <code>changeit</code>.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Этот же порядок действий применим для Jenkins и его нод (nodes), сборки которых поставляются клиентам.
+Пути дефолтного <strong>cacert</strong> в конейнерах приведены в таблице ниже.</p>
+<table>
+<thead>
+<tr>
+<th>Нод (Node)</th>
+<th>Путь</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jenkins</td>
+<td><code>/opt/java/openjdk/lib/security/cacerts</code></td>
+</tr>
+<tr>
+<td>Прочие</td>
+<td><code>/etc/default/cacerts</code><br><code>/etc/ssl/certs/java/cacerts</code><br><code>/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Fortify|`/opt/Fortify/Fortify_SCA_and_Apps_21.1.1/jre/lib/security/cacerts`<br>`/usr/lib/jvm/java-11-openjdk-amd64/lib/security/cacerts` -->
+
+<h4 id="hub-ui">Добавление сертификатов в hub-ui</h4>
+<ol>
+<li>
+<p>При необходимости запросите сертификат и приватный ключ для AppSec.Hub у администратора (ответственного лица) закрытого контура или создайте свой ключ и передайте его на подпись, а затем дождитесь подписанного сертификата.</p>
+</li>
+<li>
+<p>Скопируйте полученный сертификат в папку <strong>./ssl</strong>.</p>
+<pre class="highlight"><code>$ ls -al ./ssl/
+total 16
+drwxr-xr-x 2 root   root   4096 Mar  9 14:33 .
+drwxr-xr-x 7 ubuntu ubuntu 4096 Mar 10 07:45 ..
+-rw-r--r-- 1 root   root   1277 Mar  9 14:33 hub.crt
+-rw------- 1 root   root   1679 Mar  9 14:33 hub.key
+</code></pre>
+</li>
+<li>
+<p>Измените конфигурацию запуска hub-ui. В секцию volumes добавьте папку, в которой будут храниться ключ и сертификат:</p>
+<pre class="highlight"><code>volumes:
+    - ./nginx/hub.conf:/etc/nginx/conf.d/default.conf:ro
+    - ./logs/nginx/logs:/var/log/nginx
+    - ./ssl:/etc/ssl/certs/ssl-cert:ro
+</code></pre>
+</li>
+<li>
+<p>Измените конфигурацию <strong>./nginx/hub.conf</strong> (<strong>hub-ui</strong>) , для использования SSL:</p>
+<pre class="highlight"><code>listen 443 ssl; 
+ssl_certificate /etc/ssl/certs/ssl-cert/hub.crt; # certificate
+ssl_certificate_key /etc/ssl/certs/ssl-cert/hub.key; #  private key
+
+if ($scheme != "https") {   #uncomment for redirect 80 to 443
+    return 301 https://$host$request_uri;
+}
+</code></pre>
+</li>
+<li>
+<p>Перезапустите <strong>hub-ui</strong>.</p>
+</li>
+</ol>
+<h3 id="python-">Запуск python-скриптов</h3>
+<p>Для запуска python-скриптов, которые будут обращаться к хостам с самоподписанными SSL-сертификатами, необходимо установить следующую переменную окружения:</p>
+<pre class="highlight"><code>REQUESTS_CA_BUNDLE=/etc/ssl/certs/self-signed/rootCA.crt
+</code></pre>
+<p>.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            К началу
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул">
+      
+        
+        <a href="../users%20and%20groups/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Пользователи и группы" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Пользователи и группы
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../session%20lifetime/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Время жизни сессии" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Время жизни сессии
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    © 2020—2022&nbsp;&nbsp;<a href="https://swordfishsecurity.ru/" target="_blank" rel="noopener">
+      Swordfish Security</a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.shares", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d5a3c699.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.897f3768.min.js"></script>
+      
+    
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WT4F2GS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  </body>
+</html>
