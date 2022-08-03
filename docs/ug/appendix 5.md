@@ -3,7 +3,7 @@
 Для удобства ряд системных настроек AppSec.Hub вынесен в конфигурационный файл **app.properties**. Если рекомендуемая директория установки AppSec.Hub не изменена, данный файл располагается здесь `/opt/apphub/config/hub-core/`. 
 
 !!! note "Важно"
-    После изменения параметров в файле **app.properties** необходимо выполнить рестарт системы, см. разделы «[Остановка AppSec.Hub](../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_3)» и «[Запуск AppSec.Hub](../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_2)» Руководства прикладного администратора.
+    После изменения параметров в файле **app.properties** необходимо выполнить рестарт системы, см. разделы «[Остановка AppSec.Hub](../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_3)» и «[Запуск AppSec.Hub](../../aag/installing%2C%20running%20and%20updating%20AppSec.Hub/#appsechub_2)» Руководства администратора.
 
 Параметр|Описание|Значение по умолчанию
 -|-|-

@@ -31,6 +31,7 @@
 `ldap.updated`|Обновлены параметры соединения с LDAP сервером
 `license.expired`|Закончилась лицензия на систему AppSec.Hub
 `license.updated`|Загружена новая, корректная лицензия на систему AppSec.Hub
+`notification.sent`|По e-mail отправлено уведомление об одном из событий:<br>– defect  reopened<br>– defect fixed<br>– scan failure<br>– quality gate check failure<br>– integrity check failure<br>– account confirmation and activated<br>– test message<br>
 `pipeline.created`|Создан DevSecOps пайплайн
 `pipeline.deleted`|Удалён DevSecOps пайплайн
 `pipeline.exported`|DevSecOps пайплайн выгружен в CI инструмент
